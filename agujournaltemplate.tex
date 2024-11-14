@@ -249,7 +249,7 @@
 
 \section{Draft Results}
 %Text here ===>>>
-Below here I will put the draft plots to give an overview over the current state of the results. As of now all plots are in a draft state, sometimes missing appropriate units. Please excuse this, as I would like to first trim down the plots and order them for the final manuscript, before committing further time into finalizing the details. 
+Below here I will put the draft plots to give an overview over the current state of the results. As of now, all plots are in a draft state, sometimes missing appropriate units. Please excuse this, as I would like to first trim down the plots and order them for the final manuscript, before committing further time into finalizing the details. 
 
 
 
@@ -265,45 +265,29 @@ Below here I will put the draft plots to give an overview over the current state
 
 \begin{figure}
 \begin{center}
-\noindent\includegraphics[width=480]{fig/TimeSeriesOverview2.pdf}
+\noindent\includegraphics[width=480]{fig/DepthDivTimeSeries.pdf}
 \end{center}
-\caption{Overview over all variables used in this manuscript. Red and blue bars are yearly averages above or below mean over the entire time series. Black dots are raw or interpolated monthly data. The microscopy data is simplified to counts per functional group, to show the shifts within the community.\newline 
-\textit{Honestly, I did not find another reasonable way to show a clean and concise overview with matching columns and rows, that shows the raw data. This figure could be put into the supplementary or split into separate plots. The previous Z-Scores plot shows the same dynamics in a much more concise way.}}
+\caption{Overview over Chlorophyll and Diversity Variables over Depth}
 \end{figure}
 
 
 \begin{figure}
-\noindent\includegraphics[width=\textwidth]{fig/DivEcoFunctionPlot.pdf}
+\noindent\includegraphics[width=\textwidth]{fig/BDEF_depth_PLOT.pdf}
 \caption{Linear regression of diversity indices to log-transformed Chlorophyll Biomass, Primary Production, Resource Use Efficiency for nitrate ($RUE_N$) and for phosphate ($RUE_P$). $RUE$ is calculated as the ratio of Chlorophyll to the available nutrient ($NO_3$ and $PO_4$ respectively). All variables show a significant increasing linear trend with Genus Richness, but none for the Shannon Index or Pielou\'s Evenness Index.
 \newline
 \textit{I included this plot to show something about the Diversity to Ecosystem Function relationship at CARIACO. This can be left out, if it does not make sense to discuss in the context of this manuscript, or much further simplified, by removing the correlations to Shannon and Pielou, since none of them are significant. All correlations to Genus Richness are below p=0.05. A more advanced way to quantify these relationships would be mixed linear models, which I could do, if that makes sense in the context of the other results. For now, I wanted to keep it simple.}}
 \end{figure}
 
 \begin{figure}
-\noindent\includegraphics[width=\textwidth]{fig/ClusteringCompPlot.pdf}
+\noindent\includegraphics[width=\textwidth]{fig/ClusteringCompPlot_NEW.pdf}
 \caption{(A) Clustering of microscopy data at the Genus level, using the binary Jaccard distance. The community for each year is binned together, to smooth out seasonal aspects. (B) NMDS plot of monthly community data (cell counts) that is cube root transformed. Stress: 0.261, 2 dimensions, converging solution. Color of dots based on which yearly cluster the monthly data is in. Vector overlay of ENVFIT shows underlying environmental variables that are co-varying with the community data. \newline
-Plots (A-L) below show density distributions of the environmental variables as well as diversity indices between the clustered years. Dashed line shows the mean. \newline
-\textit{
-The clustering above is pretty straightforward and shows that we have a return to a previous community, as was noted in the 2019 Review of CARIACO. NMDS shows that the yearly clustering seems to relate at least somewhat to the monthly data. Density plots below ideally showcase why these "community clusters" exist, since the physical environment is different. I have not yet included ANOVA comparisons between the clusters into the plot, however quite a few of these are non-significant. Nevertheless, there are obvious differences, particularly towards the extremes. Diversity does not seem to significantly differ in the mean, although the variability (i.e. deviation from mean) seems to differ. 
-}}
-\end{figure}
-
-\begin{figure}
-\noindent\includegraphics[width=\textwidth]{fig/GF_simplified_weightedImp.pdf}
-\caption{Now we move on to the final portion: The Gradient Forest (GF) analysis. This is relatively complex, so I tried to show two plots first, that are relatively simplified and where the analysis does not include time lags, and a final plot that includes almost all the available output/data and where time lags were included. \newline
-Above here, you can see the result of running the GF algorithm with the environmental and climatic predictor variables at a monthly resolution on the community data at a Genus level. Of roughly 100 genus counts put in, the model can predict 43 genus abundances using the predictor variables above. GF builds many random forest models for each variable (i.e. genus abundance) to predict, then subsets the predictors and variables, checks for correlation, and notes where in the forest of random trees "splits" occur, i.e. at what value of a predictor the abundance of a genus changes. Accumulating all the predictor accuracies between variables (i.e. genus abundances) yields the plot above.}
-\end{figure}
-
-\begin{figure}
-\noindent\includegraphics[width=\textwidth]{fig/GF_simplified_overallCumImp.pdf}
-\caption{This second plot is output of the same run, which shows the cumulative importance along the predictor variables. A steep increase means that at this range there were many "splits" in the random forest models, so this is where shifts in the community occur. For nitrate for example, the range between 5 and 7.5 \units{µM} seems to have the greatest effect on the community. For temperature, lower ranges affect the community most, all of which points to the importance of upwelling in structuring the community.}
+Plots (A-L) below show density distributions of the environmental variables as well as diversity indices between the clustered years. Dashed line shows the mean.}
 \end{figure}
 
 
 \begin{figure}
 \noindent\includegraphics[width=\textwidth]{fig/GF_output_plot3.pdf}
-\caption{\textit{Since I have spent much time playing with the GF analysis and data, this is the result of optimizing the model predictions, by including and testing multiple time lags of variables.} Interestingly only time lags of the climatic indices (AMO and MEIv2) actually showed better predictive capabilities, there were none for lags of wind, nutrients or the isotherm. What I also included in the plot above is the underlying mechanism of fitting a random forest model for each genus. The plot on the top right shows the weighted importance for each genus, ranked according to the predictive capability of the model, and color coded by their respective group. Similarly, the cumulative importance plots below show the overall importance, as well as the individual color lines that show the cumulative importance per genus predicted. This is not necessarily useful to show in the final manuscript, unless we want to discuss the model output down to the genus level. Not surprisingly, it is mostly diatoms that are predictable, but also other groups are present here.\newline
-\textit{What I find particularly interesting for this set of results, is that the AMO index with a time lab of 5 months is by far the strongest predictor of abundances of genus present. The MEIv2 also scores just slightly below nitrate. I am not entirely certain how to discuss this, except that the system and community seems to be driven by multi-decadal climatic oscillations.}}
+\caption{Interestingly only time lags of the climatic indices (AMO and MEIv2) actually showed better predictive capabilities, there were none for lags of wind, nutrients or the isotherm. What I also included in the plot above is the underlying mechanism of fitting a random forest model for each genus. The plot on the top right shows the weighted importance for each genus, ranked according to the predictive capability of the model, and color coded by their respective group. Similarly, the cumulative importance plots below show the overall importance, as well as the individual color lines that show the cumulative importance per genus predicted. This is not necessarily useful to show in the final manuscript, unless we want to discuss the model output down to the genus level. Not surprisingly, it is mostly diatoms that are predictable, but also other groups are present here.}
 \end{figure}
 
 
