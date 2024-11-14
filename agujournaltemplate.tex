@@ -11,7 +11,7 @@
 % guidelines and troubleshooting are here: 
 
 %% user added for convenience, can be removed before submission:
-\usepackage{comment}
+
 
 
 %% To submit your paper:
@@ -144,8 +144,8 @@
 
 \begin{keypoints}
 \item The phytoplankton community data identified by microscopy from the CARIACO Time Series between 1996 and 2016 shows two separate clusters characterized by high and low upwelling regimes respectively.
-\item Despite the differing physical regimes and large shifts between functional groups, there is no significant difference in diversity metrics between the two clusters. Overall the data shows a positive relationship between Richness and Biomass, Productivity as well as Resource Use Efficiency.
-\item A gradient forest analysis of the community data reveals that the strongest predictor of shifts within the community is the AMO index with a time lag of 4 months, which points to a strong impact of large scale climatic oscillations in the tropical coastal ecosystem.
+\item Despite the differing physical regimes and large shifts between functional groups, there is no significant difference in diversity metrics between the two clusters. Overall, diversity (i.e. Genus Richness) shows a positive linear relationship to Biomass, Productivity as well as Resource Use Efficiency.
+\item A gradient forest analysis of the community data reveals that the strongest predictor of shifts within the community is the AMO index with a time lag of 5 months, which points to a strong impact of large scale climatic oscillations in the tropical coastal ecosystem. The next strongest predictor is nitrate concentration, with the MEI v2 index (lag of 4 months) and salinity following behind. 
 \end{keypoints}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -187,7 +187,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% Suggested section heads:
-% \section{Introduction}
+\section{Introduction}
 %
 % The main text should start with an introduction. Except for short
 % manuscripts (such as comments and replies), the text should be divided
@@ -196,56 +196,118 @@
 % Headings should be sentence fragments and do not begin with a
 % lowercase letter or number. Examples of good headings are:
 
-% \section{Materials and Methods}
+    \begin{itemize}
+    
+        %% Overarching theme: Stability of Ecosystem faunctions, Drivers of community change
+        
+        \item "The Cariaco Basin, located ...." - general hydrography/depth, etc.
+    
+        \item "The CARIACO Time Series ...." - talk about the Time Series, what they did, why
+    
+        \item "The Cariaco Basin has undergone marked shifts..." Talk about ecosystem, what has changed, reference prev literature
+    
+        \item "Here's where we come in..." Talk about how most of the analysis stopped after 2012, time series died out, but there is more data there and particularly looking at community data, we can see a return.
+    
+        \item "In this paper, we..." 
+        
+    \end{itemize}
+
+
+\section{Materials and Methods}
 % Here is text on Materials and Methods.
 %
-% \subsection{A descriptive heading about methods}
-% More about Methods.
+\subsection{The CARIACO Time Series}
+  %Talk about the Basin shortly, then about the time series
+    The Cariaco Ocean Time-Series Program was established to investigate the link between ocean surface processes and the sinking flux of particulate carbon. The Cariaco Basin is a large ($\sim$ 160 km long, 70 km wide) and deep ($\sim$ 1,400 m) basin, located on the north-eastern Venezuelan continental shelf, bound to the north by a sill at a mean depth of about 100 m. It is a relatively productive area ($\sim$ 400 $g C m^{-2} y^{-1}$), with primary production and vertical particulate organic matter fluxes that are higher than BATS and HOT locations, leading to the accumulation of anoxic bottom waters below 200 m depth.
+
+    \subsubsection{Niskin Bottle Dataset}
+        Samples were collected as part of the Cariaco Ocean Time-Series Program in monthly research vessel cruises to a station located in the eastern Cariaco Basin (10.50° N, 64.67° W). 
+
+    \subsubsection{CTD Dataset}
+
+    \subsubsection{Phytoplankton Microscopy}
+
+    \subsubsection{ERA 5 climate data for wind}
+        
+    \subsubsection{AMO and MEI v.2 Climate indices}
+
+        %% METHODS
+    \subsubsection{Z-Scores calculation}
+        
+    \subsubsection{Clustering and NMDS}
+
+        
+        \subsubsection{Gradient Forest}
+            
 %
-% \section{Data} (Or section title might be a descriptive heading about data)
+\section{Data} (Or section title might be a descriptive heading about data)
 %
 % \section{Results} (Or section title might be a descriptive heading about the
 % results)
 %
-% \section{Conclusions}
 
 
 \section{Draft Results}
 %Text here ===>>>
-Below here I will put the draft plots to give an overview over the current state of the results.
+Below here I will put the draft plots to give an overview over the current state of the results. As of now all plots are in a draft state, sometimes missing appropriate units. Please excuse this, as I would like to first trim down the plots and order them for the final manuscript, before committing further time into finalizing the details. 
+
 
 
 \begin{figure}
 \noindent\includegraphics[width=\textwidth]{fig/Artboard 1.pdf}
-\caption{caption}
+\caption{Map of CARIACO Time Series location in the Cariaco basin in Venezuela in the Caribbean Ocean, located at 10.50° N, 64.67° W}
 \end{figure}
 
 \begin{figure}
 \noindent\includegraphics[width=\textwidth]{fig/PLOTZScores.pdf}
-\caption{caption}
+\caption{Heatmap of yearly average values, normalized for comparison as z-scores. All data is available at monthly resolution (see next draft figure for raw data). Red indicates a larger value, blue indicates a smaller value for that particular year. The years 1995 (n=2) and 2017 (n=1) were removed due to lack of data. Diversity Indices are calculated based on microscopy counts at the Genus level.}
 \end{figure}
 
 \begin{figure}
-\noindent\includegraphics[width=\textwidth]{fig/TimeSeriesOverview2.pdf}
-\caption{caption}
+\begin{center}
+\noindent\includegraphics[width=480]{fig/TimeSeriesOverview2.pdf}
+\end{center}
+\caption{Overview over all variables used in this manuscript. Red and blue bars are yearly averages above or below mean over the entire time series. Black dots are raw or interpolated monthly data. The microscopy data is simplified to counts per functional group, to show the shifts within the community.\newline 
+\textit{Honestly, I did not find another reasonable way to show a clean and concise overview with matching columns and rows, that shows the raw data. This figure could be put into the supplementary or split into separate plots. The previous Z-Scores plot shows the same dynamics in a much more concise way.}}
 \end{figure}
 
+
 \begin{figure}
-\noindent\includegraphics[width=\textwidth]{fig/AllCorrelationsPlot.pdf}
-\caption{caption}
+\noindent\includegraphics[width=\textwidth]{fig/DivEcoFunctionPlot.pdf}
+\caption{Linear regression of diversity indices to log-transformed Chlorophyll Biomass, Primary Production, Resource Use Efficiency for nitrate ($RUE_N$) and for phosphate ($RUE_P$). $RUE$ is calculated as the ratio of Chlorophyll to the available nutrient ($NO_3$ and $PO_4$ respectively). All variables show a significant increasing linear trend with Genus Richness, but none for the Shannon Index or Pielou\'s Evenness Index.
+\newline
+\textit{I included this plot to show something about the Diversity to Ecosystem Function relationship at CARIACO. This can be left out, if it does not make sense to discuss in the context of this manuscript, or much further simplified, by removing the correlations to Shannon and Pielou, since none of them are significant. All correlations to Genus Richness are below p=0.05. A more advanced way to quantify these relationships would be mixed linear models, which I could do, if that makes sense in the context of the other results. For now, I wanted to keep it simple.}}
 \end{figure}
 
 \begin{figure}
 \noindent\includegraphics[width=\textwidth]{fig/ClusteringCompPlot.pdf}
-\caption{caption}
+\caption{(A) Clustering of microscopy data at the Genus level, using the binary Jaccard distance. The community for each year is binned together, to smooth out seasonal aspects. (B) NMDS plot of monthly community data (cell counts) that is cube root transformed. Stress: 0.261, 2 dimensions, converging solution. Color of dots based on which yearly cluster the monthly data is in. Vector overlay of ENVFIT shows underlying environmental variables that are co-varying with the community data. \newline
+Plots (A-L) below show density distributions of the environmental variables as well as diversity indices between the clustered years. Dashed line shows the mean. \newline
+\textit{
+The clustering above is pretty straightforward and shows that we have a return to a previous community, as was noted in the 2019 Review of CARIACO. NMDS shows that the yearly clustering seems to relate at least somewhat to the monthly data. Density plots below ideally showcase why these "community clusters" exist, since the physical environment is different. I have not yet included ANOVA comparisons between the clusters into the plot, however quite a few of these are non-significant. Nevertheless, there are obvious differences, particularly towards the extremes. Diversity does not seem to significantly differ in the mean, although the variability (i.e. deviation from mean) seems to differ. 
+}}
 \end{figure}
 
 \begin{figure}
-\noindent\includegraphics[width=\textwidth]{fig/GF_output_plot3.pdf}
-\caption{caption}
+\noindent\includegraphics[width=\textwidth]{fig/GF_simplified_weightedImp.pdf}
+\caption{Now we move on to the final portion: The Gradient Forest (GF) analysis. This is relatively complex, so I tried to show two plots first, that are relatively simplified and where the analysis does not include time lags, and a final plot that includes almost all the available output/data and where time lags were included. \newline
+Above here, you can see the result of running the GF algorithm with the environmental and climatic predictor variables at a monthly resolution on the community data at a Genus level. Of roughly 100 genus counts put in, the model can predict 43 genus abundances using the predictor variables above. GF builds many random forest models for each variable (i.e. genus abundance) to predict, then subsets the predictors and variables, checks for correlation, and notes where in the forest of random trees "splits" occur, i.e. at what value of a predictor the abundance of a genus changes. Accumulating all the predictor accuracies between variables (i.e. genus abundances) yields the plot above.}
+\end{figure}
+
+\begin{figure}
+\noindent\includegraphics[width=\textwidth]{fig/GF_simplified_overallCumImp.pdf}
+\caption{This second plot is output of the same run, which shows the cumulative importance along the predictor variables. A steep increase means that at this range there were many "splits" in the random forest models, so this is where shifts in the community occur. For nitrate for example, the range between 5 and 7.5 \units{µM} seems to have the greatest effect on the community. For temperature, lower ranges affect the community most, all of which points to the importance of upwelling in structuring the community.}
 \end{figure}
 
 
+\begin{figure}
+\noindent\includegraphics[width=\textwidth]{fig/GF_output_plot3.pdf}
+\caption{\textit{Since I have spent much time playing with the GF analysis and data, this is the result of optimizing the model predictions, by including and testing multiple time lags of variables.} Interestingly only time lags of the climatic indices (AMO and MEIv2) actually showed better predictive capabilities, there were none for lags of wind, nutrients or the isotherm. What I also included in the plot above is the underlying mechanism of fitting a random forest model for each genus. The plot on the top right shows the weighted importance for each genus, ranked according to the predictive capability of the model, and color coded by their respective group. Similarly, the cumulative importance plots below show the overall importance, as well as the individual color lines that show the cumulative importance per genus predicted. This is not necessarily useful to show in the final manuscript, unless we want to discuss the model output down to the genus level. Not surprisingly, it is mostly diatoms that are predictable, but also other groups are present here.\newline
+\textit{What I find particularly interesting for this set of results, is that the AMO index with a time lab of 5 months is by far the strongest predictor of abundances of genus present. The MEIv2 also scores just slightly below nitrate. I am not entirely certain how to discuss this, except that the system and community seems to be driven by multi-decadal climatic oscillations.}}
+\end{figure}
+
+
+\section{Conclusions}
 
 
 %%
@@ -412,12 +474,12 @@ Below here I will put the draft plots to give an overview over the current state
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %!
-% \section*{Open Research Section}
-%This section MUST contain a statement that describes where the data supporting the conclusions can be obtained. Data cannot be listed as ''Available from authors'' or stored solely in supporting information. Citations to archived data should be included in your reference list. Wiley will publish it as a separate section on the paper’s page. Examples and complete information are here:
-%https://www.agu.org/Publish with AGU/Publish/Author Resources/Data for Authors
+\section*{Open Research Section}
+This section MUST contain a statement that describes where the data supporting the conclusions can be obtained. Data cannot be listed as ''Available from authors'' or stored solely in supporting information. Citations to archived data should be included in your reference list. Wiley will publish it as a separate section on the paper’s page. Examples and complete information are here:
+https://www.agu.org/Publish with AGU/Publish/Author Resources/Data for Authors
 
-%\section*{As Applicable – Inclusion in Global Research Statement}
-%The Authorship: Inclusion in Global Research policy aims to promote greater equity and transparency in research collaborations. AGU Publications encourage research collaborations between regions, countries, and communities and expect authors to include their local collaborators as co-authors when they meet the AGU Publications authorship criteria (described here: https://www.agu.org/publications/authors/policies\#authorship). Those who do not meet the criteria should be included in the Acknowledgement section. We encourage researchers to consider recommendations from The TRUST CODE - A Global Code of Conduct for Equitable Research Partnerships (https://www.globalcodeofconduct.org/) when conducting and reporting their research, as applicable, and encourage authors to include a disclosure statement pertaining to the ethical and scientific considerations of their research collaborations in an “Inclusion in Global Research Statement’ as a standalone section in the manuscript following the Conclusions section. This can include disclosure of permits, authorizations, permissions and/or any formal agreements with local communities or other authorities, additional acknowledgements of local help received, and/or description of end-users of the research. You can learn more about the policy in this editorial. Example statements can be found in the following published papers: 
+\section*{As Applicable – Inclusion in Global Research Statement}
+The Authorship: Inclusion in Global Research policy aims to promote greater equity and transparency in research collaborations. AGU Publications encourage research collaborations between regions, countries, and communities and expect authors to include their local collaborators as co-authors when they meet the AGU Publications authorship criteria (described here: https://www.agu.org/publications/authors/policies\#authorship). Those who do not meet the criteria should be included in the Acknowledgement section. We encourage researchers to consider recommendations from The TRUST CODE - A Global Code of Conduct for Equitable Research Partnerships (https://www.globalcodeofconduct.org/) when conducting and reporting their research, as applicable, and encourage authors to include a disclosure statement pertaining to the ethical and scientific considerations of their research collaborations in an “Inclusion in Global Research Statement’ as a standalone section in the manuscript following the Conclusions section. This can include disclosure of permits, authorizations, permissions and/or any formal agreements with local communities or other authorities, additional acknowledgements of local help received, and/or description of end-users of the research. You can learn more about the policy in this editorial. Example statements can be found in the following published papers: 
 %Holt et al. (https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022JG007188), 
 %Sánchez-Gutiérrez et al. (https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2023JG007554), 
 %Tully et al. (https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1029/2022JG007128) 
@@ -425,7 +487,9 @@ Below here I will put the draft plots to give an overview over the current state
 
 
 %!
-%\acknowledgments
+\acknowledgments
+Thank you to all who have helped, communicated, provided data. Claudia Benitez-Nelson, Digna Rueda-Roa, James Pinckney.
+
 %Enter acknowledgments here. This section is to acknowledge funding, thank colleagues, enter any secondary affiliations, and so on.
 
 
@@ -437,7 +501,7 @@ Below here I will put the draft plots to give an overview over the current state
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\bibliography{ enter your bibtex bibliography filename here }
+\bibliography{references}
 
 
 
