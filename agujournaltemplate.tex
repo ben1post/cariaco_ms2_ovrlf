@@ -215,6 +215,8 @@
         \item "Here's where we come in..." Talk about how most of the analysis stopped after 2012, time series died out, but there is more data there and particularly looking at community data, we can see a return.
     
         \item "In this paper, we..." 
+
+        %Highlight that I am only looking at Phytoplankton Microscopy data, and a bit of Niskin, but nothing else. Only bottom-up drivers.
         
     \end{itemize}
 
@@ -223,101 +225,70 @@
 % Here is text on Materials and Methods.
 %
 \subsection{Study Site}
-  %Talk about the Basin shortly, then about the time series
-    The Cariaco Ocean Time-Series Program was established to investigate the link between ocean surface processes and the sinking flux of particulate carbon. The Cariaco Basin is a large ($\sim$ 160 km long, 70 km wide) and deep ($\sim$ 1,400 m) basin, located on the north-eastern Venezuelan continental shelf, bound to the north by a sill at a mean depth of about 100 m. It is a relatively productive area ($\sim$ 400 $g C m^{-2} y^{-1}$), with primary production and vertical particulate organic matter fluxes that are higher than BATS and HOT locations, leading to the accumulation of anoxic bottom waters below 200 m depth.
+    %Talk about the Basin shortly, then about the time series
+    The Cariaco Ocean Time-Series Program was established to explore the relationship between ocean surface processes and the sinking flux of particulate carbon. The Cariaco Basin is a large (approximately 160 km long and 70 km wide) and deep (about 1,400 m) basin, situated on the northeastern Venezuelan continental shelf, with a sill to the north at a mean depth of around 100 m. This area is relatively productive ($\sim$ 400 $g C m^{-2} y^{-1}$), with primary production and vertical particulate organic matter fluxes exceeding those observed at BATS and HOT sites, resulting in the accumulation of anoxic bottom waters below 200 m depth.
 
-    \subsubsection{In-Situ Data}
-    Samples were collected as part of the Cariaco Ocean Time-Series Program in monthly research vessel cruises to a station located in the eastern Cariaco Basin (10.50° N, 64.67° W). % https://imars.usf.edu/?page_id=1027 (10°30’N, 64°40’W) ???
-
-    % from 2019 Review:
-    The CARIACO field program consisted of a monthly core oceanographic cruise, two sediment trap deployment/recovery cruises per year, and two microbiogeochemical cruises targeting microbial processes across the oxic–anoxic interface per year. Field logistics and partial sample analysis were coordinated by the Fundación La Salle de Ciencias Naturales on Margarita Island, Venezuela. Details of the history of sampling procedures in CARIACO as well as sampling schemes, analytical methods, and data quality control and intercalibration procedures have been described by \citeA{mullerkarger_annual_2001, thunell_particulate_2007, astor_yrene_m_handbook_2013, astor_interannual_2013, astor_sintesis_2014}.
+\subsection{In-Situ Data}
+    Samples were collected as part of the Cariaco Ocean Time-Series Program in monthly research vessel cruises to a station located in the eastern Cariaco Basin (10.50° N, 64.66° W) \cite{muller-karger_scientific_2019}.
+    The CARIACO field program consisted of a monthly core oceanographic cruise with Niskin bottle and CTD deployments, in addition to other deployments and samples not used in this manuscript. Field logistics and partial sample analysis were coordinated by the Fundación La Salle de Ciencias Naturales on Margarita Island, Venezuela. Details of the history of sampling procedures in CARIACO as well as sampling schemes, analytical methods, and data quality control and intercalibration procedures have been described by \citeA{mullerkarger_annual_2001, thunell_particulate_2007, astor_yrene_m_handbook_2013, astor_interannual_2013, astor_sintesis_2014}. 
     
-    % below paragraph is from Taylor et al. 2012
-    % I should similarly reference the other more comprehensive data protocols like they do
-    % but also explain the methodology quickly, like they did
-    Sampling and processing protocols for hydrography, NPP, Chla, phaeo, nutrient concentrations, and sediment trap deployment and processing appear in Muller-Karger et al. (8). These data are available from www.imars. usf.edu/CAR, the National Oceanographic Data Center (NODC) (www.nodc. noaa.gov), and the Biological and Chemical Oceanography Data Management Office (BCO-DMO) (http://bco-dmo.org/data). From late 1995 to early 1998, nutrient data were provided by William Senior (Universidad de Oriente, Cumana, Venezuela) and by Dr. K. Fanning (University of South Florida, St. Petersburg, FL) from mid-1997 to the present. Samples from eight cruises were analyzed by both laboratories; PO43− and Si[OH]4 data agreed very well ($±$5\%), but NOx and NH4+ did not. Therefore, the entire PO43− and Si[OH]4 dataset and only the USF NOx and NH4+ dataset were used here.
-
-    Phytoplankton enumeration was conducted on water samples (500 mL) collected by Niskin bottles at depths of 1, 7, 15, 25, 35, 55 m and fixed with 5\% sodium tetraborate-buffered formaldehyde (final concentration). Quantitative analyses were performed using settling chambers and an inverted microscope according the Utermöhl method (38).
+    All samples were collected using a 12-bottle rosette system equipped with a CTD (SeaBird, model SBE 25) \cite{astor_yrene_m_handbook_2013}. Water samples for chlorophyll a and nutrient analysis were taken monthly during the first cast of each cruise. These samples were collected at 8 standard depths within the upper 100 meters (1, 7, 15, 25, 35, 55, 75, and 100 m). 
     
-    % The below is from Pinckney et al. 2015
-    % They have more detail about Phytoplankton, either use this, or reference them
-    Samples were collected as part of the Cariaco Ocean Time-Series Program at a station located in the eastern Cariaco Basin (101300N and 641400W) between November 1995 and January 2017. All samples were collected using a 12 bottle rosette system equipped with a CTD (SeaBird, model SBE 25) (Astor and Varela, 2013). Water samples for chl a and phaeopigment analysis were obtained on a monthly basis from the first cast of each of cruise. Samples were collected at 8 standard depths in the upper 100 m (1, 7, 15, 25, 35, 55, 75, and 100 m) following Varela (2013). For phytoplankton species determination by microscopy, 500 ml of seawater were collected at the same depths into HDPE bottles and fixed with a 4\% formalin solution neutralized with sodium tetraborate. Samples were analyzed at the Universidad de Oriente, Venezuela, using the Utermöhl technique (Hasle, 1978) with 100 ml sedimentation chambers and a settling period of 48 h. Identifications and enumerations by microscopy were limited to microphytoplankton (cells $>$20 mm) (Mutshinda et al., 2013).
-    
-    % The below is from Taylor et al. 2012 again
-    % I can use as template to introduce ERA5, MEIv2 etc.
-    To gauge ITCZ changes relevant to Cariaco Basin data, we developed ITCZ indices over South America (20°S to 5°N and 290°W to 320°W) and the Tropical Atlantic (15°S to 20°N and 300°W to 357.5°W) as area-weighted precipitation and convergence, using the precipitation intensity and negative divergence of horizontal winds, respectively. We calculate ITCZ indices using the previously described center of action (COA) approach (39). The NCEP Reanalysis (40) was the source of data for NAO (www.cgd.ucar.edu/cas/ jhurrell/ indices.html), Azores High, and ITCZ analyses. Precipitation intensities were obtained from Global Precipitation Climatology Project (41). In all cases except the NAO, derived data were obtained from the National Oceanic and Atmospheric Administration/Office of Oceanic and Atmospheric Research/Earth System Research Laboratory Physical Sciences Division (NOAA/ OAR/ESRL PSD) (www.esrl.noaa.gov/psd). 
+    Between late 1995 and early 1998, nutrient data were supplied by William Senior (Universidad de Oriente, Cumana, Venezuela), and from mid-1997 to the present, by Dr. K. Fanning (University of South Florida, St. Petersburg, FL). Samples from eight cruises were analyzed by both laboratories. The data for $PO_4$ and $SiO_4$ were in strong agreement (within ±5\%), whereas the $NO_x$ and $NH_4$ data showed discrepancies. \cite{taylor_ecosystem_2012}. For the overview of the entire time-series, we used a merged dataset for all nutrients, where coincidental monthly measurements were averaged. For the analysis of Resource Use Efficiency, only the USF $NO_3$ measurements were used.
+       
+    For phytoplankton species identification by microscopy, 500 mL seawater samples were collected at the same depths in HDPE bottles and preserved with a 5\% (final concentration) formalin solution neutralized with sodium tetraborate. Quantitative analysis was performed at the Universidad de Oriente, Venezuela, following the Utermöhl method \cite{hasle1978inverted}, using 100 mL sedimentation chambers with a 48-hour settling period. Phytoplankton identification and enumeration by microscopy were restricted to microphytoplankton (cells $>$20 μm) \cite{mutshinda_environmental_2013}.
+    %from Mutshinda et al. 2013
+    To quality control the microscopy data, we assembled the taxonomic identifications made across all cruises, removed observations that were not identified to a species or genus level, corrected spelling variations, and grouped synonyms using taxonomic information in the World Register of Marine Species (\url{marinespecies.org}). After processing the data, there were 482 phytoplankton species observed over the course of the time series, which group into 223 phytoplankton genera.
 
-    \subsubsection{Climate data}
+    
+    The datasets for Niskin bottle samples, CTD and phytoplankton taxonomy were retrieved from the Biological and Chemical Oceanography Data Management Office (BCO-DMO) \url{https://www.bco-dmo.org/project/2047} (accessed February, 2024). 
+    
+    From the CARIACO Time Series data, we used only those variables, that cover the entire length of the time series without large gaps in coverage. Therefore, we did not include Zooplankton net tow and HPLC pigment data in our analysis. 
+
+
+\subsection{Climate data}
     %from Taylor et al. 2012
-    Zonal wind stress (−u, easterly Trade Winds) across the southern Caribbean Sea drives near-shore upwelling of nutrient-rich waters by Ekman transport. We extracted the -u wind component at 10 m from the ECMWF Reanalysis v5 (ERA5) climate model and data reanalysis at the grid cell closest to the Cariaco Time Series sampling coordinates (10.5°N,64.8°W ?double check?), obtained from \url{https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels} (accessed June 2024)
+    Zonal wind stress (−u, easterly Trade Winds) across the southern Caribbean Sea drives near-shore upwelling of nutrient-rich waters by Ekman transport \cite{taylor_ecosystem_2012}. We extracted the -u wind component at 10 m from the ECMWF Reanalysis v5 (ERA5) climate model and data reanalysis at the grid cell closest to the Cariaco Time Series sampling coordinates (10.4°N,64.8°W, 31 km grid size), obtained from \url{https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels} (accessed June 2024)
     
-    The monthly AMO index data (10 year lowpass), defined as an area average of detrended low-pass filtered North Atlantic SST anomalies, were obtained from \url{https://climatedataguide.ucar.edu/climate-data/atlantic-multi-decadal-oscillation-amo} (accessed in June, 2024).
+    The monthly AMO index data (10 year lowpass), which is as an area average of detrended low-pass filtered North-Atlantic SST anomalies, were obtained from \url{https://climatedataguide.ucar.edu/climate-data/atlantic-multi-decadal-oscillation-amo} (accessed in June, 2024).
     
-    The bi-monthly multivariate El Niño/Southern Oscillation (ENSO) indices (MEI v.2), defined as the time series of the leading combined Empirical Orthogonal Function (EOF) of five different variables (sea level pressure (SLP), sea surface temperature (SST), zonal and meridional components of the surface wind, and outgoing longwave radiation (OLR)) over the tropical Pacific basin (30°S-30°N and 100°E-70°W) were obtained from \url{https://psl.noaa.gov/enso/mei/} (accessed in June, 2024). In our analysis, bi-monthly values are aligned with the tail month (December-January is treated as the value for January).
+    The bi-monthly multivariate El Niño/Southern Oscillation (ENSO) indices (MEI v.2), defined as the time series of the leading combined Empirical Orthogonal Function (EOF) of five different variables (sea level pressure (SLP), sea surface temperature (SST), zonal and meridional components of the surface wind, and outgoing longwave radiation (OLR)) over the tropical Pacific basin (30°S-30°N and 100°E-70°W), were obtained from \url{https://psl.noaa.gov/enso/mei/} (accessed in June, 2024). In our analysis, bi-monthly values are aligned with the tail month (December-January is treated as the value for January).
     
 
     \subsubsection{Data processing}
     % Niskin, CTD and Phytoplankton data processing
-    - quality control, removed outliers, interpolation, averaging
-    All done in R
-
-    
-    \subsection{Data analysis}
-    
-    \subsubsection{Z-Scores}
-    % from Fraker et al. 2022 - Lake Erie paper
-    To visualize how ecosystem components changed through time and to identify similarities in temporal trends among variables, each standardized data point (i.e., annual value) was color-coded based on whether its standardized score was greater or less than the long-term mean (negative anomaly: red; positive anomaly: blue; deeper shades indicating greater values). The variables were then ordered based on their loading onto PCA axis 1 (R package ‘ade4’; Dray and Dufour, 2007; R version 3.6.3; RCoreTeam, 2020) to indicate their degree of change over the time interval and their similarity with one another. Such visualizations have been shown to provide a useful portrayal of ecosystem change (e.g., Choi et al., 2005; Vasilakopoulos et al., 2017; Harvey et al., 2020).
-    
-
-    \subsubsection{BDEF and Diversity}
-    % from Ptacnik et al. 2008
-    Diversity was defined as the number of genera present in a given sample. Reducing the taxonomic resolution to genus level made the dataset more homogeneous and more robust to differences in skill and effort among the individual phytoplankton analysts. 
+    Data was processed and analyzed using the R programming langauge (version 4.3.3) \cite{r_core_team_r_2024} using data pipelines created with the tidyverse packages \cite{wickham_welcome_2019}. All data processing and analysis code is publically available on Github \url{https://github.com/ben1post/cariaco-ms2}. %Note: Repo currently still set to private
+    For all depth discrete measurements, the data was interpolated using the "oce" package \cite{kelley_oce_2023} with the adaptive "unesco" algorithm used by the U.S. National Oceanographic Data Center \cite{johnson2006world}. The interpolated values were depth integrated to 100 meters and in four discrete intervals between 0-25, 25-50, 50-75 and 75-100 meters for further analysis. For the phytoplankton microscopy data, the individual identified taxonomic units (Species or Genus) were interpolated, integrated and then grouped by Genus via the sum of interpolated counts.
 
 
-    % Regression analysis of RUE
-    To analyze the variability of phytoplankton diversity across temporal and depth ranges, we interpolated the discrete depth counts and divided the resulting depth profile by 4 equal depth intervals (0-25, 25-50, 50-75 and 75-100 m). 
+    \subsection{Data analysis}    
+    To give a general overview of the data and trends over the time series, we calculated yearly means for relevant variables and normalized the data range as z-scores ($z = \frac{(x – \mu)}{\sigma}$). The cruises from 1995 and 2017 were excluded, as there were too few measurements to provide a reliable yearly mean estimate. 
     
-    RUE: We excluded observations with TP concentrations 2 gliter1 (n  15) because they are close to the detection limit, resulting in very imprecise measurements.
-    Phytoplankton biomass divided by the limiting resource (total phosphorus) gave the yield or resource use efficiency (RUE) for the community. We estimated RUE both in terms of chlorophyll-a (RUEchl = chlorophyll-a:TP) and carbon biomass (RUEcarb  PPC:TP)
+    As the main indicator of diversity, we used genus richness, thereby reducing taxonomic resolution to make the dataset more homogeneous and more robust to discrepancies in sampling effort \cite{ptacnik_diversity_2008}. Additionally, we calculated the Shannon index $H' = -\sum_i p_i \log_{e} p_i$ and Pielou\'s evenness $J' = -\sum p_i ln( p_i )/ln(H')$ based on the genera present for each interpolated and integrated monthly sampling. 
 
-    
-        
+    %RUE/BDEF ANALYSIS
+    To investigates the effect of diversity on ecosystem functioning, we compared measurements of chlorophyll a, primary productivity and Resource Use Efficiency for Nitrate ($RUE_N$) against Genus Richness, Shannon Index and Pielou\'s Index, each integrated at the four depth intervals across each monthly sampling. $RUE_N$ is calculated as the ration between the limiting resource ($NO_3$) and phytoplankton biomass (chlorophyll a).
+    We excluded observations with $NO_3$ concentrations below 0.01 µM (n = 36) because they are close to the detection limit, resulting in imprecise measurements \cite{ptacnik_diversity_2008}.
+    To quantify the trend in the relationships, we use linear regression models using the "lm" function \cite{r_core_team_r_2024}.
+    %here I want to extend to glmm that correct for depth and seasonality for the final results
+      
     \subsubsection{Clustering and NMDS}
-    % from Winder and Hunter 2008
-    Non-metric multidimensional scaling (NMDS) ordination and hierarchical clustering analysis were used to extract gradients in phytoplankton community composition over time based on the Sørenson (Bray–Curtis) distance matrix. NMDS is a powerful tool for ecological community data that include a large portion of zero values because it is not biased by the ‘‘joint absences’’ effect (McCune et al. 2002) and outperformed linear models (such as principal components analysis or redundancy analysis). NMDS is an iterative search for the positions of species and time on few dimensions (axes) that minimizes the departure from monotonicity in the association between distance (dissimilarity) in the original data and ordination space. It plots dissimilar objects far apart in the ordination space and similar objects close to one another. The temporal dynamics of the phytoplankton community was characterized based on biovolume averages to reflect the true contribution of individual species to phytoplankton community composition (Interlandi and Kilham 2001). Temporal change of phytoplankton genera is conducted on a matrix of annual averages (year) by genera biovolume to extract years with similar phytoplankton structure. Data were transformed by square root transformation and double standardized (species by maximum species biovolume and dates to unit totals). NMDS is started from random starting configurations and the solution with the lowest ‘‘stress’’ was selected from 500 runs. Stress measures departure of fit between the ordination and the data and is calculated as a departure from monotonicity between the two series of distances. A stable three-dimensional solution was identified for all ordinations. Orthogonal rotation of the NMDS solution was used to maximize correlations of axes so that the variance of points is maximized on first dimension. Environmental variables were related to the strongest gradients (axes) in species composition and, using overlays, in the ordination space towards which the environmental vectors change most rapidly and to which they have maximal correlations with the ordination configuration. Linear regression was used to relate the environmental data of nutrient concentration, optical and physical (mixing) properties, as well as zooplankton (crustacean) density to the NMDS axis scores (Jovan and McCune 2005). Multivariate analysis was conducted using the vegan package in R.
-    % could add indicator species per cluster, as they have done
+    To investigate the structure of the phytoplankton time series data, we used a complete linkage clustering method via the "hclust" function in R \cite{r_core_team_r_2024} on the binary Jaccard distance matrix of yearly aggregates of genera observed integrated over 100 m depth. Additionally, we performed non-metric multidimensional scaling (NMDS) ordination and hierarchical clustering on the monthly integrated counts that were square-root transformed using "metaMDS" from the "vegan" package \cite{oksanen_vegan_2024}.
+    To contrast the environmental parameters and diversity data between the community clusters resulting from the yearly aggregated clustering, we created density distribution plots contrasting the monthly measurements between clusters using the "ggpubr" package \cite{kassambara_ggpubr_2023}. %Here I want to add "significant diferences calculation" using e.g. ANOVA.
+    % detailed explanation of NMDS in Winder and Hunter 2008
+
         
     \subsubsection{Gradient Forest}
-    % from Fraker et al. 2022 - Lake Erie paper
-    gradient forest analysis was used to identify and compare among the drivers that predicted the temporal trends within each of the indicator datasets and time intervals examined. Gradient forest analysis is a community-level extension of random forest analysis that aggregates regression trees to quantify turnover in indicator variables across driver (or pressure) variables (Pitcher et al., 2012; Large et al., 2015; Tam et al., 2017). It partitions a goodness-of-fit statistic among each driver variable for each indicator variable, then averages over indicators to produce an overall importance for that driver (R2P). The split values of the regression trees also identify thresholds for the driver variables at which the chosen indicator variables exhibit large changes in value (e.g., community turnover in the fish, bird, and zooplankton abundance indicator datasets). Plots of the cumulative predictive importance of each driver variable can suggest target values for management of key drivers of ecosystem condition (i.e., where thresholds occur; Tam et al., 2017). These analyses were conducted for abundances of each taxa and the fish-derived ecosystem indicators within each time interval (the long, intermediate, and short-term intervals, as well as each 20-year interval), except for zooplankton during the 1969–2018, 1969–1988, and 1979–1998 intervals due to lack of monitoring data during these times. These analyses were conducted using R package ‘gradientforest’ with 500 trees, a maximum of three splits, and correlation threshold of 0.5; \cite{ellis_gradient_2012}.
-            
-%
-\section{Data} (Or section title might be a descriptive heading about data)
-%
-% \section{Results} (Or section title might be a descriptive heading about the
-% results)
-%
+    To quantify the effects of bottom-up drivers in the Cariaco basin on shifts in the phytoplankton community, we employed a Gradient Forest analysis. Gradient Forest is a community-level extension of random forest analysis that combines regression trees calculated for indicator variables (here: monthly observed genus counts) to assess turnover in indicator variables across predictor variables\cite{pitcher_example_2012, large_critical_2015, tam_comparing_2017}. It calculates a goodness-of-fit statistic for each predictor variable and indicator variable, then averages these to determine the overall importance of each predictor. The regression tree split values also identify ranges of the predictors where significant changes occur in indicator variables, which signal a threshold for community turnover in the phytoplankton community. Cumulative plots of the predictive importance of each predictor variable can reveal thresholds for ecosystem drivers, as steep increases in cumulative importance signal a threshold for community turnover in the phytoplankton community \cite{tam_comparing_2017}. These analyses were conducted using monthly measurements integrated to 100 m depths for observed genera counts, ensuring the inclusion of all available data. The drivers/predictor variables considered in the analysis were the AMO index, MEI v.2 index, -u 10m wind component, the 21°C Isotherm, integrated temperature and salinity, as well as the concentration of nutrients ($NO_3$, $PO_4$ and $SiO_4$). The environmental variables from ocean time series tend to be strongly correlated, which Gradient Forest methodology takes into account by implementing a conditional permutation of correlated predictors \cite{ellis_gradient_2012}. To take into account the temporal lag in effect, in particular of climate indices, we included time lags up to 6 months of all variables in exploratory runs, and chose time lags that scored highest in the goodness-of-fit statistic for the final model run. % see figure in supplementary with initial runs TODO
+    
 
-- Phytoplankton.csv - https://www.bco-dmo.org/dataset/3095
-	last accessed Jun 2024 (2.6.2024)
-	Troccoli, L., Diaz-Ramos, R., Subero-Pino, S., Muller-Karger, F., Astor, Y., Varela, R., Rueda-Roa, D., Klein, E. (2019) Time-Series of Phytoplankton Taxonomy and Density collected by the CARIACO Ocean Time-Series Project from November 1995 to January 2017. Biological and Chemical Oceanography Data Management Office (BCO-DMO). (Version 1) Version Date 2019-08-14. doi:10.1575/1912/bco-dmo.3095.1 [last accessed June 2024]
-
-- Niskin.csv - https://www.bco-dmo.org/dataset/3093
-	last accessed Jun 2024 (2.6.2024)
-	Muller-Karger, F., Astor, Y., Scranton, M., Taylor, G., Thunell, R., Varela, R., Benitez-Nelson, C., Buck, K., Fanning, K., Capelo, J., Gutierrez, J., Guzman, L., Lorenzoni, L., Montes, E., Rojas, J., Rondon, A., Rueda-Roa, D., Tappa, E. (2019) Time-series Niskin-bottle sample data from R/V Hermano Gines cruises in the Cariaco Basin from 1995 through 2017 (CARIACO Ocean Time-Series Program). Biological and Chemical Oceanography Data Management Office (BCO-DMO). (Version 1) Version Date 2019-06-06. doi:10.1575/1912/bco-dmo.3093.1 [last accessed June 2024]
-
-- CTD - https://www.bco-dmo.org/dataset/3092
-	Muller-Karger, F., Astor, Y., Benitez-Nelson, C., Scranton, M., Taylor, G., Thunell, R., Varela, R., Capelo, J., Guzman, L., Lorenzoni, L., Montes, E., Rojas, J., Rueda-Roa, D. (2019) Time series composite CTD profiles from R/V Hermano Ginés cruises in the Cariaco Basin from 1995 through 2017 (CARIACO Ocean Time-Series Program). Biological and Chemical Oceanography Data Management Office (BCO-DMO). (Version 1) Version Date 2019-06-04 [if applicable, indicate subset used]. doi:10.1575/1912/bco-dmo.3092.1 [access date]
-
-- ERA5 - https://cds.climate.copernicus.eu/cdsapp#!/dataset/10.24381/cds.f17050d7
-	Hersbach, H., Bell, B., Berrisford, P., Biavati, G., Horányi, A., Muñoz Sabater, J., Nicolas, J., Peubey, C., Radu, R., Rozum, I., Schepers, D., Simmons, A., Soci, C., Dee, D., Thépaut, J-N. (2023): ERA5 monthly averaged data on single levels from 1940 to present. Copernicus Climate Change Service (C3S) Climate Data Store (CDS), DOI: 10.24381/cds.f17050d7 (Accessed on 02-06-2024)
-
-
-- AMO - https://climatedataguide.ucar.edu/climate-data/atlantic-multi-decadal-oscillation-amo 
-	Trenberth, Kevin &, Zhang, Rong & National Center for Atmospheric Research Staff (Eds). Last modified 2023-09-01 "The Climate Data Guide: Atlantic Multi-decadal Oscillation (AMO) and Atlantic Multidecadal Variability (AMV).” Retrieved from [https://climatedataguide.ucar.edu/climate-data/atlantic-multi-decadal-oscillation-amo](https://climatedataguide.ucar.edu/climate-data/atlantic-multi-decadal-oscillation-amo) on 2024-06-06.
-- MEI v.2 - https://psl.noaa.gov/enso/mei/
 
 \section{Draft Results}
+
+
+%from Mutshinda et al. 2013
+Phytoplankton species richness varied from 4 to 100 species per cruise, with a mean of 40 over the CARIACO time series (167 cruises from November 1995 to March 2011). Over a third of the species (187 of 525) were only observed during one or two cruises in the entire study.
+
 %Text here ===>>>
 Below here I will put the draft plots to give an overview over the current state of the results. As of now, all plots are in a draft state, sometimes missing appropriate units. Please excuse this, as I would like to first trim down the plots and order them for the final manuscript, before committing further time into finalizing the details. 
 
