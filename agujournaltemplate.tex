@@ -264,16 +264,16 @@
     \subsection{Data analysis}    
     To give a general overview of the data and trends over the time series, we calculated yearly means for relevant variables and normalized the data range as z-scores ($z = \frac{(x – \mu)}{\sigma}$). The cruises from 1995 and 2017 were excluded, as there were too few measurements to provide a reliable yearly mean estimate. 
     
-    As the main indicator of diversity, we used genus richness, thereby reducing taxonomic resolution to make the dataset more homogeneous and more robust to discrepancies in sampling effort \cite{ptacnik_diversity_2008}. Additionally, we calculated the Shannon index $H' = -\sum_i p_i \log_{e} p_i$ and Pielou\'s evenness $J' = -\sum p_i ln( p_i )/ln(H')$ based on the genera present for each interpolated and integrated monthly sampling. 
+    As the main indicator of diversity, we used genus richness, thereby reducing taxonomic resolution to make the dataset more homogeneous and more robust to discrepancies in sampling effort \cite{ptacnik_diversity_2008}. Additionally, we calculated the Shannon index $H' = -\sum_i p_i \log_{e} p_i$ and Pielou\textquotesingle s evenness $J' = -\sum_i p_i ln( p_i )/ln(H')$, where $p_i$ represents the genera observed for each interpolated and integrated monthly sampling. 
 
     %RUE/BDEF ANALYSIS
-    To investigates the effect of diversity on ecosystem functioning, we compared measurements of chlorophyll a, primary productivity and Resource Use Efficiency for Nitrate ($RUE_N$) against Genus Richness, Shannon Index and Pielou\'s Index, each integrated at the four depth intervals across each monthly sampling. $RUE_N$ is calculated as the ration between the limiting resource ($NO_3$) and phytoplankton biomass (chlorophyll a).
+    To investigates the effect of diversity on ecosystem functioning, we compared measurements of chlorophyll a, primary productivity and Resource Use Efficiency for Nitrate ($RUE_N$) against Genus Richness, Shannon Index and Pielou\textquotesingle s Index, each integrated at the four depth intervals across each monthly sampling. $RUE_N$ is calculated as the ration between the limiting resource ($NO_3$) and phytoplankton biomass (chlorophyll a).
     We excluded observations with $NO_3$ concentrations below 0.01 µM (n = 36) because they are close to the detection limit, resulting in imprecise measurements \cite{ptacnik_diversity_2008}.
     To quantify the trend in the relationships, we use linear regression models using the "lm" function \cite{r_core_team_r_2024}.
     %here I want to extend to glmm that correct for depth and seasonality for the final results
       
     \subsubsection{Clustering and NMDS}
-    To investigate the structure of the phytoplankton time series data, we used a complete linkage clustering method via the "hclust" function in R \cite{r_core_team_r_2024} on the binary Jaccard distance matrix of yearly aggregates of genera observed integrated over 100 m depth. Additionally, we performed non-metric multidimensional scaling (NMDS) ordination and hierarchical clustering on the monthly integrated counts that were square-root transformed using "metaMDS" from the "vegan" package \cite{oksanen_vegan_2024}.
+    To investigate the structure of the phytoplankton time series data, we used a complete linkage clustering method via the "hclust" function in R \cite{r_core_team_r_2024} on the binary Jaccard distance matrix of yearly aggregates of genera observed integrated over 100 m depth. Additionally, we performed non-metric multidimensional scaling (NMDS) ordination and hierarchical clustering on the monthly integrated counts that were square-root transformed using "metaMDS" from the "vegan" package \cite{oksanen_vegan_2024}. We used the Bray distance matrix in a 2-dimensional ordination, that reached a converging solution within 30 steps. To relate the multidimensional structuring of the community data to variability in environmental data, we used the "envfit" function from the "vegan" package to fit the environmental vectors onto the ordination with 999 permutations. The arrows indicate the gradient of a 2-dimensional linear trend surface. 
     To contrast the environmental parameters and diversity data between the community clusters resulting from the yearly aggregated clustering, we created density distribution plots contrasting the monthly measurements between clusters using the "ggpubr" package \cite{kassambara_ggpubr_2023}. %Here I want to add "significant diferences calculation" using e.g. ANOVA.
     % detailed explanation of NMDS in Winder and Hunter 2008
 
@@ -284,6 +284,22 @@
 
 
 \section{Draft Results}
+Our study focused on the phytoplankton microscopy data from the CARIACO Time Series, which consists of mostly monthly samplings taken at multiple depths between November 1995 and January 2017. We compared this data with nutrient, temperature and salinity data from Niskin bottle samples, as well as climate data and indices, focusing on the bottom-up drivers of variability and diversity. In total, we used a complete set of 254 monthly data points, on which all variables were available. 
+% Figure 1
+Normalized yearly means for all used environmental variables, as well as chlorophyll a and functional group counts, are shown in Figure \ref{fig:zscore}. The patterns emerging from -u 10m wind component, Temperature and the directly related 21°C Isotherm show clearly the years of positive anomalies of wind (red),  upwelling (blue, i.e. shallower depth of isotherm) and negative for temperature (blue) within the top 100 m. These patterns are reflected in the mode of the Atlantic Multidecadal Oscillation (AMO), where a positive anomaly seems to correlate with weak upwelling regimes. The yearly mean nutrient concentrations have a maximum positive anomaly at the start of the time series, but show differing oscillating patterns. Nitrate, and to some extent phosphate, seem to follow the upwelling anomalies, but remain relatively low between 2002 and 2014, with some more variability in mean phosphate concentration. Silicate does not follow a clear pattern, but shows an elevated mean concentration towards the later part of the time series (between 2008 and 2013), which could be driven by surface runoff and reduced depletion via diminished Diatom abundances.
+
+
+% Figure 2
+
+
+% Figure 3
+
+
+% Figure 4
+
+
+% Figure 5
+
 
 
 %from Mutshinda et al. 2013
@@ -295,16 +311,19 @@ Below here I will put the draft plots to give an overview over the current state
 
 
 \begin{figure}
+\label{fig:map}
 \noindent\includegraphics[width=\textwidth]{fig/Artboard 1.pdf}
 \caption{Map of CARIACO Time Series location in the Cariaco basin in Venezuela in the Caribbean Ocean, located at 10.50° N, 64.67° W}
 \end{figure}
 
 \begin{figure}
+\label{fig:zscore}
 \noindent\includegraphics[width=\textwidth]{fig/PLOTZScores.pdf}
 \caption{Heatmap of yearly average values, normalized for comparison as z-scores. All data is available at monthly resolution (see next draft figure for raw data). Red indicates a larger value, blue indicates a smaller value for that particular year. The years 1995 (n=2) and 2017 (n=1) were removed due to lack of data. Diversity Indices are calculated based on microscopy counts at the Genus level.}
 \end{figure}
 
 \begin{figure}
+\label{fig:divts}
 \begin{center}
 \noindent\includegraphics[width=480]{fig/DepthDivTimeSeries.pdf}
 \end{center}
@@ -313,11 +332,13 @@ Below here I will put the draft plots to give an overview over the current state
 
 
 \begin{figure}
+\label{fig:bdef}
 \noindent\includegraphics[width=\textwidth]{fig/BDEF_depth_PLOT.pdf}
-\caption{Linear regression of diversity indices to log-transformed Chlorophyll Biomass, Primary Production, Resource Use Efficiency for nitrate ($RUE_N$) and for phosphate ($RUE_P$). $RUE$ is calculated as the ratio of Chlorophyll to the available nutrient ($NO_3$ and $PO_4$ respectively). All variables show a significant increasing linear trend with Genus Richness, but none for the Shannon Index or Pielou\'s Evenness Index.}
+\caption{Linear regression of diversity indices to log-transformed Chlorophyll Biomass, Primary Production, Resource Use Efficiency for nitrate ($RUE_N$) and for phosphate ($RUE_P$). $RUE$ is calculated as the ratio of Chlorophyll to the available nutrient ($NO_3$ and $PO_4$ respectively). All variables show a significant increasing linear trend with Genus Richness, but none for the Shannon Index or Pielou\textquotesingle s Evenness Index.}
 \end{figure}
 
 \begin{figure}
+\label{fig:clustering}
 \noindent\includegraphics[width=\textwidth]{fig/ClusteringCompPlot_NEW.pdf}
 \caption{(A) Clustering of microscopy data at the Genus level, using the binary Jaccard distance. The community for each year is binned together, to smooth out seasonal aspects. (B) NMDS plot of monthly community data (cell counts) that is cube root transformed. Stress: 0.261, 2 dimensions, converging solution. Color of dots based on which yearly cluster the monthly data is in. Vector overlay of ENVFIT shows underlying environmental variables that are co-varying with the community data. \newline
 Plots (A-L) below show density distributions of the environmental variables as well as diversity indices between the clustered years. Dashed line shows the mean.}
@@ -325,6 +346,7 @@ Plots (A-L) below show density distributions of the environmental variables as w
 
 
 \begin{figure}
+\label{fig:GF}
 \noindent\includegraphics[width=\textwidth]{fig/GF_output_plot3.pdf}
 \caption{Interestingly only time lags of the climatic indices (AMO and MEIv2) actually showed better predictive capabilities, there were none for lags of wind, nutrients or the isotherm. What I also included in the plot above is the underlying mechanism of fitting a random forest model for each genus. The plot on the top right shows the weighted importance for each genus, ranked according to the predictive capability of the model, and color coded by their respective group. Similarly, the cumulative importance plots below show the overall importance, as well as the individual color lines that show the cumulative importance per genus predicted. This is not necessarily useful to show in the final manuscript, unless we want to discuss the model output down to the genus level. Not surprisingly, it is mostly diatoms that are predictable, but also other groups are present here.}
 \end{figure}
@@ -335,7 +357,7 @@ This present study demonstrates the highly dynamic nature of a tropical coastal 
 In the Cariaco basin, wind-driven seasonal upwelling dictates the nutrient availability in the upper mixed layer, which in turn affects the phytoplankton dynamics \cite{ptacnik_diversity_2008, bopp_response_2005}. In particular, Diatoms are responsive to changes in the mixing regime \cite{huisman_reduced_2006}.
 Alterations in physical mixing affected phytoplankton dynamics,
 % MEI index relevant (from 2019 REVIEW)
-The Caribbean experiences the most marked of the El Niño–Southern Oscillation teleconnections in the Atlantic Ocean, with warmer sea surface temperatures and trade winds blowing more to the north-northwest during the El Niño–Southern Oscillation (Enfield & Mayer 1997).
+The Caribbean experiences the most marked of the El Niño–Southern Oscillation teleconnections in the Atlantic Ocean, with warmer sea surface temperatures and trade winds blowing more to the north-northwest during the El Niño–Southern Oscillation \cite{enfield_tropical_1997}.
 
 % REALLY ONLY LOOK AT BOTTOM UP HERE; No Top Down effects quantified
 
