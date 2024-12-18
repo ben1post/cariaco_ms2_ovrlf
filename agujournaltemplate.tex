@@ -20,6 +20,11 @@
 \usepackage{lineno}
 \usepackage[inline]{trackchanges} %for better track changes. finalnew option will compile document with changes incorporated.
 \usepackage{soul}
+
+% MY OWN ADDED PACKAGES TO RENDER UNITS
+\usepackage{gensymb}
+\usepackage{booktabs}
+
 \linenumbers
 %%%%%%%
 % As of 2018 we recommend use of the TrackChanges package to mark revisions.
@@ -207,8 +212,8 @@
         \item "The Cariaco Basin has undergone marked shifts..." Talk about ecosystem, what has changed, reference prev literature
 
         % below is from 2019 REVIEW
-        Hydrographic observations (Figure 2) show strong seasonality and interannual variability in the upper 400 m in the Cariaco Basin. This is controlled by seasonal and interannual changes in the wind and in the intensity of the geostrophic Caribbean Current (Muller-Karger et al. 1989). Primary upwelling was strongest between November and May. In general, during upwelling, sea surface temperatures ranged between approximately 23\°C and 25\°C. The secondary upwelling that occurs between June and August is shorter ($\sim$ 5 weeks) and is approximately 1.5\°C warmer than the primary upwelling. It is driven by Ekman transport and an intensification of the curl of the wind close to the southern coast of the Caribbean (Rueda-Roa \& Muller-Karger 2013, Rueda-Roa et al. 2018). Upwelled waters move offshore in plumes that extended as far as 50 km to more than 250 km from the coast (Muller-Karger et al. 1989, 2010). From July to October, there is strong stratification in the upper 50 m of the water column after the wind weakens and the rain and rivers deliver less saline waters (Figure 2).
-        Sea surface temperatures ranged from approximately 28\°C to 30\°C during the period of stratification (Figure 2). The mixed-layer depth varied from less than 10 m to 35 m during the 21-year time series (Figure 3). Satellite sea surface temperature and ocean color observations show that upwelling pulsates throughout the year at the scale of days to weeks, leading to marked variation in primary production (Figure 3). CARIACO rigorously characterized the annual seasonal variation in primary productivity and stratification. The length of the time series was key in capturing interannual variations that spanned decades. Satellite sea surface temperature and field data show that upwelling was stronger between 1996 and 2002. After 2002, trade wind intensity became weaker (Taylor et al. 2012).
+        Hydrographic observations (Figure 2) show strong seasonality and interannual variability in the upper 400 m in the Cariaco Basin. This is controlled by seasonal and interannual changes in the wind and in the intensity of the geostrophic Caribbean Current (Muller-Karger et al. 1989). Primary upwelling was strongest between November and May. In general, during upwelling, sea surface temperatures ranged between approximately 23\degree C and 25\degree C. The secondary upwelling that occurs between June and August is shorter ($\sim$ 5 weeks) and is approximately 1.5\degree C warmer than the primary upwelling. It is driven by Ekman transport and an intensification of the curl of the wind close to the southern coast of the Caribbean (Rueda-Roa \& Muller-Karger 2013, Rueda-Roa et al. 2018). Upwelled waters move offshore in plumes that extended as far as 50 km to more than 250 km from the coast (Muller-Karger et al. 1989, 2010). From July to October, there is strong stratification in the upper 50 m of the water column after the wind weakens and the rain and rivers deliver less saline waters (Figure 2).
+        Sea surface temperatures ranged from approximately 28\degree C to 30\degree C during the period of stratification (Figure 2). The mixed-layer depth varied from less than 10 m to 35 m during the 21-year time series (Figure 3). Satellite sea surface temperature and ocean color observations show that upwelling pulsates throughout the year at the scale of days to weeks, leading to marked variation in primary production (Figure 3). CARIACO rigorously characterized the annual seasonal variation in primary productivity and stratification. The length of the time series was key in capturing interannual variations that spanned decades. Satellite sea surface temperature and field data show that upwelling was stronger between 1996 and 2002. After 2002, trade wind intensity became weaker (Taylor et al. 2012).
         The field observations, particularly those in the upper 50 m, showed what appeared to be a return to stronger upwelling conditions starting in 2014 (Figure 2a).
 
         
@@ -302,11 +307,11 @@ To quantify the relationships, we performed simple linear regression... %TODO pe
 Taking the microscopy community data, interpolated within the top 100 meters, we wanted to find if there was an apparent structure within the time series that could be related to the physical environment. For this, we used different clustering methods, both on the annual aggregate of cell counts from microscopy and on the individual monthly measurements. Figure \ref{fig:clustering} $a$ shows the results of clustering the annual aggregate communities with a linear complete linkage algorithm based on the binary Jaccard matrix. The community is separated into two groups, with the first cluster including the years 1996-2004 and 2014-2016 and the second cluster of the intermediate years from 2004-2013. This confirms previously observed patterns in the Cariaco ecosystem, where a strong shift in the community happened in 2004, but the community returned to the previous regime past 2014 \cite{taylor_ecosystem_2012, muller-karger_scientific_2019}.
 Interannual species turnover is shown in Figure \ref{fig:clustering} $b$, where there is an increasing trend in turnover until 2004, where turnover is reduced for the period of cluster 2, but in 2014 with the return to cluster 1, turnover is higher again. This pattern is also reflected in the clustering in Figure \ref{fig:clustering} $a$, where cluster 2 shows a lower distance in the clustering tree between the years. 
 To check whether annual aggregation of the community data smoothed out strong seasonal signals, we performed an NMDS cluster analysis using the monthly cell counts (see Figure \ref{fig:clustering} $c$). This NMDS clustering is overlayed with environmental data and climate indices to help explain some of the underlying trends. The first axis separates the two clusters relatively cleanly, where cluster 2 is trending towards postive AMO anomalies and cluster 2 trends towards positive anomalies in salinity and the MEI v.2 index. The second NMDS axis appears to follow the trends in upwelling intensity as described by the opposing trend arrows for nutrient concentrations and temperature, as well as wind speed. Overall, NMDS clustering seems to confirm the pattern found by the annual aggregate clustering. 
-Figure \ref{fig:clustering} $d$ shows density distributions for environmental variables, climate and diversity indices between the two clusters. The patterns for upwelling related variables show clear differences between the two clusters, for example for cluster 1 there was a higher occurrence of high wind, shallower 21 \°C Isotherm, as well as lower temperature and higher salinity and nutrient concentrations, in particular for nitrate. The AMO index shows a striking separation between the two clusters, where cluster 1 shows more negative anomalies, while cluster 2 has a high occurrence of positive anomalies. Although the mean diversity for all the indices is relatively similar, with a slightly higher mean in the Shannon and Pielou index for cluster 2, the density distribution shows marked differences. For cluster 1 there is a higher variance in genus richness, while cluster 2 shows higher variance and a bi-modal distribution for Shannon and Pielou indices. 
+Figure \ref{fig:clustering} $d$ shows density distributions for environmental variables, climate and diversity indices between the two clusters. The patterns for upwelling related variables show clear differences between the two clusters, for example for cluster 1 there was a higher occurrence of high wind, shallower 21 \degree C Isotherm, as well as lower temperature and higher salinity and nutrient concentrations, in particular for nitrate. The AMO index shows a striking separation between the two clusters, where cluster 1 shows more negative anomalies, while cluster 2 has a high occurrence of positive anomalies. Although the mean diversity for all the indices is relatively similar, with a slightly higher mean in the Shannon and Pielou index for cluster 2, the density distribution shows marked differences. For cluster 1 there is a higher variance in genus richness, while cluster 2 shows higher variance and a bi-modal distribution for Shannon and Pielou indices. 
 
 % Figure 5
-To identify the variables that best predict the shifts observed within the phytoplankton community, we performed a Gradient Forest analysis on the microscopy cell counts interpolated over the top 100 meters and grouped by identified genus. Preliminary model runs were used to identify if time lags of the predictor variables could better explain the data (see Appendix), and this resulted in choosing the AMO with a lag of 5 months and MEI v.2 with a lag of 4 months. In Figure \ref{fig:GF} $a$, we show the predictor variables ranked by their weighted importance, with the highest predictive capability for the climate indices with time lags, and upwelling related variables such as nitrate in the upper 100 meters and wind speed scoring slightly lower. The 21 \°C Isotherm and silicate and phosphate concentration scored lowest in predicting shifts within the community. The way Gradient Forest predicts shifts in the community, is by building a random forest model for each observed genus across the time series. The predictive power of the models for each genus is shown in Figure \ref{fig:GF} $b$. The microscopy data is biased towards larger cell sizes, and therefore most of the predicted genus cell counts are from diatoms. However, two Haptophytes and four Dinoflagellates, as well as the Cyanobacteria \textit{Synechococcus} do rank highly.
-Figure \ref{fig:GF} $c$ shows the cumulative importance of the predictor variables across the paramater range. The black line indicates the cumulative importance across the entire community, and the colored dashed lines indicate the importance per phytoplankton group. For the AMO index, we see a clear pattern that negative anomalies highly affect the community. This contrasts with a higher importance at positive anomalies in the MEI v.2 index, in particular for Haptophytes. Nitrate concentrations between 6 and 8 $µM$ is where the community changed most, which indicates these values as a threshold for the composition of the community. For wind speed, temperature and salinity, changes occurred most at parameter ranges related to high upwelling, i.e. high wind (between -4 and -6 $m s^{-1}$), low temperature (below 23 \°C) and high salinity (above 36.8 PSU). One interesting aspect is that for both climate indices, Haptophytes showed the strongest cumulative importance, but for Diatoms the nitrate concentration seem to be a stronger predictor. 
+To identify the variables that best predict the shifts observed within the phytoplankton community, we performed a Gradient Forest analysis on the microscopy cell counts interpolated over the top 100 meters and grouped by identified genus. Preliminary model runs were used to identify if time lags of the predictor variables could better explain the data (see Appendix), and this resulted in choosing the AMO with a lag of 5 months and MEI v.2 with a lag of 4 months. In Figure \ref{fig:GF} $a$, we show the predictor variables ranked by their weighted importance, with the highest predictive capability for the climate indices with time lags, and upwelling related variables such as nitrate in the upper 100 meters and wind speed scoring slightly lower. The 21 \degree C Isotherm and silicate and phosphate concentration scored lowest in predicting shifts within the community. The way Gradient Forest predicts shifts in the community, is by building a random forest model for each observed genus across the time series. The predictive power of the models for each genus is shown in Figure \ref{fig:GF} $b$. The microscopy data is biased towards larger cell sizes, and therefore most of the predicted genus cell counts are from diatoms. However, two Haptophytes and four Dinoflagellates, as well as the Cyanobacteria \textit{Synechococcus} do rank highly.
+Figure \ref{fig:GF} $c$ shows the cumulative importance of the predictor variables across the paramater range. The black line indicates the cumulative importance across the entire community, and the colored dashed lines indicate the importance per phytoplankton group. For the AMO index, we see a clear pattern that negative anomalies highly affect the community. This contrasts with a higher importance at positive anomalies in the MEI v.2 index, in particular for Haptophytes. Nitrate concentrations between 6 and 8 $µM$ is where the community changed most, which indicates these values as a threshold for the composition of the community. For wind speed, temperature and salinity, changes occurred most at parameter ranges related to high upwelling, i.e. high wind (between -4 and -6 $m s^{-1}$), low temperature (below 23 \degree C) and high salinity (above 36.8 PSU). One interesting aspect is that for both climate indices, Haptophytes showed the strongest cumulative importance, but for Diatoms the nitrate concentration seem to be a stronger predictor. 
 
 
 
@@ -345,9 +350,35 @@ Figure \ref{fig:GF} $c$ shows the cumulative importance of the predictor variabl
 \begin{figure}
 \label{fig:clustering}
 \noindent\includegraphics[width=\textwidth]{fig/ClusteringCompPlot_NEW.pdf}
-\caption{(A) Clustering of microscopy data at the Genus level, using the binary Jaccard distance. The community for each year is binned together, to smooth out seasonal aspects. (B) NMDS plot of monthly community data (cell counts) that is cube root transformed. Stress: 0.261, 2 dimensions, converging solution. Color of dots based on which yearly cluster the monthly data is in. Vector overlay of ENVFIT shows underlying environmental variables that are co-varying with the community data. \newline
+\caption{(A) Clustering of microscopy data at the Genus level, using the binary Jaccard distance. The community for each year is binned together, to smooth out seasonal aspects. (B) NMDS plot of monthly community data (cell counts) that is cube root transformed. Stress: 0.261, 2 dimensions, converging solution. Color of dots based on which yearly cluster the monthly data is in. Vector overlay of ENVFIT shows underlying environmental variables that are co-varying with the community data.
 Plots (A-L) below show density distributions of the environmental variables as well as diversity indices between the clustered years. Dashed line shows the mean.}
 \end{figure}
+
+\begin{table}
+\label{table:clustering}
+\caption{Wilcoxon sum rank test with continuity correction for variables between the two clusters. Values for in-situ data are interpolated across the top 100 meters for each individual monthly cruise sampling.}
+\centering
+\begin{tabular}[t]{lrrl}
+\toprule
+Variable & W & p.value & Significance\\
+\midrule
+AMO & 3494.0 & 1.86e-14 & ***\\
+MEI v.2 & 9523.5 & 0.006 & ***\\
+u-component 10 m wind speed & 7074.0 & 0.143 & n.s.\\
+Isotherm 21 \degree C & 5293.0 & 0.034 & **\\
+\addlinespace
+Temperature & 4763.0 & 0.003 & ***\\
+$NO_3$ & 6378.0 & 0.018 & **\\
+$PO_4$ & 7359.0 & 0.012 & **\\
+$SiO_4$ & 5998.0 & 0.736 & n.s.\\
+Salinity & 7636.0 & 0.002 & ***\\
+\addlinespace
+Genus Richness & 5913.0 & 0.954 & n.s.\\
+Shannon Index & 5142.0 & 0.108 & n.s.\\
+Pielou Index & 4874.0 & 0.029 & **\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 
 \begin{figure}
@@ -482,8 +513,35 @@ The Caribbean experiences the most marked of the El Niño–Southern Oscillation
 % will show
 % A: Here Is Appendix Title
 %
-%\appendix
-%\section{Here is a sample appendix}
+
+\appendix
+
+\section{Gradient Forest Analysis supplement}
+
+\begin{table}
+\ref{app:table1}
+
+\caption{Individual Gradient Forest model runs for each variable and the corresponding time lags. 
+        For in-situ variables, for which no coverage extends over the time series, 
+        we tested all measurements up to a lag of 3 months. 
+        For climate variables, we tested up to a lag of 6 months. 
+        Time lag with maximum importance per variable are highlighted in bold and chosen for the final model run.}
+\centering
+\begin{tabular}[t]{rrrrrrrrrr}
+\toprule
+lag & NO3 & PO4 & SiO4 & Temperature & Isotherm\_21 & Salinity\_bottles & u10 & AMO & MEIv2\\
+\midrule
+0 & \textbf{0.038} & \textbf{0.038} & \textbf{0.034} & \textbf{0.071} & \textbf{0.028} & 0.007 & 0.004 & 0.016 & 0.015\\
+1 & 0.017 & 0.011 & 0.015 & 0.002 & 0.002 & 0.004 & \textbf{0.010} & 0.014 & 0.018\\
+2 & 0.022 & 0.008 & 0.013 & 0.006 & 0.008 & \textbf{0.011} & 0.009 & \textbf{0.030} & 0.019\\
+3 & 0.016 & 0.007 & 0.004 & 0.005 & 0.007 & 0.010 & 0.007 & 0.018 & 0.018\\
+4 & - & - & - & - & - & - & 0.008 & 0.019 & \textbf{0.029}\\
+5 & - & - & - & - & - & - & 0.008 & 0.018 & 0.022\\
+6 & - & - & - & - & - & - & 0.010 & 0.018 & 0.013\\
+\bottomrule
+\end{tabular}
+\end{table}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Optional Glossary, Notation or Acronym section goes here:
