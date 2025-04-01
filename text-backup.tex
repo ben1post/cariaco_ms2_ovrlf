@@ -144,3 +144,147 @@
     Biodiversity is a complex concept composed of genetic, taxonomic, and ecological aspects that can additionally be quantified in temporal and spatial scales. In its basic sense, a measure of diversity should quantify two components: the number of items and their relative frequencies \cite{borics_freshwater_2021}. 
     Richness, the number of species or genera present at a particular time in a sample, has been established as the most basic descriptor of community diversity, but it is not the best indicator of ecosystem change \cite{hillebrand_biodiversity_2018}.
     - Other metrics, evenness, and dominance
+
+
+
+    ------
+
+
+    
+
+- What could have driven these shifts?
+% talk about link to bottom up drivers, but also mention top down aspects... then go deep on Gradient Forest analysis, what that could mean. Relate this to other papers about community changes, climate effects and gradient forest applications.
+
+
+3. Clustering shows the return of the community to the previous cluster, confirmed by monthly NMDS, but EnvFit is interesting, as no variable clearly follows the gradient separating the two clusters (NMDS2).
+
+- Climate indices: AMO stark difference between clusters, cluster 1 is negative anomaly, cluster 2 is positive anomaly, corresponding to effects of AMO -> ITCZ etc.
+- MEIv2 less clear, but shows a preponderance of positive anomalies in cluster 1 ... why???
+% MEI index relevant (from 2019 REVIEW)
+The Caribbean experiences the most marked of the El Niño–Southern Oscillation teleconnections in the Atlantic Ocean, with warmer sea surface temperatures and trade winds blowing more to the north-northwest during the El Niño–Southern Oscillation \cite{enfield_tropical_1997}.
+
+4. Gradient Forest clearly identifies climate indices as best predictors of community change, then nutrients etc.
+    This is really interesting, as it would be expected, that in situ-measurements are best predictor of community. BUT either the community + top down processes are capturing more of that variance, or we simply are missing a bottom-up variable that can explain it.
+    but that most likely requires mechanistic modeling to investigate further...
+
+    %- Discuss effect of AMO
+    % Which studies have already looked at effects of Climate on Ecosystem?
+    - AMO has emerged as an important indicator of the climate system and how it affects the ecosystems of the north Atlantic \cite{nye_ecosystem_2014}. The oscillations of the AMO index are strongly correlated with temperature indices in the Caribbean region \cite{stephenson_changes_2014}.
+    - Although regional effecs may vary, a positive phase in the AMO generally linked to periods of warmer temperatures and a shift of the ITCZ from north to south.
+    
+    - Taylor 2012 looked at NAO and MEI, and mostly looked linear trends in variables (they missed the return of the community and regime). NAO is the north-south diplole in sea level pressure, that is primarily governed by atmospheric dynamics \cite{hurrell_north_2009}. NAO and AMO are l
+    - AMO is mentioned in 2019 review
+    "The observed large-scale multidecadal fluctuations in the Atlantic sea surface temperature (SST), has been referred to as the Atlantic Multidecadal Oscillation (AMO) \cite{kerr2000north} to emphasize the “multidecadal” character of this oceanic phenomenon and to distinguish it from the inter-annual variability associated with the atmospheric North Atlantic Oscillation (NAO) \cite{enfield2001atlantic}." from AMO website
+
+    
+    
+    %- Discuss effect of MEI
+    Since El Nino has strong teleconnection to Caribbean (see ref below from Review) we included this as variable to explain changes in community. From Results it is less pronounced than AMO, but still explains some variability (also ref to NMDS).
+
+    Interestingly, in Gradient Forest Model, Climate variables are the strongest predictors of changes in community (i.e. changes in genus abundances).
+    - Discuss what climate variables actually capture, and why they might be better predictors of community changes than local (directly measured) variables.
+    
+
+    - AMO (ref to 2019 Review)
+    As the CARIACO time series was implemented in 1995, we now know that the Atlantic Multidecal Oscillation (AMO) was shifting to a positive phase for the next 20 years, which resulted in the largest oceanographic anomalies of the last century (McCarthy et al. 2015). These climatic changes had a profound impact throughout the Atlantic (Alexander et al. 2014, Nye et al. 2014) and in the Cariaco basin \cite{taylor_ecosystem_2012, pinckney_phytoplankton_2015}.
+    - ENSO teleconnection (ref to 2019 Review)
+    The Caribbean experiences the most marked of the El Ni  ̃no–Southern Oscillation teleconnections in the Atlantic Ocean, with warmer sea surface temperatures and trade winds blowing more to the north-northwest during the El Ni  ̃no–Southern Oscillation (Enfield & Mayer 1997).
+
+
+
+
+
+
+ 
+--------------------------------------------------------------------------
+----------
+----------
+----------
+----------
+----------
+
+
+
+
+- We are not able to fully resolve....
+% "Phytoplankton communities exhibit a great deal of variation due to a combination of regulation of growth by bottom-up factors such as resource availability (Grover 1997), variation in mortality due to grazing, viral and parasitoid attack (Alpine & Cloern 1992; Mu ̈ hling et al. 2005), and demographic drift among species (neutral variation). Bottom-up factors can be complex, depending on nutrient supply rates and ratios (Tilman 1982), light availability and photoinhibition (Six et al. 2007; Alderkamp et al. 2010), species-specific competitive ability for resources (Litchman 2007) and other factors influencing physiological responses such as temperature (Eppley 1972). Variation in mortality is much less frequently measured than the factors promoting growth due to the technical challenges in making measurements. None of our environmental variables are good proxies of grazing rates or whether the abundance of a particular population is determined by grazer control or resource supply at a particular time. We have ident" from Mutshinda et al. 2013
+
+%"Taylor et al. 2012 observed that the decline in cell abundances was disproportionate compared with the smaller decrease in total chlorophyll a, which implies that phytoplankton of smaller size were not detected in the surveys.. This was supported by high-performance liquid chromatography analyses, which indicated a reduction in diatom concentrations and an increase in phytoplankton diversity." from 2019 Review 
+
+%"A return to a phytoplankton community structure similar to that observed in the late 1990s was observed in 2014 and 2015 (Figure 5a), as upwelling intensity increased to levels similar to those seen before 2003." from 2019 Review Legacy of CARIACO
+
+- We are analyzing long term time series of data, where probably different analysts have counted the phytoplankton samples...
+%It is well known that the personal component has an influence on how well species are identified. Even the same person counting the samples can evolve over time, gaining more experience, which can also influence the results (Löder et al. 2012; Nohe et al. 2018). A recommendation for further improvement of the assessment is a case wise cross-validation of some samples by the monitoring agencies involved. Another important issue to be considered are the differences in sampling frequency between countries and also between stations (see ESM Fig. S1). In highly dynamic and turbid waters such as the Wadden Sea, low frequency and infrequent sampling is not sufficient to properly capture temporal signals (Fettweis et al. 2023). % from Di Cavalho et al. 2023
+- We group species and genus counts, to genus level, and use genus counts as variables the model predicts. This assumes that there are not very specific niches etc. within genus, but that they are homogenous --> caveat!
+- Discuss limitation of taxonomic diversity, i.e. not direct translation to functional diversity, but here no Data foundation to look at functional diversity.. (inspired by Borics et al. 2021)
+
+
+
+
+
+
+
+
+
+
+
+
+
+These changes are well reflected in the yearly mean anomalies shown in figure \ref{fig:zscore}. After 2004 we see higher SST, lower wind speed, reduced fluorometric chlorophyll \textit{a}, a collapse in functional group cell counts, all matching a shift in the AMO toward positive mean anomalies until 2014.
+However, the shift in yearly mean genus richness does not follow the abundances in the cell counts. Instead, we see a marked reduction following 1998 up until 2010, where richness recovers four years before the community seems to return to previous levels in 2014. The same trend is apparent, although to a less pronounced degree, in the other diversity metrics. Generally, mean anomalies in Shannon diversity and Pielou's evenness correlate with genus richness and show a reduced yearly mean between 2000 and 2006, during which time the cell counts registered an increase in nanoflagellates and a pronounced peak in cyanobacteria abundance. 
+%(Here check if this is due to "synechococcus" counts, that were abandoned past 2003). 
+The period between 2001 and 2006 lacks coverage in HPLC data, so we have to rely on microscopy data to deduce changes in the phytoplankton community. This limits the size range of the observable phytoplankton and thus the measurable diversity. We could deduce that we see a marked reduction in the diversity of microphytoplankton ahead of the collapse in abundance, and similarly an increase in microphytoplankton diversity a few years ahead of the return in abundance to previous levels. 
+
+- major thing is that previous paper only looked at microscopy to 55m (Mutshinda to 75m and Pinckney), but now we look at full 100 m!
+
+- Seasonality and Depth Distribution of biomass and diversity.
+The diversity of phytoplankton peaks in the surface ocean, similar to the patterns observed using genetic methods \cite{yeh_contrasting_2022}.
+
+
+
+2. Mismatch between Diversity variables, and cell count abundances + community clustering / ecosystem shift
+
+   The time series includes multiple measurements of the phytoplankton community, which are bulk fluorometric chlorophyll, microscopy cell counts, and high-performance liquid chromatography (HPLC) pigment analysis. Of these, all cover the entire time series except for the HPLC pigment data, which was performed by three different labs and with a gap between 2000 and 2006 \cite{muller-karger_scientific_2019}. 
+
+    The most often measured indicator of bulk phytoplankton biomass is fluorometric Chlorophyll \textit{a} concentration, which gives a general measure of biomass standing stock and distribution in the water column. A more advanced methodology, high-performance liquid chromatography (HPLC), allows individual pigment types to be quantified. These pigment distributions can be used to estimate the groups of phytoplankton that contribute to biomass. The most specific methodology to quantify phytoplankton communities is the counting and identification of individual phytoplankton cells, either manually under a microscope or automated in flow-through systems. The main drawbacks are the size limit for resolving smaller cells and, if done manually, the complexity of identifying phytoplankton species. 
+
+
+
+
+
+
+
+
+    
+
+
+5. Compare to what happened at other long-term time series in the ocean...
+
+
+
+
+
+
+
+% Pinckney et al. 2015:
+%The Cariaco Basin has undergone marked shifts in biogeochemistry and food web structure over the past two decades (Taylor et al., 2012; Montes et al., 2013; Bates et al., 2014; Scranton et al., 2014). Since the initiation of the CARIACO Ocean Time-Series, near-surface (0–55 m) chl a concentrations (measured by fluorescence of pigments extracted in methanol) and net primary production rates (NPP, measured using 14C incubations) have declined, particularly between 2004 and 2010 (Taylor et al., 2012; Scranton et al., 2014). This is hypothesized to be the result of a measured decrease in seasonal trade wind intensity, which has reduced coastal upwelling and led to shallower mixed layer depths (Taylor et al., 2012). Microscopy observations indicate that microphytoplankton assemblages (420 mm) within the euphotic zone have shifted from a community comprised mainly of diatoms, dinoflagellates, and coccolithophorids to one with increasing numbers of smaller taxa including cyanobacteria (Montes et al., 2013). During this period, a collapse in the sardine industry also occurred. The causes are not clear, but the phenomenon was accompanied by an increase in zooplankton biomass and an increase in particulate organic carbon export below the euphotic zone (Taylor et al., 2012). These results suggest that changes in zooplankton abundance and therefore grazing may have contributed to the decline in diatoms and to more efficient carbon export to depth.
+% Consistent with the results of Taylor et al. (2012), the microscopy data show large scale reductions in overall microphytoplankton (4 20 mm) cell densities and a large decrease in both diatoms and coccolithophores over the upper 55 m. However, the observed photopigment decline in diatom abundance is not nearly to the same extent and coccolithophores had a significant concentration increase of 60.1% over this same depth interval (Table 3). We argue that the reduction in cell numbers is likely only true of larger cells. Microscopic cell counts are inherently selective and biased toward easily identifiable species and cells that remain intact after preservation (Lund et al., 1958; Rott, 1981; Wilhelm et al., 1991; Schlüter et al., 2000). Furthermore, Mousing et al. (2014) found that small increases in temperature (as observed in the Cariaco Basin) lead to a decrease in the relative contribution of large cells in the community, regardless of ambient nutrient availability. Finally, depth limited microscopy data misses the downward movement of diatoms and coccolithophores deeper in the water column (i.e. below 56 m). In fact, there was also a dramatic shift in diatom speciation, with centric diatoms (Guinardia, Leptocylindrus, Skeletonema) dominating during the first half of the time-series and a mix of centric and pennate diatoms (Pseudonitzschia, Leptocylindrus, Guinardia) dominating in more recent years. In microscopy, smaller sample volumes may lead to underestimations of species richness or diversity (Cermeño et al., 2014). Nonetheless, both photopigment and microscopy measurements suggest that phytoplankton communities became more homogeneously distributed over the years, with the majority of the difference due to declining diatom populations that occur during upwelling events.
+
+
+% REALLY ONLY LOOK AT BOTTOM UP HERE; No Top Down effects quantified
+
+% AMO
+
+
+% "Shifts in global and basin-specific primary production and phytoplankton abundances are related to large-scale climatic variability in the physical environment. Despite the lack of a definitive period associated with the AMO, the relationship between the atmospheric variability associated with the NAO and thermohaline circulation characterized by the AMO suggests a coupling of ocean and atmospheric processes on time scales that will facilitate understanding and prediction of inter-annual weather, precipitation, fluvial output and estuarine and marine productivity. Several studies have documented shifts related to the AMO in oceanic (Martinez et al., 2009), coastal and continental shelf (Rodrigues et al., 2009; Schofield et al., 2008) and estuarine (Hubeny et al., 2006) productivity and responses in forage fish populations to this increase in planktonic productivity (Tourre et al., 2007). Correlations between the AMO indices and marine productivity have been documented at immediate (Schofield et al., 2008), historical (Martinez et al., 2009; Tourre et al., 2007), and pre-historical (Hubeny et al., 2006; Rodrigues et al., 2009) scales. There are several mechanisms through which this might occur. Stratification within the water column separates nutrients at lower depths from entering the euphotic zone, thus limiting primary productivity. Long-term climate oscillations may augment or suppress seasonal conditions that promote or erode stratification and regulate mixing. Schofield et al. (2008) have demonstrated links between the AMO and phytoplankton blooms in the Mid-Atlantic Bight, such that increased nutrient availability during the annual fall transition were augmented by increased winter winds associated with a positive phase in the AMO. Martinez et al. (2009) demonstrated that global phytoplankton productivity is linked to multi-decadal oscillations in both the Atlantic and Pacific, suggesting that links between chlorophyll and sea surface temperature are driven by interactions between the pycnocline and mixed surface layers. The influence of large-scale climate fluctuations on surface stratification has particular influence on phytoplankton productivity in the tropics and mid-latitudes, waters which are often nutrient-limited. Alternatively, warmer sea surface temperatures themselves may influence productivity. Shifts in fluvial inputs associated with altered precipitation patterns will also alter river-induced fertilization of marine productivity." from Nye et al. 2014
+
+%"The AMO is also associated with changes in wind and current regimes (Delworth et al., 2007; Häkkinen et al., 2011). Thus, passive dispersal of marine organisms, many of which are planktonic or have planktonic larvae, will be affected resulting in changes in spatial distribution, survival, and population abundance." from Nye et al 2014
+
+
+
+
+%%% DISCUSSION DUMP:
+
+- What we want to mention, but have not included in our analysis due to lack of data at appropriate coverage or resolution, is the indicators of top-down effects on the Cariaco basin ecosystem. Yearly landings of the Spanish sardine (\textit{Sardinella aurita}) fisheries off the NE coast of Venezuela collapsed after 2004 and measurements of zooplankton abundances since 2001 showed a steady increase in numbers up until 2010. These can be viewed as consequences of the changes apparent in the phytoplankton community, but can also be important drivers of that change, for example if the collapse in fisheries was mainly driven by overfishing. (MENTION THAT ZOO DATA IS TOO FEW DATAPOINTS TO INCLUDE IN GRADIENT FOREST MODEL RUN)
+
+FOR THE CLUSTERING (moved from Results): This confirms previously observed patterns in the Cariaco ecosystem, where a strong shift in the community happened in 2004, but the community returned to the previous regime past 2014 \cite{taylor_ecosystem_2012, muller-karger_scientific_2019}.
