@@ -380,7 +380,7 @@ Figure \ref{fig:GF} $c$ shows the cumulative importance of the predictor variabl
 
 \begin{figure}
 \noindent\includegraphics[width=\textwidth]{fig/Figure5_ClustCompPlot_v2.pdf}
-\caption{(Plots (a-o) below show density distributions of the environmental variables as well as diversity indices between the clustered years. Dashed line shows the median and significance levels of Wilcoxon sum rank tests between clusters are shown above plots  (***\textless0.001, **\textless0.01, *\textless0.05, n.s.=not significant).}
+\caption{(Plots (a-o) below show density distributions of the environmental variables as well as diversity indices between the clustered years. Dashed line shows the median and significance levels of Wilcoxon sum rank tests between clusters are shown above plots  (p-value: ***\textless0.001, **\textless0.01, *\textless0.05, n.s.=not significant).}
 \label{fig:clustcomp}
 \end{figure}
 
@@ -607,8 +607,7 @@ In this study, we have found a strong impact of decadal-scale climatic oscillati
 
 \begin{figure}
 \noindent\includegraphics[width=\textwidth]{fig/CorrClustSupplementalPlot_v1.pdf}
-\caption{Correlation matrix with clustering of all datasets presented. Correlation was calcualted using a Spearman's rank correlation coefficient, the magnitude of the coefficient is indicated by the color of the circle. The size of the circle and significance level marking (***=p<0.001, **=p<0.01, *=p<0.05) 
-for hierarchical clustering }
+\caption{Correlation matrix with clustering of environmental variables, diversity metrics and cell counts. Correlation was calcualted using a Spearman's rank correlation coefficient, the magnitude of the coefficient is indicated by the color of the circle. The size of the circle and significance level marking represents the calculated significance of the correlation deviating from 0 (p-value: ***\textless0.001, **\textless0.01, *\textless0.05). The time series were aditionally ordered by hierarchical clustering via the complete linkage method into 5 groups indicated by the black square border.}
 \label{fig:map}
 \end{figure}
 
@@ -617,58 +616,32 @@ for hierarchical clustering }
 \section{Gradient Forest Analysis supplement}
 
 
-
-\begin{table}
-
-\caption{Individual Gradient Forest model runs for each variable and the corresponding time lags. 
-        For in-situ variables, for which no coverage extends over the time series, 
-        we tested all measurements up to a lag of 3 months. 
-        For climate variables we tested up to a lag of 6 months. 
-        Time lag with maximum importance per variable are highlighted in bold and chosen for the final model run.}
-\centering
-\resizebox{\textwidth}{!}{\begin{tabular}[t]{rrrrrrrrrrrr}
-\toprule
-lag & NO_3 & PO_4 & SiO_4 & SST & \qty{21}{\celsius} isotherm & Salinity & Wind speed & AMO & MEI v.2 & Precipitation & Evaporation\\
-\midrule
-0 & \textbf{0.025} & \textbf{0.028} & \textbf{0.029} & \textbf{0.084} & \textbf{0.024} & 0.006 & 0.003 & 0.015 & 0.015 & 0.004 & 0.010\\
-1 & 0.013 & 0.011 & 0.014 & 0.010 & 0.003 & 0.007 & \textbf{0.007} & 0.012 & 0.015 & \textbf{0.013} & 0.011\\
-2 & 0.016 & 0.007 & 0.013 & 0.011 & 0.006 & 0.011 & 0.007 & \textbf{0.026} & 0.018 & 0.005 & 0.009\\
-3 & 0.014 & 0.007 & 0.005 & 0.007 & 0.007 & \textbf{0.016} & 0.004 & 0.017 & 0.017 & 0.008 & \textbf{0.013}\\
-4 & NA & NA & NA & NA & NA & NA & 0.006 & 0.018 & \textbf{0.025} & 0.008 & 0.005\\
-\addlinespace
-5 & NA & NA & NA & NA & NA & NA & 0.007 & 0.016 & 0.020 & 0.008 & 0.032\\
-6 & NA & NA & NA & NA & NA & NA & 0.006 & 0.017 & 0.011 & 0.006 & 0.003\\
-12 & NA & NA & NA & NA & NA & NA & NA & 0.011 & 0.012 & NA & NA\\
-\bottomrule
-\end{tabular}}
-\end{table}
-
+% HERE ADD FIGURE OF GF RUN WITHOUT TIME LAGS (ALLVARS)
 
 
 \begin{table}
 
-\caption{Individual Gradient Forest model runs for each variable and the corresponding time lags. 
-        For in-situ variables, for which no coverage extends over the time series, 
-        we tested all measurements up to a lag of 3 months. 
-        For climate variables we tested up to a lag of 6 months. 
-        Time lag with maximum importance per variable are highlighted in bold and chosen for the final model run.}
+\caption{Resulting $R^2$ weighted importance for running predictor variables together with time-lags to check if they provide a better fit to the data. Each column represents a single run, with resulting importance values for time series and monthly lags. The results were stable, so that repeated runs confirmed the chosen time lag. For in-situ variables,  we tested all measurements up to a lag of 3 months. For climate variables we tested up to a lag of 6 months and added a lag of 12 months for the climate indices. Time lag with maximum importance per variable are highlighted in bold and chosen for the final model run.}
 \centering
 \resizebox{\textwidth}{!}{\begin{tabular}[t]{rrrrrrrrrrrr}
 \toprule
-lag & NO3 & PO4 & SiO4 & Temperature & Isotherm\_21 & Salinity\_bottles & u10 & AMO & MEIv2 & Precipitation & Evaporation\\
+lag & NO3 & PO4 & SiO4 & SST & \qty{21}{\celsius} Isotherm & Salinity & AMO & MEI v.2 & Wind speed & Precipitation & Evaporation\\
 \midrule
-0 & 0.062 & 0.11 & 0.068 & 0.092 & 0.067 & 0.175 & 0.048 & 0.013 & 0.082 & 0.048 & 0.019\\
-1 & 0.148 & NA & 0.017 & 0.019 & 0.044 & NA & 0.158 & 0.033 & 0.057 & 0.094 & 0.346\\
-2 & 0.177 & NA & NA & NA & 0.013 & NA & NA & 0.057 & 0.140 & 0.254 & 0.116\\
-3 & 0.341 & NA & NA & NA & NA & NA & NA & 0.023 & 0.143 & NA & 0.016\\
-4 & NA & NA & NA & NA & NA & NA & NA & 0.081 & 0.048 & NA & 0.209\\
+0 & \textbf{0.027} & \textbf{0.029} & \textbf{0.026} & \textbf{0.086} & \textbf{0.024} & 0.006 & 0.015 & 0.015 & 0.003 & 0.005 & 0.011\\
+1 & 0.015 & 0.011 & 0.014 & 0.010 & 0.003 & 0.004 & 0.012 & 0.015 & 0.006 & \textbf{0.014} & 0.009\\
+2 & 0.018 & 0.007 & 0.011 & 0.013 & 0.005 & 0.010 & \textbf{0.026} & 0.018 & 0.007 & 0.005 & 0.013\\
+3 & 0.013 & 0.007 & 0.003 & 0.007 & 0.007 & \textbf{0.013} & 0.016 & 0.017 & 0.005 & 0.009 & 0.011\\
+4 & NA & NA & NA & NA & NA & NA & 0.017 & \textbf{0.026} & 0.005 & 0.008 & 0.005\\
+5 & NA & NA & NA & NA & NA & NA & 0.016 & 0.020 & \textbf{0.008} & 0.008 & \textbf{0.040}\\
+6 & NA & NA & NA & NA & NA & NA & 0.017 & 0.012 & 0.005 & 0.006 & 0.004\\
 \addlinespace
-5 & NA & NA & NA & NA & NA & NA & NA & 0.260 & 0.095 & NA & NA\\
-6 & NA & NA & NA & NA & NA & NA & NA & NA & 0.046 & NA & NA\\
-12 & NA & NA & NA & NA & NA & NA & NA & NA & 0.037 & NA & NA\\
+12 & NA & NA & NA & NA & NA & NA & 0.010 & 0.013 & NA & NA & NA\\
 \bottomrule
 \end{tabular}}
 \end{table}
+
+% HERE ADD FIGURE OF GF RUN VARS FROM FINAL RUN NOT SHOWN IN FIGURE 6
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Optional Glossary, Notation or Acronym section goes here:
 %
