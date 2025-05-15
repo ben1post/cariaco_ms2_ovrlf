@@ -68,7 +68,7 @@
 %
 % ie, \journalname{Water Resources Research}
 
-\journalname{Enter journal name here}
+\journalname{JGR: Biogeosciences}
 
 
 \begin{document}
@@ -150,9 +150,9 @@
 
 \begin{keypoints}
 \item The CARIACO time series showed a highly variable phytoplankton community over the course of sampling between 1995 and 2017. Clustering of community data from microscopy cell counts reveals two separate clusters, defined by high- and low-upwelling conditions that match the anomalies in the AMO index. 
-% \index Previous studies proposed a shift in the community, but with the full dataset we see a shift and a return. The community shows a departure form cluster one around 2004, but a return to that community in 2014. 
-\item Despite the differing physical regimes and the large changes between the functional groups, there are no significant differences in genus richness and Shannon diversity between the two clusters, although community evenness was higher and community turnover was lower in the second cluster (low-upwelling conditions).
-\item A gradient forest analysis of community data reveals that the strongest predictor of shifts within the community is the AMO index with a time lag of 2 months, pointing to a strong impact of large-scale climatic oscillations in the tropical coastal ecosystem. The next strongest predictor is the MEI v2 index (lag of 4 months), with in-situ temperature and nitrate concentration following behind. 
+\index Instead of a unidirectional trend, we see a shift around 2004 to low-upwelling conditions, and a return to the previous community and physical environment in 2014. 
+\item Despite the differing physical regimes and the large changes between the functional groups, there are no significant differences in genus richness and Shannon diversity between the two clusters, but community evenness was higher and community turnover was lower in the second cluster (low-upwelling conditions).
+\item A gradient forest analysis of community data reveals that the strongest predictor of shifts within the community is the AMO index with a time lag of 2 months, pointing to a strong impact of large-scale climatic oscillations in the tropical coastal ecosystem. The next strongest predictor is sea surface temperature (SST), with the MEI v2 index (lag of 4 months) and nitrate concentration following behind. 
 \end{keypoints}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -318,7 +318,30 @@ The structure of the phytoplankton community was identified using microscopy in 
         
     \subsubsection{Assessing Environmental Drivers of Phytoplankton Dynamics}
     To quantify the effects of bottom-up drivers in the Cariaco basin on shifts in the phytoplankton community, we employed a Gradient Forest analysis. Gradient Forest is a community-level extension of random forest analysis that combines regression trees calculated for indicator variables (here: monthly observed genus counts) to assess turnover in indicator variables across predictor variables \cite{pitcher_example_2012, large_critical_2015, tam_comparing_2017}. Gradient Forest calculates a goodness-of-fit statistic for each predictor variable and indicator variable, then averages these to determine the overall importance of each predictor. The regression tree split values also identify the ranges of predictors in which significant changes occur in the indicator variables, signaling a threshold for phytoplankton community turnover. Cumulative plots of the predictive importance of each predictor variable can reveal thresholds for ecosystem drivers, as steep increases in cumulative importance signal a threshold for community turnover in the phytoplankton community \cite{tam_comparing_2017}. This analysis was conducted using monthly measurements integrated to 100 m depths for observed genera counts, ensuring the inclusion of all available data. The drivers/predictor variables considered in the analysis were the AMO index, the MEI v.2 index, the -u 10m wind component, the \qty{21}{\celsius} isotherm, integrated temperature and salinity, as well as the concentration of nutrients ($NO_3$, $PO_4$ and $SiO_4$). The environmental variables from ocean time series tend to be strongly correlated, which the Gradient Forest methodology takes into account by implementing a conditional permutation of the correlated predictors \cite{ellis_gradient_2012}. To consider the temporal lag in effect, in particular of climate indices, we included time lags up to 6 months of all climate variables, as well as 3 months lags for in-situ measurements in exploratory runs, and chose time lags that scored highest in the goodness-of-fit statistic for the final model run (see Table \ref{app:table1} in the Appendix).
-    
+
+
+    \begin{table}
+
+\caption{All data sources with corresponding units used as predictor variables for the gradient forest analysis.}
+\centering
+\resizebox{\textwidth}{!}{\begin{tabular}[t]{rrrrrrrrrrrr}
+\toprule
+Variable Name & Units & Data source \\
+\midrule
+MEI v.2 & unitless & Climate Indices provided by NOAA \\
+AMO & unitless & Climate Indices provided by NSF NCAR \\
+Wind speed & m/s & ERA5 model reanalysis: 10 m u-component of wind speed \\
+Precipitation & 0.013 & ERA5 model reanalysis: total precipitation\\
+Evaporation & NA & ERA5 model reanalysis: evaporation \\
+SST & °C & CARIACO time series: CTD, Average temperature per month measured in top 10 m\\
+21° C Isotherm & m & CARIACO time series: CTD, depth at which temperature reaches 21°C\\
+Salinity & PSU & Niskin, top 100m \\
+NO3 & µM & Niskin, top 100m \\
+PO4 & µM & Niskin, top 100m \\
+SiO4 & µM & Niskin, top 100m \\
+\end{tabular}}
+\label{tab:DataSources}
+\end{table}
 
 
 \section{Draft Results}
@@ -385,9 +408,11 @@ Figure \ref{fig:GF} $c$ shows the cumulative importance of the predictor variabl
 \end{figure}
 
 
+
+
 \begin{table}
+
 \caption{Wilcoxon sum rank test with continuity correction for variables between the two clusters. Values for in-situ data are interpolated across the top 100 meters for each individual monthly cruise sampling.}
-\label{table:clustering}
 \centering
 \begin{tabular}[t]{lrrl}
 \toprule
@@ -395,15 +420,18 @@ Variable & W & p.value & Significance\\
 \midrule
 AMO & 3494.0 & 1.86e-14 & ***\\
 MEI v.2 & 9523.5 & 0.006 & **\\
-u-component 10 m wind speed & 7074.0 & 0.143 & n.s.\\
-Isotherm \qty{21}{\celsius} & 5293.0 & 0.034 & *\\
+Wind speed & 7074.0 & 0.143 & n.s.\\
+Precipitation & 6251.0 & 0.004 & **\\
+Evaporation & 9979.0 & 3.68e-5 & ***\\
 \addlinespace
-Temperature & 4763.0 & 0.003 & **\\
+21 °C Isotherm & 5293.0 & 0.034 & *\\
+SST & 4712.0 & 0.001 & ***\\
+Salinity & 7636.0 & 0.002 & **\\
 $NO_3$ & 6378.0 & 0.018 & *\\
 $PO_4$ & 7359.0 & 0.012 & *\\
 $SiO_4$ & 5998.0 & 0.736 & n.s.\\
-Salinity & 7636.0 & 0.002 & **\\
 \addlinespace
+Chlorophyll $a$ & 8229.0 & 9.63e-6 & ***\\
 Genus Richness & 5913.0 & 0.954 & n.s.\\
 Shannon Index & 5142.0 & 0.108 & n.s.\\
 Pielou Index & 4874.0 & 0.029 & *\\
@@ -608,7 +636,7 @@ In this study, we have found a strong impact of decadal-scale climatic oscillati
 \begin{figure}
 \noindent\includegraphics[width=\textwidth]{fig/CorrClustSupplementalPlot_v1.pdf}
 \caption{Correlation matrix with clustering of environmental variables, diversity metrics and cell counts. Correlation was calcualted using a Spearman's rank correlation coefficient, the magnitude of the coefficient is indicated by the color of the circle. The size of the circle and significance level marking represents the calculated significance of the correlation deviating from 0 (p-value: ***\textless0.001, **\textless0.01, *\textless0.05). The time series were aditionally ordered by hierarchical clustering via the complete linkage method into 5 groups indicated by the black square border.}
-\label{fig:map}
+\label{fig:sup:correlation}
 \end{figure}
 
 
@@ -616,7 +644,11 @@ In this study, we have found a strong impact of decadal-scale climatic oscillati
 \section{Gradient Forest Analysis supplement}
 
 
-% HERE ADD FIGURE OF GF RUN WITHOUT TIME LAGS (ALLVARS)
+\begin{figure}
+\noindent\includegraphics[width=\textwidth]{fig/FigureA2_GF_output_Supplement_v1.pdf}
+\caption{Cumulative importance curves for all predictor variables not shown in the main figure. Dashed black line represents the cumulative importance across the entire community, colored lines represent functional groups. Gradient forest runs where done on Genus-level cell counts, integrated over the top 100 meters.}
+\label{fig:sup:GFoutput_lags_extra}
+\end{figure}
 
 
 \begin{table}
@@ -638,13 +670,26 @@ lag & NO3 & PO4 & SiO4 & SST & \qty{21}{\celsius} Isotherm & Salinity & AMO & ME
 12 & NA & NA & NA & NA & NA & NA & 0.010 & 0.013 & NA & NA & NA\\
 \bottomrule
 \end{tabular}}
+\label{tab:sup:GFlagtests}
 \end{table}
 
+
+
 \begin{figure}
-\noindent\includegraphics[width=\textwidth]{fig/CorrClustSupplementalPlot_v1.pdf}
-\caption{Correlation matrix with clustering of environmental variables, diversity metrics and cell counts. Correlation was calcualted using a Spearman's rank correlation coefficient, the magnitude of the coefficient is indicated by the color of the circle. The size of the circle and significance level marking represents the calculated significance of the correlation deviating from 0 (p-value: ***\textless0.001, **\textless0.01, *\textless0.05). The time series were aditionally ordered by hierarchical clustering via the complete linkage method into 5 groups indicated by the black square border.}
-\label{fig:map}
+\noindent\includegraphics[width=\textwidth]{fig/FigureA3_GF_output_NOLAG_v1.pdf}
+\caption{Gradient Forest analysis of monthly community data at a genus level. (a) Predictor variables ranked according to overall weighted importance in predicting shifts in abundances. (b) Phytoplankton genera that could be predicted ranked according to the predictive power via the weighted importance. (c) Cumulative importance curves for the predictor variables. Black line shows cumulative importance across predictor range for the entire model and all genera. Dashed colored lines represent the responses of individual functional groups.}
+\label{fig:sup:GFoutput_nolags}
 \end{figure}
+
+
+\begin{figure}
+\noindent\includegraphics[width=\textwidth]{fig/FigureA4_GF_output_Supplement_NOLAG_v1.pdf}
+\caption{Cumulative importance curves for all variables not shown in the previous figure. Dashed black line represents the cumulative importance across the entire community, colored lines represent functional groups. Gradient forest runs where done on Genus-level cell counts, integrated over the top 100 meters.}
+\label{fig:sup:GFoutput_nolags_extra}
+\end{figure}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Optional Glossary, Notation or Acronym section goes here:
 %
