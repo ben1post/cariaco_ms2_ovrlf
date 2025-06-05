@@ -430,12 +430,6 @@ Pielou Index & 4874.0 & 0.029 & *\\
 
 \section{Discussion}
 
-% Subhendu's Comment:
-% Clearly and briefly restating main findings 
-% Interpret what these findings mean in the context of the study
-% Emphasize what is novel and important (without comparison)
-% Only in following paragraphs: Compare to existing literature, highlight agreements, contradictions, and new persepctives. Discuss why and explain reasons for either.
-
 \subsection{Community reorganization and biomass shifts}
 % P1: Introductory paragraph highlighting the overall dynamics/shifts
 This study demonstrates the highly dynamic nature of a tropical coastal marine ecosystem driven by local environmental variability, which is in turn influenced by large-scale climatic changes. In the Cariaco Basin, decadal-scale climate oscillations have impacted the wind-driven upwelling regime, resulting in confounding effects on the composition and biodiversity of the phytoplankton community.
@@ -468,53 +462,30 @@ Although regional effects may vary, a negative phase in the AMO is generally ass
 The El Niño Southern Oscillation (ENSO) has a strong teleconnection to the Caribbean Sea. During ENSO (indicated by a positive MEI v.2 index) sea surface temperatures rise, and trade winds blow more to the north-northwest \cite{enfield_tropical_1997}. \citeA{taylor_ecosystem_2012} found no strong correlation between the MEI v.2 and measurements in the Cariaco Basin and only \qtyrange{24}{36}{\%} explanation of variance using linear regression with a time lag of 12 months. In contrast, we found relatively strong predictive power for changes in the phytoplankton community for the MEI v.2 index with a 4-month time lag. We also tested a 12-month lag and found no significant improvement (see Table \ref{tab:sup:GFlagtests} in the appendix).
 The threshold responses indicate a shift in the abundances of dinoflagellates and haptophytes for negative MEI v.2 index anomalies, which represent La Niña conditions. For cyanobacteria and haptophytes, we observed a pronounced threshold response to positive anomalies, demonstrating sensitivity to ENSO events. Diatoms do not exhibit a clear threshold response for the MEI v.2 index but are affected across the entire range. Interestingly, positive anomalies of the MEI v.2, representing strong ENSO events, are mostly found in Cluster 1 (see Figure \ref{fig:clustering} $e$). 
 
-The in-situ measurements that best predict changes in the microphytoplankton community were SST, nitrate concentration, and salinity, in that order. Nitrate is a crucial nutrient for phytoplankton growth and has been found to be the growth-limiting nutrient during stratification periods in the Cariaco Basin \cite{muller-karger_scientific_2019}. For diatoms, we observe a strong threshold response above \qty{7}{\micro \molar}, indicating that intense upwelling conditions drive blooms, resulting in predictable changes in cell counts. Similarly, for SST, haptophytes and diatoms exhibit a threshold around \qtyrange{22}{24}{\celsius}, indicating thresholds at low surface temperatures driven by stronger upwelling.
+The in-situ measurements that best predict changes in the microphytoplankton community were SST, nitrate concentration, and salinity, in that order. Nitrate is a crucial nutrient for phytoplankton growth and has been identified as the growth-limiting nutrient during stratification periods in the Cariaco Basin \cite{muller-karger_scientific_2019}. For diatoms, we observe a strong threshold response above \qty{7}{\micro \molar}, indicating that intense upwelling conditions drive blooms, resulting in predictable changes in cell counts. Similarly, for SST, haptophytes and diatoms exhibit a threshold around \qtyrange{22}{24}{\celsius}, indicating thresholds at low surface temperatures driven by stronger upwelling.
 
 These results match the observed NMDS clustering of the monthly cell counts in relation to the predictor variables, as the scaling axis that separates the two yearly aggregate community clusters is NMDS 1, which covaries most strongly with changes in the AMO, MEI v.2, salinity, evaporation, and precipitation (see Figure \ref{fig:clustering} $c$). Variables directly related to upwelling conditions, such as temperature, \qty{21}{\celsius} isotherm, wind speed, and nutrient concentrations vary more strongly along NMDS 2. Salinity and silicate concentration, which are also strongly related to water mass exchanges through upwelling but additionally depend on freshwater input from precipitation and surface runoff, show greater variance along NMDS 1. Salinity, evaporation, and silicate concentration exhibit some explanatory power in the gradient forest analysis, although they are weaker predictors than SST, nitrate concentration, and the climate indices (see Figure \ref{fig:GF}). This indicates that the climate indices capture variability not represented in the more direct measurements of upwelling intensity. 
 
 
 \subsection{Limitations of microscopy cell counts and gradient forest}
-% P6: DISCUSS LIMITATIONS OF STUDY!!
-% DEFINITELY NEED TO DISCUSS PROBLEMS OF CORRELATION WITH SUCH TIME SERIES DATA
+% P6: Discuss limitations of study and methodology
 
 % 1.  Discuss Limitations of Light microscopy cell counts in CARIACO Time Series
-Using microscopy cell counts as a basis for this analysis means that the results should be interpreted in terms of changes in the microphytoplankton community, due to the size limitations of identifying species via light microscopy. Grouping cell counts by genus does create a loss of resolution but is based on the assumption that species within a genus generally exhibit similar eco-physiological responses. The output of the gradient forest model is further grouped by broad functional types to facilitate the identification of shifts and trends. The phytoplankton genera that can be best predicted are mostly diatoms, along with some haptophytes, dinoflagellates, and cyanobacteria (see Figure \ref{fig:GF} $b$).
-This is very likely not a complete picture of the phytoplankton community -> compare to HPLC data.
+Using microscopy cell counts as a basis for this analysis means that the results should be interpreted in terms of changes in the microphytoplankton community, due to the size limitations of identifying species via light microscopy. Grouping cell counts by genus does create a loss of resolution but is based on the assumption that species within a genus generally exhibit similar eco-physiological responses. The output of the gradient forest model is further grouped by broad functional types to facilitate the identification of shifts and trends. The phytoplankton genera that can be best predicted are mostly diatoms, along with some haptophytes, dinoflagellates, and cyanobacteria (see Figure \ref{fig:GF} $b$). This is certainly not a complete picture of the phytoplankton community at the CARIACO time series station. The HPLC pigment data captures all size classes of phytoplankton, but as previously discussed, does not cover the entire time series and was analyzed by four different laboratories \cite{pinckney_phytoplankton_2015}. With the caveat that the microscopy counts capture microphytoplankton exclusively, the data can be brought into agreement. Where the cell counts collapsed, a shift to smaller species occurred, which also agrees with size spectra calculated from the HPLC pigment data \cite{lorenzoni_characterization_2015}.
 
 
-
-
-% 2. Discuss limitations of GF analysis
-% FROM FRAKER ET AL. 2022
-%"Note that although this analysis identifies predictive relationships between drivers and the biological indicators, these relationships do not necessarily imply mechanistic relationships. As such, this analysis represents the first stages of an overall analysis (a narrowing of the potential key relationships and when they matter from a much larger dataset), and additional statistical analyses, modeling, and experimental work may be required to develop a full mechanistic understanding of driver-response relationships and ecosystem change."
-Without adjusting for time lags, SST and nitrate concentration are the strongest predictors of community change (see Figure \ref{fig:sup:GFoutput_nolags} in the appendix). Incorporating time lags slightly improves the overall predictive strength, as quantified by the $R^2$ weighted importance, although both SST and the AMO index as the strongest predictors yield a relatively low value around \qty{0.03}{}. This is to be expected with the data we are working with, and in line with values reported in other studies utilizing the gradient forest algorithm \cite{}. 
-
-- There is some correction for correlation between the predictors, and we check the time lags to test for impeding effects of autocorrelation, but still the model does not take the temporal aspect into account in building the random forest models underlying the gradient forest analysis. It can however detect non-linear responses between variables. 
+% 2. Discuss limitations of GF analysis & Limitation to bottom-up drivers and climate indices
+Given the limited scope of the microscopy genus counts, it is necessary to identify the limitations of the gradient forest algorithm employed to quantify predictors of community change.
+Many of the predictors in ecological time series and in this study are highly correlated (see Figure \ref{fig:sup:correlation} in the appendix). This can lead to the identification of a correlated predictor that has no direct effect on community changes. The gradient forest methodology addresses this by conditionally permuting subsets of the correlated predictors, which can mitigate some of this effect \cite{ellis_gradient_2012}. Additionally, random forest models do not consider temporal relationships between data points, which is why we included tests for the predictive relationships with time lags of our predictors. Without adjusting for time lags, SST and nitrate concentration are the strongest predictors of community change (see Figure \ref{fig:sup:GFoutput_nolags} in the appendix). Incorporating time lags slightly improves the overall predictive strength, as quantified by the $R^2$ weighted importance, although both SST and the AMO index as the strongest predictors yield a relatively low value around \qty{0.03}{}. This is expected given the relatively noisy nature of phytoplankton microscopy cell counts and is consistent with values reported in other studies utilizing the gradient forest algorithm \cite{pitcher_example_2012, roland_pitcher_exploring_2012, roubeix_identification_2016, samhouri_defining_2017, fraker_temporal_2022}. It is important to consider that although predictive relationships between drivers and ecological predictors are identified, this does not necessarily imply a mechanistic relationship. The scope of this analysis is exploratory data analysis aimed at narrowing down potential key relationships. Additional statistical analyses, modeling, and experimental work are required to develop a clearer mechanistic understanding of the drivers of ecosystem change in the Cariaco Basin.
  
-
-% 3. Limitation to bottom-up drivers and climate indices
-Our limitation to bottom-up drivers of community change could also limit the explanatory power of our analysis, as top-down processes such as zooplankton grazing strongly affect the structure of the phytoplankton community \cite{banas_adding_2011, acevedo-trejos_mechanisms_2015}. In the Cariaco Basin in particular, a trophic cascade from the collapse of sardine fisheries through an increasing abundance of mesozooplankton has been proposed to have affected the phytoplankton community \cite{muller-karger_scientific_2019}. Due to the lack of temporal resolution for higher trophic levels and the absence of zooplankton data for the first six years of the time series, we propose that mechanistic modeling studies could be well-suited to investigate this aspect of the CARIACO time series further.
-
+Our limitation to bottom-up drivers of community change may also restrict the explanatory power of our analysis, as top-down processes such as zooplankton grazing significantly impact the structure of the phytoplankton community \cite{banas_adding_2011, acevedo-trejos_mechanisms_2015}. In the Cariaco Basin specifically, a trophic cascade stemming from the collapse of sardine fisheries coupled with an increasing abundance of mesozooplankton has been proposed to have influenced the phytoplankton community \cite{muller-karger_scientific_2019}. Due to the lack of temporal resolution for higher trophic levels and the absence of zooplankton data for the first six years of the time series, we suggest that mechanistic modeling studies could be well-suited to further investigate this aspect of the CARIACO time series.
 
 
 
 \section{Conclusions}
-- Our analysis shows that...
-
-- We also show that...
-
-- But we cannot confirm or test. so we would recommend X for the future.
-
-
-In this study, we found a strong impact of decadal-scale climatic oscillations on shifts in the phytoplankton community in the tropical coastal ecosystem of the Cariaco Basin. 
-
-Despite multiannual trends in warming, reduced productivity, and a collapse in fisheries and phytoplankton cell counts, the phytoplankton community returned to previous levels once the climatic and local physical conditions were restored. 
-
-We observe these patterns clearly in the community data obtained from microscopy, which demonstrates the value of the rigorous work involved in identifying and counting phytoplankton cells. 
-
-
+In this study, we found a strong impact of decadal-scale climatic oscillations on shifts in the phytoplankton community in the tropical coastal ecosystem of the Cariaco Basin. Specifically, microscopy cell counts reveal a shift and return between two clusters, defined by high- and low-upwelling conditions that correspond to anomalies in the AMO index. Between the clusters, we observe no significant changes in diversity metrics, except for lower turnover and higher community evenness under low-upwelling conditions.
+Despite multiannual trends in warming, reduced productivity, and a collapse in fisheries and microphytoplankton cell counts, the phytoplankton community returned to previous levels once the climatic and local physical conditions were restored. 
 The strongest bottom-up variable predicting changes in the phytoplankton community is the AMO index, highlighting the complex nature of climate-driven ecosystem variability and the connections between global climate and local ecosystems through low-frequency natural cycles. We can concur with \citeA{nye_ecosystem_2014} that the AMO appears to be a suitable candidate as an indicator of ecosystem state, particularly for the phytoplankton community of the Cariaco Basin. 
-
 The analysis could be extended by including top-down effects on the phytoplankton community, particularly zooplankton and fisheries data. 
 We hope that the work hints at the resilient nature of phytoplankton communities under global change, which should be further investigated by studying long-term ocean time series.
 
