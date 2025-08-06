@@ -25,6 +25,7 @@
 \usepackage{gensymb}
 \usepackage{booktabs}
 \usepackage{siunitx}
+\usepackage[section]{placeins}
 
 \linenumbers
 %%%%%%%
@@ -266,7 +267,7 @@ The shift in phytoplankton community composition associated with increased tempe
     Between late 1995 and early 1998, nutrient data, including nitrate, phosphate, and silicate, were provided by William Senior (Universidad de Oriente, Cumana, Venezuela) and from mid-1997 to present by Dr. K. Fanning (University of South Florida, St. Petersburg, USA). Samples from eight cruises were analyzed by both laboratories \cite{taylor_ecosystem_2012}. We used a merged dataset for all nutrients, in which coincidental monthly measurements are averaged.
        
     For the identification of phytoplankton species by microscopy, \qty{500}{\milli\liter} seawater samples were collected at depths of 1, 7, 15, 25, 35, 55, 75, and 100 m in HDPE bottles and preserved with a \qty{5}{\%} (final concentration) formalin solution neutralized with sodium tetraborate. Species counts were performed at the Universidad de Oriente, Venezuela, following the Utermöhl method \cite{hasle1978inverted}, using \qty{100}{\milli\liter} sedimentation chambers with a 48-hour settling period. 
-    %from Mutshinda et al. 2013
+
     Quality control of the microscopy data was performed by assembling the taxonomic identifications made across all cruises, removing observations that were not identified at the species or genus level (with the exception of nanoflagellate cell counts that are shown in Figure \ref{fig:zscore}), correcting spelling variations, and grouping synonyms using taxonomic information from the World Register of Marine Species (WoRMS, \url{marinespecies.org}). A total of 482 phytoplankton species were observed over the course of the time series, which were grouped into 223 phytoplankton genera. The identified genera were further grouped into functional groups based on their taxonomic classification in WoRMS.
 
     
@@ -459,10 +460,10 @@ The shift in phytoplankton community composition associated with increased tempe
     % P5: Climate impacts
     Although regional effects may vary, a negative phase in the AMO is generally associated with periods of colder temperatures and a southward shift of the ITCZ \cite{knight_climate_2006, colna2017latitudinal}. In the Cariaco Basin, a southward shift of the ITCZ correlates with increased wind-driven upwelling \cite{taylor_ecosystem_2012}. The threshold responses between functional groups, which relate to shifts in cell count abundances, showed contrasting patterns. Diatoms, dinoflagellates, and haptophytes exhibited strong response thresholds for negative AMO anomalies, which pointed to the influence of stronger upwelling conditions. The abundance of haptophytes, additionally, showed a threshold effect at positive AMO anomalies, which may be related to the pattern observed by \citeauthor{pinckney_phytoplankton_2015} based on HPLC data showing haptophytes blooming more frequently during the time period of 2006 to 2010, which was characterized by mostly positive AMO anomalies.
     
-    The El Niño Southern Oscillation (ENSO) exhibits a strong teleconnection to the Caribbean Sea. During ENSO (indicated by a positive MEI v.2 index) sea surface temperatures rise, and trade winds blow more to the north-northwest \cite{enfield_tropical_1997}. \citeA{taylor_ecosystem_2012} found no strong correlation between MEI v.2 and other variables in the Cariaco Basin, and only \qtyrange{24}{36}{\%} explanation of variance using linear regression with a time lag of 12 months. In contrast, we found a relatively strong predictive power for changes in the phytoplankton community for the MEI v.2 index with a 4-month time lag. We also tested a 12-month time lag and found no significant improvement (Table \ref{tab:sup:GFlagtests} in Appendix).
-    The threshold responses indicate a shift in the abundances of dinoflagellates and haptophytes for negative MEI v.2 anomalies, which represent La Niña conditions. For cyanobacteria and haptophytes, we observed a pronounced threshold response to positive anomalies, demonstrating sensitivity to ENSO events. Diatoms do not exhibit a clear threshold response to the MEI v.2 index but are affected across the entire range. Interestingly, positive anomalies in the MEI v.2, representing strong ENSO events, are mostly found in cluster 1 (see Figure \ref{fig:clustering} $e$). This is consistent with previous findings, that strong El Niño events (as indicated by a positive MEI) increase the strength of currents in the Caribbean sea through modulating the easterly wind anomalies, thereby increasing upwelling in the Cariaco Basin \cite{huang_enso_2023}.
+    The El Niño Southern Oscillation (ENSO) exhibits a strong teleconnection to the Caribbean Sea. During El Niño (indicated by a positive MEI v.2 index) sea surface temperatures rise, and trade winds blow more to the north-northwest \cite{enfield_tropical_1997}. This would imply a general reduction in upwelling strength during El Niño events in the Cariaco Basin, which has indeed been observed during the period from 1997 to 1998 \cite{romero_seasonal_2009}. The MEI v.2 is significantly positively correlated to local evaporation and salinity and negatively correlated to the AMO index, however it is not significantly correlated to local upwelling-related variables (see Figure \ref{fig:sup:correlation} in Appendix). The link here is less clear; while generally trade wind strength and SST are anti-correlated in the Caribbean Sea, positive trade wind anomalies have been observed during during El Niño conditions and the reverse during La Niña \cite{chang_coupled_2013}. \citeA{taylor_ecosystem_2012} found no strong correlation between MEI v.2 and other variables in the Cariaco Basin, and only \qtyrange{24}{36}{\%} explanation of variance using linear regression with a time lag of 12 months. In contrast, we found a relatively strong predictive power for changes in the phytoplankton community for the MEI v.2 index with a 4-month time lag. We also tested a 12-month time lag and found no significant improvement (Table \ref{tab:sup:GFlagtests} in Appendix).
+    The threshold responses indicate a shift in the abundances of dinoflagellates for negative MEI v.2 anomalies, which represent La Niña conditions. Findings from Bayesian modeling showed that dinoflagellates responding positively to warmer, stratified conditions in the Cariaco Basin \cite{mutshinda_environmental_2013}. For cyanobacteria and haptophytes, we observed a pronounced threshold response to positive anomalies, demonstrating sensitivity to ENSO events. Diatoms do not exhibit a clear threshold response, but show a slightly stronger response in the positive range of the MEI v.2. Interestingly, positive anomalies in the MEI v.2, representing strong ENSO events, are mostly found in the high upwelling regime of cluster 1 (see Figure \ref{fig:clustering} $e$). This could be explained by previous findings, that strong El Niño events (as indicated by a positive MEI) increase the strength of currents in the Caribbean sea through modulating the easterly wind anomalies, thereby potentially increasing upwelling strength in the Cariaco Basin \cite{huang_enso_2023}.
     
-    The in-situ measurements that best predicted changes in the microphytoplankton community were SST, nitrate concentration, and salinity, in that order. Nitrate is a crucial nutrient for phytoplankton growth and has been identified as the growth-limiting nutrient during stratification periods in the Cariaco Basin \cite{muller-karger_scientific_2019}. For diatoms, a strong threshold response was observed above \qty{7}{\micro \molar}, indicating that intense upwelling conditions drove blooms, resulting in predictable changes in cell counts. Similarly, haptophytes and diatoms exhibited a threshold around \qtyrange{22}{24}{\celsius}, indicating thresholds at low surface temperatures driven by stronger upwelling.
+    The in-situ measurements that best predicted changes in the microphytoplankton community were SST, nitrate concentration, and salinity, in that order. Haptophytes and diatoms exhibited a steep threshold around \qtyrange{22}{24}{\celsius}, indicating the strong effect on cell counts at low surface temperatures that are indicative of strong upwelling. Nitrate is a crucial nutrient for phytoplankton growth and has been identified as the growth-limiting nutrient during stratification periods in the Cariaco Basin \cite{muller-karger_scientific_2019}. For diatoms, a strong threshold response was observed above \qty{7}{\micro M}, indicating that intense upwelling conditions drove blooms, resulting in predictable changes in cell counts.
     
     These results matched the observed NMDS clustering of the monthly cell counts in relation to the predictor variables, as the scaling axis that separated the two clusters was NMDS 1, which co-varied most strongly with changes in AMO, MEI v.2, salinity, evaporation, and precipitation (Figure \ref{fig:clustering} $c$). Variables directly related to upwelling conditions, such as temperature, \qty{21}{\celsius} isotherm, wind speed, and nutrient concentrations varied more strongly along NMDS 2. Salinity and silicate concentration, which are also strongly related to water mass exchanges through upwelling but additionally depend on freshwater input from precipitation and surface runoff, showed greater variance along NMDS 1. Salinity, evaporation, and silicate concentration exhibited some explanatory power in the Gradient Forest analysis, although they were weaker predictors than SST, nitrate concentration, and climate indices (see Figure \ref{fig:GF}). This implies that the climate indices explain variability that more direct measurements of upwelling intensity do not capture. 
     
@@ -608,22 +609,21 @@ The shift in phytoplankton community composition associated with increased tempe
 %
 
 \appendix
-
+\newpage
 \section{Correlation of data}
 
-
-\begin{figure}
+\begin{figure}[h!]
 \noindent\includegraphics[width=\textwidth]{fig/CorrClustSupplementalPlot_v1.pdf}
 \caption{Correlation matrix with clustering of environmental variables, diversity metrics and cell counts. Correlation was calcualted using a Spearman's rank correlation coefficient, the magnitude of the coefficient is indicated by the color of the circle. The size of the circle and significance level marking represents the calculated significance of the correlation deviating from 0 (p-value: ***\textless0.001, **\textless0.01, *\textless0.05). The time series were aditionally ordered by hierarchical clustering via the complete linkage method into 5 groups indicated by the black square border.}
 \label{fig:sup:correlation}
 \end{figure}
 
 
-
+\newpage
 \section{Gradient Forest analysis supplement}
 
 
-\begin{figure}
+\begin{figure}[h!]
 \noindent\includegraphics[width=\textwidth]{fig/FigureA2_GF_output_Supplement_v1.pdf}
 \caption{Cumulative importance curves for all predictor variables not shown in the main figure. Dashed black line represents the cumulative importance across the entire community, colored lines represent functional groups. Gradient forest runs where done on Genus-level cell counts, integrated over the top 100 meters.}
 \label{fig:sup:GFoutput_lags_extra}
@@ -668,12 +668,24 @@ lag & NO3 & PO4 & SiO4 & SST & \qty{21}{\celsius} Isotherm & Salinity & AMO & ME
 \end{figure}
 
 
+%\end{tabular}}
+
+%\label{tab:sup:GenusFuncGroups}
+%\end{table}
+
+%\begin{table}
+
+%\caption{Table \ref{tab:sup:GenusFuncGroups} cont.:}
+%\begin{tabular}{@{}ll@{}}
+
 %
 \begin{table}
 \caption{Table of all identified genus that were counted more than 10 times across the time series (n=89). The monthly cell counts per genus were used as input data to the gradient forest analysis.}
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
 
+%\resizebox*{\textheight}{!}{
+\resizebox*{!}{\dimexpr\textheight-\lineskip\relax}{%
 \begin{tabular}{@{}ll@{}}
 \textbf{Diatoms} &                                                            \\
 \textit{Amphora}           & C.G. Ehrenberg ex F.T. Kützing, 1844                       \\
@@ -728,16 +740,6 @@ lag & NO3 & PO4 & SiO4 & SST & \qty{21}{\celsius} Isotherm & Salinity & AMO & ME
 \textit{Cochlodinium}      & Schütt, 1896                                               \\
 \textit{Cystodinium}       & Klebs, 1912                                                \\
 
-\end{tabular}
-
-\label{tab:sup:GenusFuncGroups}
-\end{table}
-
-\begin{table}
-
-\caption{Table \ref{tab:sup:GenusFuncGroups} cont.:}
-\begin{tabular}{@{}ll@{}}
-\textbf{Dinoflagellates} cont.    &                                                            \\
 \textit{Dinophysis}        & Ehrenberg, 1839                                            \\
 \textit{Diplopsalis}       & R.S.Bergh, 1881                                            \\
 \textit{Glenodinium}       & Ehrenberg, 1836     
@@ -781,7 +783,9 @@ lag & NO3 & PO4 & SiO4 & SST & \qty{21}{\celsius} Isotherm & Salinity & AMO & ME
 \textit{Eutreptia}         & Perty, 1852                                                \\
 \textit{Eutreptiella}      & A.M.Cunha, 1913                                            \\
 \textit{Mesodinium}        & von Stein                                                 
-\end{tabular}
+\end{tabular}}
+
+\label{tab:sup:GenusFuncGroups}
 \end{table}
 
 
@@ -852,7 +856,9 @@ All the code and data used in this analysis and to create the plots are publicly
 
 %!
 \acknowledgments
-We thank Digna Rueda-Roa, Claudia Benitez-Nelson, and James Pinckney for their valuable input during the early stages of this research. 
+We thank Digna Rueda-Roa, Claudia Benitez-Nelson, and James Pinckney for their valuable input during the very early stages of this research. Additionally we want to thank all researchers and staff involved in the CARIACO Time Series for the considerable effort of collecting the time series data and providing it openly to the scientific community.
+
+AI tools (specifically Open AI's ChatGPT) were used to aid in spelling and grammar corrections in writing this study.
 
 %Enter acknowledgments here. This section is to acknowledge funding, thank colleagues, enter any secondary affiliations, and so on.
 
