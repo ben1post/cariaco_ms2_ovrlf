@@ -72,6 +72,7 @@
 	\begin{enumerate}
 		\item We added an in-depth discussion of the impact of missing data, particularly towards the end of the time series.
 		\item We corrected spelling errors etc...
+        %NOTE: can add this at the very end, when we decided what stays in.
 	\end{enumerate}
 \end{revresponse}
 \begin{concludingresponse}[to the Editor]
@@ -91,7 +92,7 @@ Results show a drastic shift in the phytoplankton community in 2004 coinciding w
 \end{generalcomment}
 
 \begin{revresponse}[Thank you for your feedback.]
-	We have carefully ....
+	We greatly appreciate your effort to review our manuscript!
 \end{revresponse}
 
 \begin{revcomment}
@@ -182,7 +183,7 @@ Line 145: "This area is relatively productive ($\sim 400$ gCm$^{-2}$ y$^{-1}$)".
 \end{revcomment}
 \begin{revresponse}
 	This value was chosen as a representative value based on reported values from literature, thank you for highlighting the missing reference and explanation.
-    We have now calculated the average primary productivity across the entire time series using the raw data and added the exact mean value and standard deviation (\lineref{R1:C5:start}[R1:C5:end]):
+    We have now calculated the average primary productivity across the entire time series using monthly interpolated values and added the exact mean value and standard deviation (\lineref{R1:C5:start}[R1:C5:end]):
     \begin{changes}
        This area is relatively productive (mean integrated primary production across the entire time series of $485 \pm 345$ g C m$^{-2}$ y$^{-1}$),...
     \end{changes}
@@ -239,7 +240,7 @@ Line 238: Note that the Results section make reference to data from 2016.
     
     We have added the following paragraph in \lineref{R1:C12:start}[R1:C12:end] to clarify this:
     \begin{changes}
-        For the analysis of annual z-scores, we excluded years with fewer than six monthly observations. This applied to 1995 (n=2; November–December only), 2016 (n=5; January, February, May, September, December), and 2017 (n=1; January only). Climate and meteorological variables (AMO, MEI v.2, wind speed, precipitation, evaporation) had complete monthly coverage from 1996–2016, while in-situ measurements showed occasional gaps throughout the time series, with sporadic missing months in 1997–2013 (typically 1–3 months per year) and more substantial gaps in 2014 (3 months missing: March, July, August) and 2015 (4 months missing: January, May, June, October). Importantly, despite these gaps, both 2014 and 2015 retained observations from both upwelling (December–May) and rainy (June–November) seasons, reducing the risk of seasonal bias in annual averages.
+        To provide an overview of the available data and highlight interannual trends and changes in the time series data, we calculated annual anomalies for relevant variables as normalized z scores, $z = \frac{(x – \mu)}{\sigma}$, where $x$ is the yearly mean, $\mu$ is the mean and $\sigma$ is the standard deviation of all yearly means.  For the analysis of annual z-scores, we excluded years with fewer than six monthly observations. This applied to 1995 (n=2; November–December only), 2016 (n=5; January, February, May, September, December), and 2017 (n=1; January only). Climate and meteorological variables (AMO, MEI v.2, wind speed, precipitation) had complete monthly coverage from 1996–2016, while in-situ measurements showed occasional gaps throughout the time series, with sporadic missing months in 1997–2013 (typically 1–3 months per year) and more substantial gaps in 2014 (3 months missing: March, July, August) and 2015 (4 months missing: January, May, June, October). Importantly, despite these gaps, both 2014 and 2015 retained observations from both upwelling (December–May) and rainy (June–November) seasons, reducing the risk of seasonal bias in annual averages. 
     \end{changes}
 \end{revresponse}
 
@@ -330,7 +331,7 @@ Line 439: Delete "dashed". Phytoplankton curves are all solid lines.
 Lines 440-441: Where in the figure is this shown? This statement is confusing because the cumulative importance increases toward positive AMO values.
 \end{revcomment}
 \begin{revresponse}
-	We have added an explanatory paragraph (\lineref{R1:C24:start}[R1:C24:end]) before this assertion, to explain how to interpret the cumulative importance curves:
+	We have added an explanatory paragraph (\lineref{R1:C24:start}[R1:C24:end]) before this assertion, to clarify how to interpret the cumulative importance curves:
     \begin{changes}
         Cumulative importance curves from gradient forest analysis show how the importance of a predictor accumulates across its range of values. The slope of the curve at any point indicates where the strongest compositional turnover occurs—steep sections represent threshold values where small changes in the predictor correspond to large changes in community composition, while flat sections indicate regions where the predictor has little influence on community structure. For the AMO index, we see a clear pattern in which negative anomalies affect the community (slope is highest for negative values).
     \end{changes}
@@ -418,15 +419,15 @@ Figure 6: In the figure caption, change to "Dashed black line" and "Colored soli
 Figure B2: Please clarify how this figure is different from Figure 6. Both figures have nitrate as predictor but the curves are different. It is not clear from the caption why this is the case. The same with AMO. Also, note that Trichodesmium belongs to cyanobacteria and is misclassified here (not in Figure 6).
 \end{revcomment}
 \begin{revresponse}
-    We thank the reviewer for identifying this oversight. Figure C2 and C3 (in the update manuscript, previously these were B2 and B3) show the gradient forest analysis performed without any time lags in the predictor variables, whereas Figure 6 in the main text includes optimized time lags for climate and meteorological variables (see Table C1). This comparison was included to demonstrate the effect of incorporating time lags on predictor rankings and response curves, as the gradient forest algorithm showed sensitivity to this methodological choice. Notably, even without time lags, AMO and MEI v.2 rank relatively high among predictors, supporting the robustness of our finding that climate indices are important predictors of community change.
+    We forgot to clarify this in the figure caption. Figure C2 and C3 (in the update manuscript, previously these were B2 and B3) show the gradient forest analysis performed without any time lags in the predictor variables, whereas Figure 6 in the main text includes optimized time lags for climate and meteorological variables (see Table C1). This comparison was included to demonstrate the effect of incorporating time lags on predictor rankings and response curves, as the gradient forest algorithm showed high sensitivity to this methodological choice. Notably, even without time lags, AMO and MEI v.2 rank relatively high among predictors, supporting the robustness of our finding that climate indices are important predictors of community change.
     
-    The differences in the cumulative importance curves for nitrate (and other variables without time lags) between Figures 6 and C2 arise from two sources: (1) the stochastic nature of the random forest models underlying the gradient forest algorithm, and (2) the conditional permutation procedure, which accounts for correlations among predictors and can lead to different importance attributions when the predictor set changes (i.e., when lagged vs. non-lagged variables are used). The AMO curves differ more substantially because Figure 6 uses a 2-month lag while Figure C2 uses no lag.
+    The differences in the cumulative importance curves for nitrate (and other variables without time lags) between Figures 6 and C2 arise from two sources: (1) the conditional permutation procedure, which accounts for correlations among predictors and can lead to different importance attributions when the predictor set changes (i.e., when lagged vs. non-lagged variables are used), and (2) to a smaller part due to the stochastic nature of the random forest models underlying the gradient forest algorithm. The AMO curves differ more substantially because Figure 6 uses a 2-month lag while Figure C2 uses no lag.
     
     We have corrected the figure caption to explicitly state that these supplementary figures show results without time lags. We have also corrected the classification of \textit{Trichodesmium}, which was erroneously colored as "other" rather than a cyanobacterium in Figure C2. We thank the reviewer for catching this error.
 \end{revresponse}
 
 \begin{concludingresponse}[]
-	Thank you for your valuable comments on our manuscript. 
+	Thank you for your valuable comments on our manuscript and insights into the Cariaco Basin system. They have helped us greatly improve the quality of the manuscript.
 \end{concludingresponse}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -441,7 +442,7 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
 	The paper describes analysis of a long time series of phytoplankton cell counts collected alongside environmental variables in the Cariaco Basin time series site, as well as larger climatic indices. The work recapitulates early analysis of trends in phytoplankton dynamics associated with environmental variables; previous work determined phytoplankton classes according to HPLC pigment concentrations and examined environmental data from water samples collected at the CARIACO Ocean Time Series site. The current study built upon this work and analyzed genus-level phytoplankton data using cell counts and incorporated climate indices (AMO and ENSO signals). The present work uses gradient forest analysis to identify thresholds in environmental variables to better understand drivers of phytoplankton community diversity and abundances. While there are some limitations of this approach (i.e., with monthly data, there is the potential of time-aliasing and a lack of resolution with which to identify thresholds), the long-time series helps to overcome some of the limitations in ability to detect changes that correspond to environmental thresholds. There are few long-term data sets of this type, which make the study valuable for exploring relationships between environmental factors and biological production over time. At a time when climate change is threatening ecosystems worldwide, such data and their analyses are critical to understand and predict the impacts of climate shifts.
 \end{generalcomment}
 \begin{revresponse}[Thank you for your feedback.]
-
+ % NOTE: I should discuss his implicit criticism, time-aliasing and lack of resolution!
 \end{revresponse}
 
 \begin{generalcomment} (continued) 
@@ -456,23 +457,23 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
 \begin{revresponse}
     We thank the reviewer for raising this important point. We have expanded our discussion of missing data and added a dedicated subsection (Section~2.4.3) clarifying how different analyses handle data gaps.
     
-    For annually aggregated analyses (z-scores in Figure~\ref{fig:zscore}, hierarchical clustering in Figure~\ref{fig:clustering}a, species turnover in Figure~\ref{fig:clustering}b, and annual means in Figure~\ref{fig:divts}), we excluded years with fewer than six monthly observations (1995, 2016, and 2017). The hierarchical clustering uses presence-absence data, which is relatively robust to missing months because a genus need only be detected once within a year to be recorded as present. Monthly-resolution analyses (NMDS ordination, density distributions, gradient forest) include all available observations. We have now additionally conducted sensitivity analyses using `core months' consistently sampled across 2014-2017 to verify that conclusions were not artifacts of uneven sampling.
+    For annually aggregated analyses (z-scores in Figure~\ref{fig:zscore}, hierarchical clustering in Figure~\ref{fig:clustering}a, species turnover in Figure~\ref{fig:clustering}b, and annual means in Figure~\ref{fig:divts}), we excluded years with fewer than six monthly observations (1995, 2016, and 2017). The other years also include some missing monthly data (see \autoref{comment:phyto-coverage} for a more detailed discussion of this), yet our hierarchical clustering uses presence-absence data, which is relatively robust to missing months because a genus need only be detected once within a year to be recorded as present. Other parts of our analysis (NMDS ordination, density distributions, and gradient forest), were performed with the original monthly resolution and include all available observations. We have now additionally conducted sensitivity analyses using `core months' consistently sampled across 2014-2017 to verify that conclusions of a return to the earlier regime were not artifacts of uneven sampling of seasonal outliers.
     
-    Regarding the post-2014 period: although 2014 and 2015 have gaps, both years retain observations from both upwelling and rainy seasons, reducing the risk of seasonal bias. To further assess the robustness of our conclusions, we compared monthly observations across three periods (Early Cluster~1: 1996--2004; Cluster~2: 2005--2013; Late Cluster~1: 2014--2017) using Wilcoxon rank-sum tests (Table~\ref{tab:sup:period_comparison}). For key variables including SST, salinity, chlorophyll~$a$, and several functional groups, Early~C1 and Cluster~2 differ significantly, and Cluster~2 and Late~C1 differ significantly, while Early~C1 and Late~C1 do not---a pattern consistent with partial recovery to pre-2005 conditions. Additionally, independent sampling near Margarita Island in the Cariaco Basin \citep{gomez_gaspar_variacion_2025} shows a return to elevated surface chlorophyll during 2014--2017, corroborating our interpretation.
+    Regarding the post-2014 period: although 2014 and 2015 have gaps, both years retain observations from both upwelling and rainy seasons, reducing the risk of seasonal bias. To further assess the robustness of our conclusions, we compared monthly observations across three periods (Early Cluster~1: 1996--2004; Cluster~2: 2005--2013; Late Cluster~1: 2014--2017) using Wilcoxon rank-sum tests (see Table~\ref{tab:sup:period_comparison}). For key variables including SST, salinity, chlorophyll~$a$, and several functional groups, Early~C1 and Cluster~2 differ significantly, and Cluster~2 and Late~C1 differ significantly, while Early~C1 and Late~C1 do not---a pattern consistent with partial recovery to pre-2005 conditions. Additionally, independent sampling near Margarita Island in the Cariaco Basin from 2002-2018 (\cite{gomez_gaspar_variacion_2025}) show a reduction following 2004 and a return to elevated surface chlorophyll during 2014--2017, corroborating a potential recovery.
     
     We have added discussion of these points to Section~4.3 (Limitations).
 \end{revresponse}
 
-\begin{revcomment} 
+\begin{revcomment} \label{comment:ChlMax}
 	In a similar vein, I found it a little hard to follow how they were grouping the data in some sections of the manuscript. In some analysis, they aggregated data by year (including 12 months of data into a yearly average), while in other analyses, report seasonal values (e.g., upwelling vs. downwelling seasons). But even monthly-averaged data is subject to time-aliasing; they might consider a discussion on the implications and impacts of time averaging. The same can be said for depth-averaging; I would have liked to have seen data on mixed layer depth and solar insolation to better understand the implications of data interpolation or the conclusions that the chlorophyll maximum was deeper in some years than others.
 \end{revcomment}
 
 \begin{revresponse}
-    We have added a paragraph to Section~2.4 (line~\lineref{R:ClarifyAggregation}) that clearly summarizes which analyses use annual aggregation versus monthly resolution, and which use depth integration over 0--100~m versus the four depth intervals shown in Figure~\ref{fig:divts}. We hope this clarifies the data grouping throughout the manuscript.
+    We have added a paragraph to Section~2.4 (\lineref{R:ClarifyAggregation}) that clearly summarizes which part of our analysis use annual aggregation versus monthly resolution, and all use depth integration over 0--100~m, except for the variables shown across four depth intervals in Figure~\ref{fig:divts}. We hope this clarifies the data grouping throughout the manuscript.
     
-    Regarding time averaging: we note that our in-situ data represent discrete monthly samples, not averages derived from higher-frequency measurements. Only the climate reanalysis data (ERA5) represent monthly averages. Annual aggregation was applied selectively to emphasize interannual trends, while monthly-resolution analyses (NMDS, gradient forest) preserve seasonal signals. Figure~\ref{fig:divts} was included specifically to show both depth-resolved and seasonal patterns, complementing the depth-integrated analyses elsewhere.
+    Regarding time averaging and aliasing: We agree that the monthly resolution might miss crucial short term variablitity. Our in-situ data represents discrete monthly samples, not averages derived from higher-frequency measurements. Only the climate reanalysis data (ERA5) represent monthly averages. Annual aggregation was applied selectively to emphasize interannual trends, while monthly-resolution analyses (NMDS, gradient forest) preserve seasonal signals. Figure~\ref{fig:divts} was included specifically to show both depth-resolved and seasonal patterns, complementing the 100m-depth-integrated analyses elsewhere.
     
-    Regarding mixed layer depth and chlorophyll maximum dynamics: our analysis focuses on depth-integrated properties to capture large-scale community changes, rather than on vertical structure per se. Mixed layer depth in the Cariaco Basin is consistently shallow ($<$35~m; \cite{muller-karger_scientific_2019}) and the 21$^{\circ}$C isotherm depth is more commonly used as a proxy for upwelling intensity in this system. Our references to a deeper chlorophyll maximum during stratified periods are based on previous research \cite{lorenzoni_characterization_2015, pinckney_phytoplankton_2015}, which documented euphotic zone depths of 60--75~m during low-production periods compared to 15--30~m during upwelling. Our depth-resolved data in Figure~\ref{fig:divts} are consistent with these earlier findings.
+    Regarding mixed layer depth and chlorophyll maximum dynamics: Our references to a deeper chlorophyll maximum during stratified periods are based on previous research (\cite{lorenzoni_characterization_2015, pinckney_phytoplankton_2015}). Our depth-resolved data in Figure~\ref{fig:divts} are consistent with these earlier findings. Other parts of our analysis focuse on fully depth-integrated properties to capture large-scale community changes, rather than on the vertical structure of the community. Mixed layer depth in the Cariaco Basin is consistently shallow ($<$35~m; \cite{muller-karger_scientific_2019}) and the 21$^{\circ}$C isotherm depth is more commonly used as a proxy for upwelling intensity in this system. Rergarding euphotic zone depth data, there are some reported values, e.g. \cite{pinckney_phytoplankton_2015} document a significant deepening of the euphotic zone, with the average depth (defined as 0.1\% PAR) increasing from 61±18 m (1996–2000) to 75±13 m (2006–2010). We have added a sentence in \lineref{R2:C14} to mention this. 
 \end{revresponse}
 
 \begin{revcomment} 
@@ -481,7 +482,7 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
 \begin{revresponse}
     We thank the reviewer for these suggestions. As detailed in our responses above, we have added discussion of data gaps and their implications to Section~2.4.3 and Section~4.3, and clarified the data aggregation approaches in Section~2.4.
     
-    Regarding the `nanoflagellates' grouping: this broad category appears only in the z-score analysis (Figure~\ref{fig:zscore}), where it illustrates interannual trends in functional group biomass. Nanoflagellate counts were reported as such in the original data and were not identified to finer taxonomic levels. Importantly, nanoflagellates were excluded from all diversity metric calculations, which are based exclusively on genus-level identifications (as noted in lines 192--193 and 272--273). We have added clarifying text to ensure this distinction is clear to readers.
+    Regarding the `nanoflagellates' grouping: this broad category appears only in the z-score analysis (Figure~\ref{fig:zscore}), where it illustrates interannual trends in functional group biomass. Nanoflagellate counts were reported as such in the original data and were not identified to finer taxonomic levels. Thus, nanoflagellates were excluded from all diversity metric calculations which are based exclusively on genus-level identifications. We have added clarifying text to ensure this distinction is clear to readers (see \lineref{R2:C25}).
     
     We have also revised sections of the Results to improve synthesis and flow, as suggested.
 \end{revresponse}
@@ -511,7 +512,7 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
     The conclusion that the pattern is cyclic depends on whether the data from 2014 onward are representative of the full calendar year (despite missing data); the relationship with the AMO is interesting regardless of cyclicity
 \end{revcomment}
 \begin{revresponse}
-    We agree that the interpretation of cyclicity depends on the representativeness of the post-2014 data. As detailed in our response to the previous comment, our sensitivity analyses and statistical comparisons (Table~\ref{tab:sup:period_comparison}) support the robustness of this finding, as does independent evidence from \cite{gomez_gaspar_variacion_2025}. 
+    We agree that the interpretation of cyclicity depends on the representativeness of the post-2014 data. As detailed in our response to the previous comment, our sensitivity analyses and statistical comparisons (Table~\ref{tab:sup:period_comparison}) provide support to this finding, as does independent evidence from \cite{gomez_gaspar_variacion_2025}. 
     We hope that our original manuscript already used tempered language, but we have reviewed the abstract and discussion to ensure this caution is consistently conveyed. We agree that the AMO relationship is a robust finding independent of the cyclicity question.
 \end{revresponse}
 
@@ -537,7 +538,7 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
     
 \end{revcomment}
 \begin{revresponse}
-	We have reformulated that section and included both the hypothesis and specific references to which data is the foundation for Muller-Karger et al.'s suggestion that there was a return to strong upwelling intensities and the accompanying phytoplankton community. To our knowledge, their claim makes reference to aggregated microscopy cell counts of Diatoms and Dinoflagellates, and not HPLC data. We have added this clarification to the paragraph (see \lineref{R2:C8:1}).
+	We have reformulated that section and included both the hypothesis and specific references to which data is the foundation for Muller-Karger et al.'s suggestion that there was a return to strong upwelling intensities and the previous phytoplankton community. To our knowledge, their claim makes reference to aggregated microscopy cell counts of Diatoms and Dinoflagellates, and not HPLC data. We have added this clarification to the paragraph (see \lineref{R2:C8:1}).
     We have also added a sentence to clearly state our hypothesis that these changes were driven by large-scale climatic factors, thank you for pointing this out.
     We have also added to our discussion a paragraph on the fact that microscopy data and pigment data may yield different insights into community responses (see \lineref{R2:C8:2}).
     
@@ -550,7 +551,7 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
 \end{revcomment}
 \begin{revresponse}
 	We have added the specific trends that Taylor et al. 2012 is presenting, which hopefully clarifies this (see \lineref{R2:C9}).
-    In general, we aim to highlight the novel aspect of our study, that we analyze the trends not as unidirectional, but include more data and found evidence for a potential cyclic or oscillatory pattern.
+    In this paragraph, we aim to highlight the novel aspect of our study, that we analyze the trends not as unidirectional, and using more data found evidence for a potential cyclic or oscillatory pattern.
 \end{revresponse}
 
 
@@ -593,7 +594,7 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
 
     We acknowledge that these gaps, particularly the missing upwelling-season months in 2004 and 2013, could have influenced the detected shift timing. To assess whether sampling gaps drove the observed patterns, we conducted a sensitivity analysis restricting data to months consistently sampled across 2014–2017, which confirmed that clustering patterns remained consistent [see Supplementary Material, Section/Figure SX - PLACEHOLDER].
     
-    Additionally, our hierarchical clustering used binary (presence-absence) data aggregated annually, an approach relatively robust to missing observations compared to abundance-based metrics. While these considerations provide reasonable certainty that missing data do not fundamentally skew our results and interpretation, we recognize that findings from the later years (2014–2017) should be interpreted with care. We have added a paragraph to the Discussion addressing the limitations imposed by data gaps.
+    Additionally, our hierarchical clustering used binary (presence-absence) data aggregated annually, an approach relatively robust to missing observations compared to abundance-based metrics. While these considerations provide reasonable certainty that missing data do not fundamentally skew our results and interpretation, we recognize that findings from the later years (2014–2017) should be interpreted with care. We have added a paragraph to the Discussion addressing the limitations imposed by data gaps (see \lineref{R2:missing-discussion}).
 \end{revresponse}
 
 \begin{revcomment}
@@ -602,7 +603,7 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
     Lines 195 – 198: The authors refer to easterly winds in referencing zonal winds, but then say they extracted the eastward component of the wind – easterly vs. eastward generally refer to different directions (easterly = from the east, eastward = toward the east). The authors should clarify which is correct and then adjust the language to use similar terms for wind direction. It is also a bit unclear whether they only used the easterly/eastward component of the 10 m winds, whether they used the absolute value of wind speed at 10 m height, or whether they accounted for wind direction in their analyses.
 \end{revcomment}
 \begin{revresponse}
-	We thank the reviewer for pointing out this confusing terminology. The ERA5 variable u10 is defined as the eastward component of wind speed, meaning positive values indicate wind blowing toward the east and negative values indicate wind blowing toward the west (i.e., easterly winds). Since upwelling in the Cariaco Basin is driven by easterly trade winds, we used the negative of u10 so that positive values in our analysis correspond to stronger easterly winds. We have revised the methods text to clarify this (see\linelabel{R2:C12}).
+	We thank the reviewer for pointing out this confusing terminology. The ERA5 variable u10 is defined as the eastward component of wind speed, meaning positive values indicate wind blowing toward the east and negative values indicate wind blowing toward the west (i.e., easterly winds). Since upwelling in the Cariaco Basin is driven by easterly trade winds, we used the negative of u10 so that positive values in our analysis correspond to stronger easterly winds. We have revised the methods text to clarify this (see \lineref{R2:C12}).
 \end{revresponse}
 
 
@@ -624,11 +625,11 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
 \begin{revresponse}
 	We thank the reviewer for these suggestions regarding vertical structure and depth integration methods.
 	
-	We have already mentioned the discrete depth intervals at which CARIACO data were sampled at in Section 2.2, but now additionally added that information  (1, 7, 15, 25, 35, 55, 75, and \qty{100}{\meter}) to Section 2.3.1. Depth integration was achieved by interpolating to a meter-resolution between these standard depths using the ``unesco'' algorithm from the R ``oce'' package, then summing across the specified depth intervals. We hope this answers the reviewers questions.
+	We have already mentioned the discrete depth intervals at which CARIACO data were sampled at in Section 2.2, but now additionally added that information  (1, 7, 15, 25, 35, 55, 75, and 100 m) to Section 2.3.1. Depth integration was achieved by interpolating to a meter-resolution between these standard depths using the ``unesco'' algorithm from the R ``oce'' package, then summing across the specified depth intervals. We hope this answers the reviewers questions.
 	
-	Regarding mixed layer depth: in the tropical coastal ecosystem of the Cariaco Basin, mixed layer depth is consistently shallow ($<$\qty{35}{\meter}; \cite{muller-karger_scientific_2019}) and shows high variability. For this reason, the 21°C isotherm depth, which we include in our analysis, is more commonly used as a proxy for upwelling intensity in this system (e.g. \cite{astor_seasonal_2003, lorenzoni_bio-optical_2011}).
+	Regarding mixed layer depth: in the tropical coastal ecosystem of the Cariaco Basin, mixed layer depth is consistently shallow ($<$\qty{35}{\meter}; \cite{muller-karger_scientific_2019}) and shows high variability. For this reason, the 21°C isotherm depth, which we include in our analysis, is more commonly used as a proxy for upwelling intensity in this system (e.g. \cite{astor_seasonal_2003, lorenzoni_bio-optical_2011, pinckney_phytoplankton_2015}).
 	
-	We acknowledge that euphotic zone depth influences phytoplankton vertical distribution. Unfortunately, PAR data were not collected during the time series, and euphotic depth measurements are only available until 2012. Previous studies documented euphotic zone depths of 60--75~m during low-production periods compared to 15--30~m during upwelling (\cite{lorenzoni_characterization_2015, pinckney_phytoplankton_2015}). Our depth-resolved data in Figure~\ref{fig:divts} are consistent with these earlier findings, but further investigation is out of the scope of our study. We have added a brief acknowledgment of this limitation to the discussion (see \lineref{R2:C14}).
+	We acknowledge that euphotic zone depth influences phytoplankton vertical distribution. Unfortunately, PAR data were not collected during the time series. Please see \autoref{comment:ChlMax} for additional discussion. Further investigation is out of the scope of our study. We have added an acknowledgment of this limitation to the discussion (see \lineref{R2:C14}).
 \end{revresponse}
 
 \begin{revcomment}
@@ -638,7 +639,7 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
     The authors note that data from 1995, 2016, and 2017 were excluded due to missing data, with more than 6 months of data missing (i.e., 50\% of each year). The missing data make it difficult to be confident in the cyclical nature of change reported in the manuscript. Were there also missing data for phytoplankton cell counts in these years? In Lines 334-335, the authors note that “Although data are sparse, nutrients and biological variables show a strong increase from 2014”
 \end{revcomment}
 \begin{revresponse}
-    Yes, phytoplankton cell count data were also incomplete for these years. As detailed in our response to your \autoref{comment:phyto-coverage}, we provide a complete list of missing months for phytoplankton data. Years with fewer than six monthly observations, 1995 ($n=2$), 2016 ($n=5$), and 2017 ($n=1$), were excluded from annually aggregated analyses for this reason (Section~2.4, \lineref{R1:C12:start}[R1:C12:end]).
+    Yes, phytoplankton cell count data were also incomplete for these years. As detailed in our response to your \autoref{comment:phyto-coverage}, wheree provide a complete list of missing months for phytoplankton data. Years with fewer than six monthly observations, 1995 ($n=2$), 2016 ($n=5$), and 2017 ($n=1$), were excluded from annually aggregated analyses for this reason (Section~2.4, \lineref{R1:C12:start}[R1:C12:end]).
     
     Regarding the sentence at \lineref{R2:C15:sparse}[R2:C15:sparse:end]: we acknowledge this could be clearer, and have revised it to explicitly state which data are sparse and why we consider the cyclic interpretation robust:
     \begin{changes}
@@ -660,6 +661,7 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
 \begin{revresponse}
     We thank the reviewer for requesting this clarification. The reviewer's understanding is largely correct. The procedure is as follows:
     \begin{enumerate}
+        %NOTE: need to double check my actual interpolation algorithm!
         \item Depth-discrete cell counts (at 1, 7, 15, 25, 35, 55, 75, and 100~m) were interpolated to 1~m resolution and integrated (summed) over the upper 100~m to obtain a single depth-integrated value per taxon per month.
         \item For each month, depth-integrated counts of all taxa belonging to a functional group were summed to obtain total cell counts per functional group.
         \item These monthly functional group totals were then averaged across all months within a year to obtain annual mean cell counts per functional group.
@@ -755,7 +757,7 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
 \begin{revresponse}
     We thank the reviewer for this observation. The hierarchical clustering was performed using the binary Jaccard distance matrix, which considers only presence-absence of genera and is insensitive to relative abundances. Under this metric, the years 1996-2004 and 2014-2016 form a single cluster based on shared taxonomic composition.
     
-    We included the dominant genera separately to provide additional ecological context, as dominance patterns reflect a different aspect of community structure than presence-absence similarity. The shift in dominant taxa from \textit{Thalassiosira} (early Cluster~1) to \textit{Pseudo-nitzschia}/\textit{Emiliania} (Cluster~2) to \textit{Emiliania}/\textit{Thalassiosira} (late Cluster~1) does suggest gradual compositional change, which is consistent with ecological expectations-community transitions are rarely abrupt. However, the clustering analysis indicates that despite these shifts in dominance, the overall taxonomic pool present in late Cluster~1 more closely resembles early Cluster~1 than Cluster~2. We have added a clarifying sentence to the text to distinguish these complementary perspectives (\lineref{R2:C23}).
+    We included the dominant genera separately to provide additional ecological context, as dominance patterns reflect a different aspect of community structure than presence-absence similarity. The shift in dominant taxa from \textit{Thalassiosira} (early Cluster~1) to \textit{Pseudo-nitzschia}/\textit{Emiliania} (Cluster~2) to \textit{Emiliania}/\textit{Thalassiosira} (late Cluster~1) does suggest that the community did transition rather than return. However, the clustering analysis indicates that despite these shifts in dominance, the overall taxonomic pool present in late Cluster~1 more closely resembles early Cluster~1 than Cluster~2. We have added a clarifying sentence to the text to distinguish these complementary perspectives (\lineref{R2:C23}).
     
     We have also corrected the spelling of \textit{Emiliania} throughout the manuscript and figures.
 \end{revresponse}
@@ -801,7 +803,7 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
 \begin{revresponse}
 	The magnification used in identifying cells was 100x according to the Methods Handbook of the CARIACO time series. We stated in our discussion, that only microphytoplankton (cells > 20 µm) were identified. To make this clearer in our manuscript, we have added a sentence to the methods section to mention the magnification and size limit.
     
-    That small diatoms may have gone undetected is a valid point and we have added the specification of \textit{large} diatoms in the sentence. 
+    That small diatoms may have gone undetected is a valid point and we have added the specification of \textit{large} diatoms in the sentence (\lineref{R2:C28}). 
 \end{revresponse}
 
 
@@ -823,7 +825,9 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
 \end{revcomment}
 
 \begin{revresponse}
-    The 55~m depth threshold originates from \cite{pinckney_phytoplankton_2015} and likely reflects changes in euphotic zone depth rather than mixed layer depth. In the Cariaco Basin, MLD is consistently shallow ($<$35~m; \cite{muller-karger_scientific_2019}) and is a less reliable indicator of vertical structure than in open-ocean systems. The euphotic zone depth, in contrast, varies substantially with productivity: 60-75~m during stratified, low-production periods versus 15-30~m during upwelling when biomass accumulation attenuates light (\cite{lorenzoni_characterization_2015, pinckney_phytoplankton_2015}). We have added clarifying text to the Discussion noting this distinction and the data limitations (see \lineref{R2:C14}).
+    The 55~m depth threshold originates from \cite{pinckney_phytoplankton_2015} and likely reflects constraints of the depth-resolved data sources, rather than the mixed layer depth. 
+    Please see \autoref{comment:ChlMax} for a more detailed discussion of the euphotic zone and mixed layer depth.
+    We have added clarifying text to the Discussion noting this distinction and the data limitations (see \lineref{R2:C14}).
 \end{revresponse}
 
 \begin{revcomment}
@@ -832,7 +836,7 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
     Line 509 – When nanoflagellates are present at increased numbers in the community, this would influence richness estimates, since the various genera encompassed by this polyphyletic group are not necessarily captured accurately; it would be helpful for the authors to discuss how a broad grouping might influence estimates of genus richness and thus the clusters and patterns observed in the data. Lines 512 – 516 would benefit from consideration of the effect of a grouping of nanoflagellate taxa on evenness metrics.
 \end{revcomment}
 \begin{revresponse}
-    We thank the reviewer for raising this concern. The wording in our Methods section was unclear. Nanoflagellate counts were included only in the z-score analysis of functional group biomass (Figure~\ref{fig:zscore}), where they illustrate interannual trends. However, because nanoflagellates were not identified to genus level in the original data, they were excluded from all diversity metric calculations (genus richness, Shannon index, Pielou's evenness) and from the hierarchical clustering analysis, which are based exclusively on genus-level community data. Therefore, the broad grouping of nanoflagellates does not influence our diversity estimates or clustering patterns. We have added clarifying text to ensure this distinction is clear to readers (see \lineref{R2:C25}).
+    We thank the reviewer for raising this concern. The wording in our Methods section was unclear. Nanoflagellate counts were included only in the z-score analysis of functional group biomass (Figure~\ref{fig:zscore}), where they illustrate interannual trends. However, because nanoflagellates were not identified to genus level in the original data, they were excluded from all diversity metric calculations (genus richness, Shannon index, Pielou's evenness) and from the hierarchical clustering analysis, which are based exclusively on genus-level community data. In Section~4.3 (see \lineref{R2:C31}, we discuss the strong limitation the microscopy data imposes, the size detection limit skews our richness estimates of communities dominated by smaller phytoplankton.
 \end{revresponse}
 
 
