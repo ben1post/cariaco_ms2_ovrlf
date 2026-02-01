@@ -326,7 +326,6 @@ The shift in phytoplankton community composition associated with increased tempe
     AMO & unitless & Climate index provided by NSF NCAR \\
     Wind speed & \qty{}{\meter/\second} & ERA5 model reanalysis, negative 10 m u-component of wind speed \\
     Precipitation & \qty{}{\meter} & ERA5 model reanalysis, total precipitation\\
-    Evaporation & \qty{}{\meter} & ERA5 model reanalysis, evaporation \\
     SST & \qty{}{\celsius} & CTD, Average temperature measured down to \qty{10}{\meter} depth\\
     \qty{21}{\celsius} isotherm & \qty{}{\meter} & CTD, depth at which temperature reaches 21°C\\
     Salinity & PSU & Niskin, interpolated down to \qty{100}{\meter} depth \\
@@ -351,7 +350,7 @@ The shift in phytoplankton community composition associated with increased tempe
     
     
     \begin{figure}
-    \noindent\includegraphics[width=\textwidth]{fig/Figure2_ZScores_v2.pdf}
+    \noindent\includegraphics[width=\textwidth]{fig/Figure2_ZScores_v4_revresponse.pdf}
     \caption{Time series showing annual z-scores of selected environmental, climatological, and ecological variables. Red indicates negative annual anomalies and blue indicates positive annual anomalies. Deeper shades indicate larger anomalies. Chlorophyll and functional group counts were log-transformed prior to normalization. The years 1995 (n=2) and 2016 (n=5), 2017 (n=1) were removed due to insufficient monthly data to generate robust annual means. Additionally, we marked years with two or three and four or more missing monthly values.}
     \label{fig:zscore}
     \end{figure}
@@ -366,7 +365,7 @@ The shift in phytoplankton community composition associated with increased tempe
     
     \begin{figure}
     \begin{center}
-    \noindent\includegraphics[width=480pt]{fig/DepthDivTimeSeries_updated.pdf}
+    \noindent\includegraphics[width=480pt]{fig/Figure3_DepthDivTimeSeries_v3_revResponse.pdf}
     \end{center}
     \caption{Time series and seasonality of chlorophyll \textit{a} and diversity indices at four depth intervals. (a,c,e,g) Large dots and lines mark annual mean across time series for years with more than 5 monthly samples. Small, transparent dots show monthly values. (b,d,f,h) Boxplots of monthly measurements at four depth intervals grouped by season. Upwelling season includes the months from December to May, rainy season from June to November.}
     \label{fig:divts}
@@ -380,7 +379,7 @@ The shift in phytoplankton community composition associated with increased tempe
     To check whether the annual aggregation of community data smoothed out strong seasonal signals, we performed an NMDS cluster analysis using the monthly cell counts (Figure \ref{fig:clustering} $c$). The NMDS clustering is overlaid with environmental data and climate indices in an attempt to unveil some of the underlying trends. The horizontal axis separates the two clusters, with cluster 2 located over positive anomalies in AMO and precipitation, and cluster 1 located over positive anomalies in evaporation, salinity, and MEI v.2. The second NMDS axis appears to follow the trends in upwelling intensity, as indicated by the vectors pointing in opposite directions for nutrient concentrations, temperature, and wind speed. Overall, the NMDS clustering confirms the pattern shown by clustering the annually aggregated data. 
     
     \begin{figure}
-    \noindent\includegraphics[width=\textwidth]{fig/Figure4_ClusteringNMDS_v2.pdf}
+    \noindent\includegraphics[width=\textwidth]{fig/Figure4_ClusteringNMDS_v4.pdf}
     \caption{Clustering analysis. (a) Hierarchical clustering by complete linkage method of microscopy cell counts at the Genus level, using the binary Jaccard distance. The community for each year is binned together, to smooth out seasonal features. (b) Species turnover between years for annual aggregate of identified phytoplankton at the genus level. The three genera dominating the cell counts for the separate parts of cluster 1 and cluster 2 are given in order of abundance from top to bottom. (c) NMDS plot of monthly community data (cell counts) that is cube-root transformed. Stress: 0.261, 2 dimensions, converging solution. The fill color of dots indicates which cluster the monthly values belong, cluster 1 in blue and cluster 2 in red. Vectors show how environmental variables co-vary with the community data. The length of the vector indicates the strength of the relationship.}
     \label{fig:clustering}
     \end{figure}
@@ -389,8 +388,8 @@ The shift in phytoplankton community composition associated with increased tempe
     Figure \ref{fig:clustcomp} shows density distributions of environmental variables, chlorophyll \textit{a}, and diversity indices for the two clusters. Upwelling-related variables exhibit distinct patterns between the two clusters. For example, cluster 1 experienced more frequent high wind events, a shallower \qty{21}{\celsius} isotherm, lower temperatures, reduced evaporation, and higher salinity and nutrient concentrations, particularly for nitrate. The AMO index shows a pronounced separation between the two clusters, with cluster 1 exhibiting more negative anomalies, while cluster 2 shows a higher occurrence of positive anomalies. Although there are no significant differences in genus richness and the Shannon index between clusters, there is a slightly increased median in the Pielou index for cluster 2 (Table \ref{tab:ClustCompWilcox}). The density distributions highlight additional contrasts; cluster 1 shows higher variance for genus richness, whereas cluster 2 shows greater variance and a bimodal distribution for the Shannon and Pielou indices. 
     
     \begin{figure}
-    \noindent\includegraphics[width=\textwidth]{fig/Figure5_ClustCompPlot_v2.pdf}
-    \caption{Density distributions of environmental variables, chlorophyll \textit{a}, and diversity indices for the two clusters. The dashed lines mark the median of each distribution. Significance levels of Wilcoxon sum rank tests between clusters are shown above plots  (p-value: ***\textless0.001, **\textless0.01, *\textless0.05, n.s.=not significant).}
+    \noindent\includegraphics[width=\textwidth]{fig/Figure5_DensityDistributions_v3.pdf}
+    \caption{Density distributions of environmental variables, chlorophyll \textit{a}, and diversity indices for the two clusters. The dashed lines mark the median of each distribution.}
     \label{fig:clustcomp}
     \end{figure}
 
