@@ -393,34 +393,41 @@ The shift in phytoplankton community composition associated with increased tempe
     \label{fig:clustcomp}
     \end{figure}
 
-    \begin{table}
-    \caption{Results of two-sided Wilcoxon sum rank test with continuity correction for monthly values of the variables between the two clusters. Cluster 1 covers the periods 1996-2004 and 2014-2016 and cluster 2 covers the period 2005-2013.}
-    \centering
-    \begin{tabular}[t]{lrrl}
-    \toprule
-    Variable & W & p.value & Significance\\
-    \midrule
-    AMO & 3494.0 & 1.86e-14 & ***\\
-    MEI v.2 & 9523.5 & 0.006 & **\\
-    Wind speed & 7074.0 & 0.143 & n.s.\\
-    Precipitation & 6251.0 & 0.004 & **\\
-    Evaporation & 9979.0 & 3.68e-5 & ***\\
-    \addlinespace
-    21 °C Isotherm & 5293.0 & 0.034 & *\\
-    SST & 4712.0 & 0.001 & ***\\
-    Salinity & 7636.0 & 0.002 & **\\
-    $NO_3$ & 6378.0 & 0.018 & *\\
-    $PO_4$ & 7359.0 & 0.012 & *\\
-    $SiO_4$ & 5998.0 & 0.736 & n.s.\\
-    \addlinespace
-    Chlorophyll $a$ & 8229.0 & 9.63e-6 & ***\\
-    Genus Richness & 5913.0 & 0.954 & n.s.\\
-    Shannon Index & 5142.0 & 0.108 & n.s.\\
-    Pielou Index & 4874.0 & 0.029 & *\\
-    \bottomrule
-    \end{tabular}
+
     
+    \begin{table}[ht]
+    \centering
+    \caption{Comparison of environmental and biological variables across three clusters: Early Cluster~1 (1996-2003), Cluster~2 (2004-2013), and Late Cluster~1 (2014-2016). P-values are from two-sided Wilcoxon rank-sum tests on the monthly values. Significance levels indicated by asterisks (p-value: ***\textless0.001, **\textless0.01, *\textless0.05), non-significant results show the p-value. Note that sample sizes for Late Cluster~1 are smaller ($n$ = 21-36), which may limit statistical power for comparisons involving this period. A pattern consistent with recovery to pre-2004 conditions is indicated when E-C1 vs C2 and C2 vs L-C1 show significant differences, while E-C1 vs L-C1 does not.}
     \label{tab:ClustCompWilcox}
+    \small
+    \begin{tabular}{l rrr ccc}
+    \hline
+    & \multicolumn{3}{c}{Sample size ($n$)} & \multicolumn{3}{c}{Wilcoxon test} \\
+    \cmidrule(lr){2-4} \cmidrule(lr){5-7}
+    Variable & E-C1 & C2 & L-C1 & E-C1 vs C2 & C2 vs L-C1 & E-C1 vs L-C1 \\
+    \hline
+    AMO & 96 & 120 & 36 & *** & *** & ** \\
+    MEI v.2 & 96 & 120 & 36 & {\scriptsize 0.38} & *** & *** \\
+    Wind speed & 96 & 120 & 36 & {\scriptsize 0.29} & {\scriptsize 0.12} & {\scriptsize 0.43} \\
+    Precipitation & 96 & 120 & 36 & * & * & {\scriptsize 0.50} \\
+    Salinity & 89 & 111 & 22 & ** & * & {\scriptsize 0.28} \\
+    SST & 93 & 111 & 21 & ** & ** & {\scriptsize 0.23} \\
+    21°C Isotherm & 93 & 111 & 21 & * & {\scriptsize 0.38} & {\scriptsize 0.87} \\
+    NO$_3$ & 84 & 102 & 21 & ** & {\scriptsize 0.07} & {\scriptsize 1.00} \\
+    PO$_4$ & 90 & 111 & 21 & * & {\scriptsize 0.16} & {\scriptsize 0.88} \\
+    SiO$_4$ & 91 & 110 & 21 & {\scriptsize 0.97} & {\scriptsize 0.28} & {\scriptsize 0.53} \\
+    Primary Productivity & 91 & 89 & 22 & {\scriptsize 0.33} & {\scriptsize 0.34} & {\scriptsize 0.96} \\
+    Chlorophyll $a$ & 92 & 110 & 22 & *** & {\scriptsize 0.07} & {\scriptsize 0.57} \\
+    Diatoms & 87 & 108 & 23 & *** & ** & ** \\
+    Haptophytes & 87 & 108 & 23 & *** & *** & {\scriptsize 0.98} \\
+    Dinoflagellates & 87 & 108 & 23 & *** & *** & {\scriptsize 0.37} \\
+    Cyanobacteria & 87 & 108 & 23 & *** & *** & * \\
+    Nanoflagellates & 87 & 108 & 23 & * & *** & *** \\
+    Genus Richness & 87 & 108 & 23 & {\scriptsize 0.81} & {\scriptsize 0.71} & {\scriptsize 0.70} \\
+    Shannon Index & 87 & 108 & 23 & {\scriptsize 0.17} & {\scriptsize 0.10} & {\scriptsize 0.24} \\
+    Pielou Index & 87 & 108 & 23 & {\scriptsize 0.10} & * & {\scriptsize 0.08} \\
+    \hline
+    \end{tabular}
     \end{table}
     
 
@@ -632,47 +639,12 @@ The shift in phytoplankton community composition associated with increased tempe
 \section{Correlation of data}
 
 \begin{figure}[h!]
-\noindent\includegraphics[width=\textwidth]{fig/CorrClustSupplementalPlot_v1.pdf}
-\caption{Correlation matrix with clustering of environmental variables, diversity metrics and cell counts. Correlation was calculated using a Spearman's rank correlation coefficient, the magnitude of the coefficient is indicated by the color of the circle. The size of the circle and significance level marking represents the calculated significance of the correlation deviating from 0 (p-value: ***\textless0.001, **\textless0.01, *\textless0.05). The time series were aditionally ordered by hierarchical clustering via the complete linkage method into 5 groups indicated by the black square border.}
+\noindent\includegraphics[width=\textwidth]{fig/CorrClustSupplementalPlot_v2.pdf}
+\caption{Correlation matrix with clustering of environmental variables, diversity metrics and cell counts. Biological variables (chlorophyll \textit{a}, primary productivity, and phytoplankton group abundances) were log-transformed (log\textsubscript{1+x}) prior to analysis. Correlation was calculated using Spearman's rank correlation coefficient; the magnitude of the coefficient is indicated by the color of the circle. The size of the circle and significance level marking represents the calculated significance of the correlation deviating from 0 (p-value: ***\textless0.001, **\textless0.01, *\textless0.05). The time series were additionally ordered by hierarchical clustering via the complete linkage method into 5 groups indicated by the black square border. Note that significance levels should be interpreted with caution, as temporal autocorrelation in the monthly time series may inflate the apparent statistical significance of correlations.}
 \label{fig:sup:correlation}
 \end{figure}
 
 
-\newpage
-\section{Cluster comparison}
-\begin{table}[ht]
-\centering
-\caption{Comparison of environmental and biological variables across three periods: Early Cluster~1 (1995--2004), Cluster~2 (2005--2013), and Late Cluster~1 (2014--2017). P-values are from two-sided Wilcoxon rank-sum tests. Significance levels indicated by asterisks: $^{***}p < 0.001$, $^{**}p < 0.01$, $^{*}p < 0.05$; non-significant results show the p-value. A pattern consistent with partial recovery to pre-2005 conditions is indicated when Early~C1 vs C2 and C2 vs Late~C1 show significant differences, while Early~C1 vs Late~C1 does not.}
-\label{tab:sup:period_comparison}
-\small
-\begin{tabular}{l rrr ccc}
-\hline
-& \multicolumn{3}{c}{Sample size ($n$)} & \multicolumn{3}{c}{Wilcoxon test} \\
-\cmidrule(lr){2-4} \cmidrule(lr){5-7}
-Variable & E-C1 & C2 & L-C1 & E-C1 vs C2 & C2 vs L-C1 & E-C1 vs L-C1 \\
-\hline
-MEI v.2 & 110 & 108 & 37 & {\scriptsize 0.06} & $^{***}$ & $^{***}$ \\
-AMO & 110 & 108 & 37 & $^{***}$ & $^{***}$ & $^{**}$ \\
-Wind speed & 110 & 108 & 37 & {\scriptsize 0.31} & {\scriptsize 0.11} & {\scriptsize 0.36} \\
-Precipitation & 110 & 108 & 37 & $^{*}$ & $^{*}$ & {\scriptsize 0.33} \\
-Isotherm Depth & 107 & 99 & 22 & {\scriptsize 0.16} & {\scriptsize 0.37} & {\scriptsize 0.82} \\
-Salinity & 102 & 99 & 23 & $^{***}$ & $^{**}$ & {\scriptsize 0.41} \\
-SST & 107 & 99 & 22 & $^{**}$ & $^{**}$ & {\scriptsize 0.16} \\
-NO$_3$ & 96 & 92 & 22 & $^{*}$ & {\scriptsize 0.10} & {\scriptsize 0.91} \\
-PO$_4$ & 104 & 99 & 22 & {\scriptsize 0.08} & {\scriptsize 0.15} & {\scriptsize 0.73} \\
-SiO$_4$ & 105 & 98 & 22 & {\scriptsize 0.26} & {\scriptsize 0.17} & {\scriptsize 0.69} \\
-Chlorophyll $a$ & 106 & 99 & 23 & $^{***}$ & $^{*}$ & {\scriptsize 0.73} \\
-Diatoms & 98 & 99 & 23 & $^{***}$ & $^{**}$ & $^{**}$ \\
-Haptophytes & 98 & 99 & 23 & $^{***}$ & $^{***}$ & {\scriptsize 0.60} \\
-Dinoflagellates & 98 & 99 & 23 & $^{***}$ & $^{***}$ & {\scriptsize 0.18} \\
-Cyanobacteria & 98 & 99 & 23 & $^{***}$ & $^{***}$ & {\scriptsize 0.09} \\
-Nanoflagellates & 98 & 99 & 23 & $^{***}$ & $^{**}$ & $^{***}$ \\
-Richness & 98 & 99 & 23 & {\scriptsize 0.67} & {\scriptsize 0.53} & {\scriptsize 0.49} \\
-Shannon & 98 & 99 & 23 & {\scriptsize 0.19} & {\scriptsize 0.14} & {\scriptsize 0.33} \\
-Pielou & 98 & 99 & 23 & {\scriptsize 0.07} & $^{*}$ & {\scriptsize 0.15} \\
-\hline
-\end{tabular}
-\end{table}
 
 \newpage
 \section{Gradient forest analysis supplement}
@@ -686,27 +658,39 @@ Pielou & 98 & 99 & 23 & {\scriptsize 0.07} & $^{*}$ & {\scriptsize 0.15} \\
 
 
 \begin{table}
-
-\caption{Resulting $R^2$ weighted importance for running predictor variables together with time-lags to check if they provide a better fit to the data. Each column represents a single run, with resulting importance values for time series and monthly lags. The results were stable, so that repeated runs confirmed the chosen time lag. For in-situ variables,  we tested all measurements up to a lag of 3 months. For climate variables we tested up to a lag of 6 months and added a lag of 12 months for the climate indices. Time lag with maximum importance per variable are highlighted in bold and chosen for the final model run.}
 \centering
-\resizebox{\textwidth}{!}{\begin{tabular}[t]{rrrrrrrrrrrr}
+\caption{\label{tab:tab:sup:GFlagtests}Resulting $R^2$ weighted importance for running predictor variables together with time-lags to check if they provide a better fit to the data. Each column represents a single run, with resulting importance values for time series and monthly lags. The results were stable, so that repeated runs confirmed the chosen time lag. For in-situ variables, we tested all measurements up to a lag of 3 months. For climate variables we tested up to a lag of 12 months and lags of 1 to 5 years (i.e. 12 - 60 months). Time lag with maximum importance per variable are highlighted in bold and chosen for the final model run.}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{rllllllllll}
 \toprule
-lag & NO3 & PO4 & SiO4 & SST & \qty{21}{\celsius} Isotherm & Salinity & AMO & MEI v.2 & Wind speed & Precipitation & Evaporation\\
+lag (months)& NO3 & PO4 & SiO4 & SST & \qty{21}{\celsius} Isotherm & Salinity & Wind speed & Precipitation & AMO & MEI v.2\\
 \midrule
-0 & \textbf{0.027} & \textbf{0.029} & \textbf{0.026} & \textbf{0.086} & \textbf{0.024} & 0.006 & 0.015 & 0.015 & 0.003 & 0.005 & 0.011\\
-1 & 0.015 & 0.011 & 0.014 & 0.010 & 0.003 & 0.004 & 0.012 & 0.015 & 0.006 & \textbf{0.014} & 0.009\\
-2 & 0.018 & 0.007 & 0.011 & 0.013 & 0.005 & 0.010 & \textbf{0.026} & 0.018 & 0.007 & 0.005 & 0.013\\
-3 & 0.013 & 0.007 & 0.003 & 0.007 & 0.007 & \textbf{0.013} & 0.016 & 0.017 & 0.005 & 0.009 & 0.011\\
-4 & NA & NA & NA & NA & NA & NA & 0.017 & \textbf{0.026} & 0.005 & 0.008 & 0.005\\
-5 & NA & NA & NA & NA & NA & NA & 0.016 & 0.020 & \textbf{0.008} & 0.008 & \textbf{0.040}\\
-6 & NA & NA & NA & NA & NA & NA & 0.017 & 0.012 & 0.005 & 0.006 & 0.004\\
+0 & \textbf{0.062} & \textbf{0.029} & \textbf{0.022} & \textbf{0.1} & \textbf{0.037} & 0.007 & 0.003 & 0.004 & 0.006 & 0.006\\
+1 & 0.027 & 0.013 & 0.014 & 0.007 & 0.012 & 0.005 & \textbf{0.009} & \textbf{0.011} & 0.005 & 0.004\\
+2 & 0.019 & 0.007 & 0.01 & 0.006 & 0.007 & \textbf{0.014} & 0.007 & 0.004 & 0.005 & 0.003\\
+3 & 0.013 & 0.008 & 0.008 & 0.009 & 0.005 & 0.008 & 0.005 & 0.008 & 0.006 & 0.003\\
+4 & NA & NA & NA & NA & NA & NA & 0.006 & 0.008 & 0.005 & 0.004\\
+
+5 & NA & NA & NA & NA & NA & NA & 0.008 & 0.008 & 0.002 & 0.004\\
+6 & NA & NA & NA & NA & NA & NA & 0.006 & 0.007 & 0.003 & 0.004\\
+7 & NA & NA & NA & NA & NA & NA & NA & NA & 0.002 & 0.004\\
+8 & NA & NA & NA & NA & NA & NA & NA & NA & 0.003 & 0.004\\
+9 & NA & NA & NA & NA & NA & NA & NA & NA & 0.002 & 0.004\\
+
+10 & NA & NA & NA & NA & NA & NA & NA & NA & 0.003 & 0.003\\
+11 & NA & NA & NA & NA & NA & NA & NA & NA & 0.003 & 0.005\\
+12 & NA & NA & NA & NA & NA & NA & NA & NA & 0.005 & 0.007\\
 \addlinespace
-12 & NA & NA & NA & NA & NA & NA & 0.010 & 0.013 & NA & NA & NA\\
+24 & NA & NA & NA & NA & NA & NA & NA & NA & \textbf{0.031} & 0.02\\
+36 & NA & NA & NA & NA & NA & NA & NA & NA & 0.023 & 0.018\\
+48 & NA & NA & NA & NA & NA & NA & NA & NA & 0.016 & \textbf{0.03}\\
+60 & NA & NA & NA & NA & NA & NA & NA & NA & 0.02 & 0.025\\
 \bottomrule
 \end{tabular}}
+
 \label{tab:sup:GFlagtests}
 \end{table}
-
 
 
 \begin{figure}
