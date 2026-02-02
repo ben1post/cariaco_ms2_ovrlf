@@ -439,7 +439,7 @@ The shift in phytoplankton community composition associated with increased tempe
     \linelabel{R1:C24:start} Cumulative importance curves from gradient forest analysis show how the importance of a predictor accumulates across its range of values. The slope of the curve at any point indicates where the strongest compositional turnover occurs—steep sections represent threshold values where small changes in the predictor correspond to large changes in community composition, while flat sections indicate regions where the predictor has little influence on community structure. For the AMO index, we see a clear pattern in which negative anomalies affect the community (slope is highest for negative values). \linelabel{R1:C24:end} This contrasts with a higher importance for positive anomalies in the MEI v.2 index, particularly for haptophytes and cyanobacteria. Nitrate concentrations between 6 and 8 \unit{\micro \mole} represent the range within which the community changed most, indicating these values as a threshold for community composition. Figure \ref{fig:sup:GFoutput_lags_extra} in Appendix shows response curves for all variables not shown here. Variables that show a pronounced threshold response are evaporation and salinity. For evaporation the threshold is at larger values of evaporation, which are most likely linked to periods of strong stratification, and salinity at both extreme ends of the range, signifying effects on cell counts of diatoms, dinoflagellates and cyanobacteria at strong upwelling and stratified conditions. 
     
     \begin{figure}
-    \noindent\includegraphics[width=\textwidth]{fig/Figure6_GF_output_FINAL_v2.pdf}
+    \noindent\includegraphics[width=\textwidth]{fig/Figure6_NEW_GF_output_LAGGED.pdf}
     \caption{Gradient forest analysis of monthly community data at a genus level. (a) Predictor variables ranked according to overall weighted importance in predicting shifts in abundances. (b) Phytoplankton genera that could be predicted ranked according to the predictive power via the weighted importance. (c) Cumulative importance curves for the predictor variables. The dashed black lines show cumulative importance across predictor range for the entire model and all genera. Solid colored lines represent the responses of individual functional groups.}
     \label{fig:GF}
     \end{figure}
@@ -651,7 +651,7 @@ The shift in phytoplankton community composition associated with increased tempe
 
 
 \begin{figure}[h!]
-\noindent\includegraphics[width=\textwidth]{fig/FigureA2_GF_output_Supplement_v1.pdf}
+\noindent\includegraphics[width=\textwidth]{fig/Figure6_NEW_GF_supplement_LAGGED.pdf}
 \caption{Cumulative importance curves for all predictor variables not shown in the main figure. Dashed black line represents the cumulative importance across the entire community, colored lines represent functional groups. Gradient forest runs where done on Genus-level cell counts, integrated over the top 100 meters.}
 \label{fig:sup:GFoutput_lags_extra}
 \end{figure}
@@ -694,17 +694,46 @@ lag (months)& NO3 & PO4 & SiO4 & SST & \qty{21}{\celsius} Isotherm & Salinity & 
 
 
 \begin{figure}
-\noindent\includegraphics[width=\textwidth]{fig/FigureA3_GF_output_NOLAG_v1.pdf}
+\noindent\includegraphics[width=\textwidth]{fig/Figure6_NEW_GF_output_NOLAG.pdf}
 \caption{Gradient forest analysis of monthly community data at a genus level for all predictors without any time lags. (a) Predictor variables ranked according to overall weighted importance in predicting shifts in abundances. (b) Phytoplankton genera that could be predicted ranked according to the predictive power via the weighted importance. (c) Cumulative importance curves for the predictor variables. The dashed black lines show cumulative importance across predictor range for the entire model and all genera. Solid colored lines represent the responses of individual functional groups.}
 \label{fig:sup:GFoutput_nolags}
 \end{figure}
 
 
 \begin{figure}
-\noindent\includegraphics[width=\textwidth]{fig/FigureA4_GF_output_Supplement_NOLAG_v1.pdf}
+\noindent\includegraphics[width=\textwidth]{fig/Figure6_NEW_GF_supplement_NOLAG.pdf}
 \caption{Cumulative importance curves for all variables not shown in the previous figure, showing the gradient forest analysis performed with all predictors without any time lags. Dashed black line represents the cumulative importance across the entire community. Solid colored lines represent functional groups. Gradient forest runs where done on Genus-level cell counts, integrated over the top 100 meters.}
 \label{fig:sup:GFoutput_nolags_extra}
 \end{figure}
+
+\newpage
+\section{Seasonal effect supplemental information}
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{FigureSX_seasonalNMDS_v1.pdf}
+\caption{NMDS plot of monthly phytoplankton community data (genus-level cell counts, cube-root transformed) with points colored by season. Stress: 0.263, 2 dimensions, converging solution. Vectors show how environmental variables co-vary with the community data; vector length indicates the strength of the relationship. No clear separation is visible among seasonal groups (Upwelling: December--May; Secondary Upwelling: June--August; Rainy: September--November), consistent with PERMANOVA results showing that season explains only 3.5\% of community variance compared to 17.9\% for interannual cluster (Table~\ref{sup:tab:permanova_season_cluster}).}
+\label{fig:sup:nmds_season}
+\end{figure}
+
+
+\begin{table}[ht]
+\centering
+\caption{Permutational multivariate analysis of variance (PERMANOVA) testing the effects of interannual cluster and season on phytoplankton community composition. Community data (genus-level cell counts) were cube-root transformed prior to analysis. Bray--Curtis dissimilarity was used as the distance metric, with 999 permutations. Two observations (1995, 2017) were excluded due to missing cluster assignments ($n$ = 193). Results shown are for cluster entered first; reversing term order yielded nearly identical R\textsuperscript{2} values (cluster: 17.9\%, season: 3.5\%), indicating minimal collinearity between factors.}
+\label{tab:sup:permanova_season_cluster}
+\small
+\begin{tabular}{l rrrrl}
+\hline
+Factor & df & Sum of Squares & R\textsuperscript{2} (\%) & \textit{F} & \textit{p}-value \\
+\hline
+Cluster & 2 & 8.772 & 17.9 & 21.4 & 0.001 \\
+Season & 2 & 1.713 & 3.5 & 4.2 & 0.001 \\
+Residual & 188 & 38.525 & 78.6 & — & — \\
+Total & 192 & 49.010 & 100.0 & — & — \\
+\hline
+\end{tabular}
+\end{table}
 
 
 %\end{tabular}}
