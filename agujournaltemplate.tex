@@ -503,7 +503,7 @@ The shift in phytoplankton community composition associated with increased tempe
     %MORE ON MISSING DATA
 
     % 1.  Discuss Limitations of Light microscopy cell counts in CARIACO Time Series
-    \linelabel{R2:C31} Using microscopy cell counts as a basis for our analysis allowed us to focus on changes in the microphytoplankton community. Our choice of grouping cell counts by genus was based on the assumption that species within a genus generally exhibit similar eco-physiological responses. The output of the gradient forest model was further grouped by broad functional types to facilitate the identification of broader ecological shifts and trends. The phytoplankton genera that could be best predicted were mostly diatoms, along with some haptophytes, dinoflagellates, and cyanobacteria (Figure \ref{fig:GF} $b$). This does not represent a complete picture of the phytoplankton community of the Cariaco basin. The HPLC pigment data used by \citeA{pinckney_phytoplankton_2015} captured all size classes of phytoplankton and showed less drastic declines in almost all functional groups after 2004. With the caveat that the microscopy counts captured microphytoplankton almost exclusively, this discrepancy with the HPLC pigment analysis can be explained. Drastic declines in cell counts reflected shifts to smaller species, an aspect consistent with size spectra calculated by previous studies using HPLC pigment data \cite{lorenzoni_characterization_2015}. \linelabel{R2:C8:2} Comparative studies have shown that microscopic estimates become less consistent when small cells dominate the community, and that diatom contributions to total biomass tend to be higher when estimated by microscopy compared to pigment-based methods \citep{schluter2000use, havskum2004routine}. Such different dynamics would clearly also impact the interpretation of environmental effects on the community.
+    \linelabel{R2:C31} Using microscopy cell counts as a basis for our analysis allowed us to focus on changes in the microphytoplankton community. Our choice of grouping cell counts by genus was based on the assumption that species within a genus generally exhibit similar eco-physiological responses. The output of the gradient forest model was further grouped by broad functional types to facilitate the identification of broader ecological shifts and trends. The phytoplankton genera that could be best predicted were mostly diatoms, along with some haptophytes, dinoflagellates, and cyanobacteria (Figure \ref{fig:GF} $b$). This does not represent a complete picture of the phytoplankton community of the Cariaco basin. The HPLC pigment data used by \citeauthor{pinckney_phytoplankton_2015} captured all size classes of phytoplankton and showed less drastic declines in almost all functional groups after 2004. With the caveat that the microscopy counts captured microphytoplankton almost exclusively, this discrepancy with the HPLC pigment analysis can be explained. Drastic declines in cell counts reflected shifts to smaller species, an aspect consistent with size spectra calculated by previous studies using HPLC pigment data \cite{lorenzoni_characterization_2015}. \linelabel{R2:C8:2} Comparative studies have shown that microscopic estimates become less consistent when small cells dominate the community, and that diatom contributions to total biomass tend to be higher when estimated by microscopy compared to pigment-based methods \cite{schluter2000use, havskum2004routine}. Such different dynamics would clearly also impact the interpretation of environmental effects on the community.
     However, the HPLC dataset had limited temporal coverage and was assembled from four different laboratories, introducing potential inconsistencies. We therefore focused on the microscopy data, which provided continuous genus and species-level observations across the full time series, while acknowledging that our analysis may over- or underestimate the magnitude of community change when shifts occur towards or among smaller size fractions.
     
     % 2. Discuss limitations of GF analysis & Limitation to bottom-up drivers and climate indices
@@ -659,7 +659,7 @@ The shift in phytoplankton community composition associated with increased tempe
 
 \begin{table}
 \centering
-\caption{\label{tab:tab:sup:GFlagtests}Resulting $R^2$ weighted importance for running predictor variables together with time-lags to check if they provide a better fit to the data. Each column represents a single run, with resulting importance values for time series and monthly lags. The results were stable, so that repeated runs confirmed the chosen time lag. For in-situ variables, we tested all measurements up to a lag of 3 months. For climate variables we tested up to a lag of 12 months and lags of 1 to 5 years (i.e. 12 - 60 months). Time lag with maximum importance per variable are highlighted in bold and chosen for the final model run.}
+\caption{\label{tab:tab:sup:GFlagtests}Resulting $R^2$ weighted importance for running predictor variables together with time-lags to check if they provide a better fit to the data. Each column represents a single run, with resulting importance values for time series and monthly lags. The results were stable, so that repeated runs confirmed the chosen time lag. For in-situ variables, we tested all measurements up to a lag of 3 months. For climate variables we tested up to a lag of 12 months and lags of 1 to 5 years (i.e. 12 - 60 months). Time lag with maximum importance per variable are highlighted in bold and chosen for the final model run. Repeat model runs were highly consistent.}
 \centering
 \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
 \begin{tabular}[t]{rllllllllll}
@@ -858,7 +858,7 @@ Total & 192 & 49.010 & 100.0 & — & — \\
 \end{table}
 
 
-\begin{table}
+\begin{table}[h]
 \centering
 \caption{\label{tab:sup:GFlagtests_seasonal}Mean $R^2$ weighted importance for predictor variables across three seasons, used to select optimal time lags. Values shown as: lag in months (mean importance). Due to relatively small seasonal sample sizes and resulting stochasticity in importance estimates, the analysis was run five times per season and mean values are reported. For in-situ variables, lags of 0-3 months were tested; for atmospheric variables, 0-6 months; for climate indices, 0-12, 24, 36, 48, and 60 months. To balance model parsimony with explanatory power, the shortest lag within 20\% of maximum importance was selected (bold), favoring more directly interpretable ecological relationships when predictive performance was similar.}
 \centering
@@ -877,10 +877,10 @@ Variable & Upwelling & Secondary Upwelling & Rainy\\
 \hspace{1em}Salinity & \textbf{0} (0.031); 3 (0.010); 2 (0.008) & \textbf{2} (0.073); 3 (0.049); 1 (0.020) & \textbf{0} (0.022); 3 (0.010); 2 (0.010)\\
 \addlinespace[0.3em]
 \multicolumn{4}{l}{Atmospheric variables (lags 0-6 months)}\\
-\hspace{1em}Wind speed & 5 (0.007); 6 (0.007); 4 (0.006) & \textbf{6} (0.027); 2 (0.010); 5 (0.006) & \textbf{0} (0.021); 5 (0.019); 2 (0.009)\\
+\hspace{1em}Wind speed & 5 (0.007); 6 (0.007); \textbf{4} (0.006) & \textbf{6} (0.027); 2 (0.010); 5 (0.006) & \textbf{0} (0.021); 5 (0.019); 2 (0.009)\\
 \hspace{1em}Precipitation & \textbf{1} (0.019); 0 (0.012); 2 (0.009) & \textbf{0} (0.018); 2 (0.012); 1 (0.008) & \textbf{3} (0.017); 0 (0.012); 6 (0.006)\\
 \addlinespace[0.3em]
-\multicolumn{4}{l}{\textit{Climate indices (lags 0-12, 24, 36, 48, 60 months)}}\\
+\multicolumn{4}{l}{Climate indices (lags 0-12, 24, 36, 48, 60 months)}\\
 \hspace{1em}AMO & 60 (0.028); \textbf{24} (0.023); 36 (0.021) & \textbf{24} (0.034); 60 (0.032); 36 (0.020) & 48 (0.028); \textbf{36} (0.025); 12 (0.013)\\
 \hspace{1em}MEI v.2 & \textbf{48} (0.036); 36 (0.018); 60 (0.018) & \textbf{60} (0.037); 24 (0.018); 0 (0.015) & 48 (0.027); \textbf{36} (0.024); 60 (0.020)\\
 \bottomrule
@@ -888,8 +888,8 @@ Variable & Upwelling & Secondary Upwelling & Rainy\\
 \end{table}
 
 \begin{figure}
-    \noindent\includegraphics[width=\textwidth]{fig/Fig.pdf}
-    \caption{Gradient forest analysis of monthly phytoplankton community data at genus level across three oceanographic seasons: (a) Upwelling, (b) Secondary Upwelling, and (c) Rainy. For each season, predictor variables are ranked by $R^2$ weighted importance for models without time lags (left) and with optimal lags (center), where lag notation indicates months (e.g., L24 = 24-month lag). The right panels show phytoplankton genera ranked by predictive power under optimal lag conditions, colored by functional group. Results shown are exemplary output from a single model run; while slight variation occurs between runs due to the stochastic nature of random forests, general patterns are robust.}
+    \noindent\includegraphics[width=\textwidth]{fig/FigureS3_GF_seasonal_ALL_COMBINED.pdf}
+    \caption{Exploratory gradient forest analysis of monthly phytoplankton community data at genus level across three oceanographic seasons: (a) Upwelling, (b) Secondary Upwelling, and (c) Rainy. For each season, predictor variables are ranked by $R^2$ weighted importance for models without time lags (left) and with optimal lags (center), where lag notation indicates months (e.g., L24 = 24-month lag). The right panels show phytoplankton genera ranked by predictive power under optimal lag conditions, colored by functional group. Slight variation occurs between runs due to the stochastic nature of random forests, general patterns are robust. Results shown are exemplary output from a single model run. Monthly sample sizes per season are Upwelling: n=104 (no lag), n=104 (with lags); Secondary Upwelling: n=48 (no lag), n=40 (with lags); Rainy: n=43 (no lag), n=39 (with lags).}
     \label{fig:GF_seasonal}
 \end{figure}
 
