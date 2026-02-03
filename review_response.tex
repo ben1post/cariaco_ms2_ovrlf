@@ -37,7 +37,7 @@
     \ifnum\getrefnumber{#1}=\getrefnumber{#2}%
        line \ref{#1}% Same line
     \else%
-       lines \ref{#1}--\ref{#2}% Different lines
+       lines \ref{#1}-\ref{#2}% Different lines
     \fi%
   }%
 }
@@ -99,7 +99,7 @@ Results show a drastic shift in the phytoplankton community in 2004 coinciding w
 	The Cariaco Basin is subject to a secondary upwelling pulse that typically occurs between June and August every year. This event is mainly controlled by the intensification of wind curl and transport of the Caribbean current, and not by ITCZ dynamics. While this upwelling event is somewhat weaker than the primary upwelling during January-April it can lead to significant shoaling of the nutricline and associated increase in primary productivity, chl-a concentration, and diatom abundance. This secondary upwelling pulse likely adds nuance to the seasonality of the phytoplankton community that cannot be captured with annually averaged data due to signal smoothing and attenuation. Therefore, there could value in performing analyses with seasonally aggregated data to determine whether the phytoplankton response to the AMO shift is dominated solely by changes in primary upwelling or if this effect also becomes apparent as changes in the strength of the secondary upwelling. Seasonal data analysis could aid in 1) quantifying the impact of shifts in AMO and MEI v.2 on this secondary welling pulse, 2) identifying additional community clusters and their association to a particular index, and 3) disentangling physical drivers of species turnover (as shown in Figure 4) during primary and secondary upwelling events.
 \end{revcomment}
 \begin{revresponse}
-	We thank the reviewer for this insightful suggestion. We agree that the secondary upwelling (June--August) represents a distinct oceanographic event with potentially different drivers than the primary upwelling (December--May). To address this, we conducted additional analyses stratifying the data by three seasons: primary upwelling, secondary upwelling, and rainy season (September--November).
+	We thank the reviewer for this insightful suggestion. We agree that the secondary upwelling (June-August) represents a distinct oceanographic event with potentially different drivers than the primary upwelling (December-May). To address this, we conducted additional analyses stratifying the data by three seasons: primary upwelling, secondary upwelling, and rainy season (September-November).
     
     \textit{Seasonal gradient forest analysis}
     
@@ -109,7 +109,7 @@ Results show a drastic shift in the phytoplankton community in 2004 coinciding w
     \begin{itemize}
         \item AMO ranked as the top predictor across all three seasons with optimized time lags. Notably, AMO emerged as the strongest predictor for secondary upwelling even without any time lag, indicating a strong linkage to community composition during this period. The optimal lag was shorter for secondary upwelling (2 months) than for primary upwelling (3 months), potentially suggesting a more immediate link between AMO and community response during secondary upwelling, although this one-month difference is marginal in the context of a multi-decadal time series.
         \item MEI v.2 ranked second for both primary and secondary upwelling, suggesting ENSO teleconnections influence both upwelling events.
-        \item Silicate and total precipitation emerged among the top predictors during secondary upwelling. Given that precipitation peaks during June--August (visible in seasonal density distributions), elevated silicate likely reflects enhanced surface runoff during this period rather than upwelling-driven nutrient supply.
+        \item Silicate and total precipitation emerged among the top predictors during secondary upwelling. Given that precipitation peaks during June-August (visible in seasonal density distributions), elevated silicate likely reflects enhanced surface runoff during this period rather than upwelling-driven nutrient supply.
         \item The composition of predictable genera varied by season: primary upwelling models predicted predominantly diatoms alongside dinoflagellates and cyanobacteria; secondary upwelling and rainy season models predicted mostly diatoms and dinoflagellates, with dinoflagellates particularly prominent during the rainy season.
     \end{itemize}
     
@@ -459,7 +459,7 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
     
     For annually aggregated analyses (z-scores in Figure~\ref{fig:zscore}, hierarchical clustering in Figure~\ref{fig:clustering}a, species turnover in Figure~\ref{fig:clustering}b, and annual means in Figure~\ref{fig:divts}), we excluded years with fewer than six monthly observations (1995, 2016, and 2017). The other years also include some missing monthly data (see \autoref{comment:phyto-coverage} for a more detailed discussion of this), yet our hierarchical clustering uses presence-absence data, which is relatively robust to missing months because a genus need only be detected once within a year to be recorded as present. Other parts of our analysis (NMDS ordination, density distributions, and gradient forest), were performed with the original monthly resolution and include all available observations. We have now additionally conducted sensitivity analyses using `core months' consistently sampled across 2014-2017 to verify that conclusions of a return to the earlier regime were not artifacts of uneven sampling of seasonal outliers.
     
-    Regarding the post-2014 period: although 2014 and 2015 have gaps, both years retain observations from both upwelling and rainy seasons, reducing the risk of seasonal bias. To further assess the robustness of our conclusions, we compared monthly observations across three periods (Early Cluster~1: 1996--2004; Cluster~2: 2005--2013; Late Cluster~1: 2014--2017) using Wilcoxon rank-sum tests (see Table~\ref{tab:sup:period_comparison}). For key variables including SST, salinity, chlorophyll~$a$, and several functional groups, Early~C1 and Cluster~2 differ significantly, and Cluster~2 and Late~C1 differ significantly, while Early~C1 and Late~C1 do not---a pattern consistent with partial recovery to pre-2005 conditions. Additionally, independent sampling near Margarita Island in the Cariaco Basin from 2002-2018 (\cite{gomez_gaspar_variacion_2025}) show a reduction following 2004 and a return to elevated surface chlorophyll during 2014--2017, corroborating a potential recovery.
+    Regarding the post-2014 period: although 2014 and 2015 have gaps, both years retain observations from both upwelling and rainy seasons, reducing the risk of seasonal bias. To further assess the robustness of our conclusions, we compared monthly observations across three periods (Early Cluster~1: 1996-2004; Cluster~2: 2005-2013; Late Cluster~1: 2014-2017) using Wilcoxon rank-sum tests (see Table~\ref{tab:sup:period_comparison}). For key variables including SST, salinity, chlorophyll~$a$, and several functional groups, Early~C1 and Cluster~2 differ significantly, and Cluster~2 and Late~C1 differ significantly, while Early~C1 and Late~C1 do not, a pattern consistent with partial recovery to pre-2005 conditions. Additionally, independent sampling near Margarita Island in the Cariaco Basin from 2002-2018 (\cite{gomez_gaspar_variacion_2025}) show a reduction following 2004 and a return to elevated surface chlorophyll during 2014-2017, corroborating a potential recovery.
     
     We have added discussion of these points to Section~4.3 (Limitations).
 \end{revresponse}
@@ -469,7 +469,7 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
 \end{revcomment}
 
 \begin{revresponse}
-    We have added a paragraph to Section~2.4 (\lineref{R:ClarifyAggregation}) that clearly summarizes which part of our analysis use annual aggregation versus monthly resolution, and all use depth integration over 0--100~m, except for the variables shown across four depth intervals in Figure~\ref{fig:divts}. We hope this clarifies the data grouping throughout the manuscript.
+    We have added a paragraph to Section~2.4 (\lineref{R:ClarifyAggregation}) that clearly summarizes which part of our analysis use annual aggregation versus monthly resolution, and all use depth integration over 0-100~m, except for the variables shown across four depth intervals in Figure~\ref{fig:divts}. We hope this clarifies the data grouping throughout the manuscript.
     
     Regarding time averaging and aliasing: We agree that the monthly resolution might miss crucial short term variablitity. Our in-situ data represents discrete monthly samples, not averages derived from higher-frequency measurements. Only the climate reanalysis data (ERA5) represent monthly averages. Annual aggregation was applied selectively to emphasize interannual trends, while monthly-resolution analyses (NMDS, gradient forest) preserve seasonal signals. Figure~\ref{fig:divts} was included specifically to show both depth-resolved and seasonal patterns, complementing the 100m-depth-integrated analyses elsewhere.
     
@@ -573,7 +573,7 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
 	We thank the reviewer for raising this important point about data gaps. For phytoplankton data, a complete list of missing months is given here:
 
     \begin{itemize}
-        \item 1995: January--October (10 months; time series began in November)
+        \item 1995: January-October (10 months; time series began in November)
         \item 1997: August (1 month)
         \item 1998: April, May, November (3 months)
         \item 2000: August, September (2 months)
@@ -588,8 +588,8 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
         \item 2013: January, February (2 months, both within upwelling season)
         \item 2014: March, July, August (3 months)
         \item 2015: January, May, June, October (4 months)
-        \item 2016: March, April, June--August, October, November (7 months)
-        \item 2017: February--December (11 months; only January sampled)
+        \item 2016: March, April, June-August, October, November (7 months)
+        \item 2017: February-December (11 months; only January sampled)
     \end{itemize}
 
     We acknowledge that these gaps, particularly the missing upwelling-season months in 2004 and 2013, could have influenced the detected shift timing. To assess whether sampling gaps drove the observed patterns, we conducted a sensitivity analysis restricting data to months consistently sampled across 2014–2017, which confirmed that clustering patterns remained consistent [see Supplementary Material, Section/Figure SX - PLACEHOLDER].
@@ -690,7 +690,7 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
     It would be helpful if the authors explained why they used integrated cell count data for the gradient forest analysis, but interpolated nutrient data.
 \end{revcomment}
 \begin{revresponse}
-    We thank the reviewer for highlighting this inconsistency. Upon review, we recognized that using interpolated nutrient data alongside integrated cell counts was not methodologically justified. We have revised our data analysis pipeline to use depth-integrated values (0--100~m) for both cell count data and nutrient concentrations throughout our analysis. This correction did not qualitatively affect our results or conclusions.
+    We thank the reviewer for highlighting this inconsistency. Upon review, we recognized that using interpolated nutrient data alongside integrated cell counts was not methodologically justified. We have revised our data analysis pipeline to use depth-integrated values (0-100~m) for both cell count data and nutrient concentrations throughout our analysis. This correction did not qualitatively affect our results or conclusions.
 \end{revresponse}
 
 
@@ -863,7 +863,6 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
 \begin{concludingresponse}[]
 	Thank you for your valuable comments on our manuscript. 
 \end{concludingresponse}
-
 
 
 % \begin{revcomment}\label{comment:work-not-good}

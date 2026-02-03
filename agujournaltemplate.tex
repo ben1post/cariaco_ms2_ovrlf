@@ -706,33 +706,6 @@ lag (months)& NO3 & PO4 & SiO4 & SST & \qty{21}{\celsius} Isotherm & Salinity & 
 \label{fig:sup:GFoutput_nolags_extra}
 \end{figure}
 
-\newpage
-\section{Seasonal effect supplemental information}
-
-
-\begin{figure}
-\noindent\includegraphics[width=\textwidth]{fig/FigureSX_seasonalNMDS_v1.pdf}
-\caption{NMDS plot of monthly phytoplankton community data (genus-level cell counts, cube-root transformed) with points colored by season. Stress: 0.263, 2 dimensions, converging solution. Vectors show how environmental variables co-vary with the community data; vector length indicates the strength of the relationship. No clear separation is visible among seasonal groups (Upwelling: December--May; Secondary Upwelling: June--August; Rainy: September--November), consistent with PERMANOVA results showing that season explains only 3.5\% of community variance compared to 17.9\% for interannual cluster (Table~\ref{tab:sup:permanova_season_cluster}).}
-\label{fig:sup:nmds_season}
-\end{figure}
-
-
-\begin{table}[ht]
-\centering
-\caption{Permutational multivariate analysis of variance (PERMANOVA) testing the effects of interannual cluster and season on phytoplankton community composition. Community data (genus-level cell counts) were cube-root transformed prior to analysis. Bray--Curtis dissimilarity was used as the distance metric, with 999 permutations. Two observations (1995, 2017) were excluded due to missing cluster assignments ($n$ = 193). Results shown are for cluster entered first; reversing term order yielded nearly identical R\textsuperscript{2} values (cluster: 17.9\%, season: 3.5\%), indicating minimal collinearity between factors.}
-\label{tab:sup:permanova_season_cluster}
-\small
-\begin{tabular}{l rrrrl}
-\hline
-Factor & df & Sum of Squares & R\textsuperscript{2} (\%) & \textit{F} & \textit{p}-value \\
-\hline
-Cluster & 2 & 8.772 & 17.9 & 21.4 & 0.001 \\
-Season & 2 & 1.713 & 3.5 & 4.2 & 0.001 \\
-Residual & 188 & 38.525 & 78.6 & — & — \\
-Total & 192 & 49.010 & 100.0 & — & — \\
-\hline
-\end{tabular}
-\end{table}
 
 
 %\end{tabular}}
@@ -856,6 +829,73 @@ Total & 192 & 49.010 & 100.0 & — & — \\
 \end{table}
 
 
+
+\newpage
+\section{Seasonal effect supplemental information}
+
+\begin{figure}[h]
+\centering
+\noindent\includegraphics[width=300px]{fig/FigureSX_seasonalNMDS_v1.pdf}
+\caption{NMDS plot of monthly phytoplankton community data (genus-level cell counts, cube-root transformed) with points colored by season. Stress: 0.263, 2 dimensions, converging solution. Vectors show how environmental variables co-vary with the community data; vector length indicates the strength of the relationship. No clear separation is visible among seasonal groups (Upwelling: December-May; Secondary Upwelling: June-August; Rainy: September-November), consistent with PERMANOVA results showing that season explains only 3.5\% of community variance compared to 17.9\% for interannual cluster (Table~\ref{tab:sup:permanova_season_cluster}).}
+\label{fig:sup:nmds_season}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\caption{Permutational multivariate analysis of variance (PERMANOVA) testing the effects of interannual cluster and season on phytoplankton community composition. Community data (genus-level cell counts) were cube-root transformed prior to analysis. Bray-Curtis dissimilarity was used as the distance metric, with 999 permutations. Two observations (1995, 2017) were excluded due to missing cluster assignments ($n$ = 193). Results shown are for cluster entered first; reversing term order yielded nearly identical R\textsuperscript{2} values (cluster: 17.9\%, season: 3.5\%), indicating minimal collinearity between factors.}
+\label{tab:sup:permanova_season_cluster}
+\small
+\begin{tabular}{l rrrrl}
+\hline
+Factor & df & Sum of Squares & R\textsuperscript{2} (\%) & \textit{F} & \textit{p}-value \\
+\hline
+Cluster & 2 & 8.772 & 17.9 & 21.4 & 0.001 \\
+Season & 2 & 1.713 & 3.5 & 4.2 & 0.001 \\
+Residual & 188 & 38.525 & 78.6 & — & — \\
+Total & 192 & 49.010 & 100.0 & — & — \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}
+\centering
+\caption{\label{tab:sup:GFlagtests_seasonal}Mean $R^2$ weighted importance for predictor variables across three seasons, used to select optimal time lags. Values shown as: lag in months (mean importance). Due to relatively small seasonal sample sizes and resulting stochasticity in importance estimates, the analysis was run five times per season and mean values are reported. For in-situ variables, lags of 0-3 months were tested; for atmospheric variables, 0-6 months; for climate indices, 0-12, 24, 36, 48, and 60 months. To balance model parsimony with explanatory power, the shortest lag within 20\% of maximum importance was selected (bold), favoring more directly interpretable ecological relationships when predictive performance was similar.}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{llll}
+\toprule
+Variable & Upwelling & Secondary Upwelling & Rainy\\
+\midrule
+\addlinespace[0.3em]
+\multicolumn{4}{l}{In-situ variables (lags 0-3 months)}\\
+\hspace{1em}NO\textsubscript{3} & \textbf{0} (0.060); 1 (0.036); 2 (0.020) & \textbf{0} (0.034); 3 (0.031); 2 (0.029) & 3 (0.017); \textbf{0} (0.015); 2 (0.006)\\
+\hspace{1em}PO\textsubscript{4} & \textbf{0} (0.023); 1 (0.008); 2 (0.007) & 3 (0.023); \textbf{0} (0.021); 2 (0.020) & \textbf{0} (0.039); 3 (0.027); 1 (0.014)\\
+\hspace{1em}SiO\textsubscript{4} & \textbf{0} (0.026); 1 (0.008); 3 (0.006) & \textbf{0} (0.032); 1 (0.028); 2 (0.022) & \textbf{3} (0.043); 1 (0.033); 2 (0.032)\\
+\hspace{1em}SST & \textbf{0} (0.101); 3 (0.014); 1 (0.007) & \textbf{0} (0.032); 2 (0.025); 1 (0.014) & \textbf{0} (0.052); 1 (0.032); 3 (0.010)\\
+\hspace{1em}\qty{21}{\celsius} Isotherm & \textbf{0} (0.045); 1 (0.011); 2 (0.007) & \textbf{1} (0.024); 3 (0.014); 0 (0.010) & \textbf{0} (0.032); 2 (0.010); 3 (0.007)\\
+\hspace{1em}Salinity & \textbf{0} (0.031); 3 (0.010); 2 (0.008) & \textbf{2} (0.073); 3 (0.049); 1 (0.020) & \textbf{0} (0.022); 3 (0.010); 2 (0.010)\\
+\addlinespace[0.3em]
+\multicolumn{4}{l}{Atmospheric variables (lags 0-6 months)}\\
+\hspace{1em}Wind speed & 5 (0.007); 6 (0.007); 4 (0.006) & \textbf{6} (0.027); 2 (0.010); 5 (0.006) & \textbf{0} (0.021); 5 (0.019); 2 (0.009)\\
+\hspace{1em}Precipitation & \textbf{1} (0.019); 0 (0.012); 2 (0.009) & \textbf{0} (0.018); 2 (0.012); 1 (0.008) & \textbf{3} (0.017); 0 (0.012); 6 (0.006)\\
+\addlinespace[0.3em]
+\multicolumn{4}{l}{\textit{Climate indices (lags 0-12, 24, 36, 48, 60 months)}}\\
+\hspace{1em}AMO & 60 (0.028); \textbf{24} (0.023); 36 (0.021) & \textbf{24} (0.034); 60 (0.032); 36 (0.020) & 48 (0.028); \textbf{36} (0.025); 12 (0.013)\\
+\hspace{1em}MEI v.2 & \textbf{48} (0.036); 36 (0.018); 60 (0.018) & \textbf{60} (0.037); 24 (0.018); 0 (0.015) & 48 (0.027); \textbf{36} (0.024); 60 (0.020)\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{figure}
+    \noindent\includegraphics[width=\textwidth]{fig/Figure_GF_seasonal_importance.pdf}
+    \caption{Gradient forest analysis of monthly phytoplankton community data at genus level across three oceanographic seasons: (a) Upwelling, (b) Secondary Upwelling, and (c) Rainy. For each season, predictor variables are ranked by $R^2$ weighted importance for models without time lags (left) and with optimal lags (center), where lag notation indicates months (e.g., L24 = 24-month lag). The right panels show phytoplankton genera ranked by predictive power under optimal lag conditions, colored by functional group. Results shown are exemplary output from a single model run; while slight variation occurs between runs due to the stochastic nature of random forests, general patterns are robust.}
+    \label{fig:GF_seasonal}
+\end{figure}
+
+
+
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Optional Glossary, Notation or Acronym section goes here:
 %
