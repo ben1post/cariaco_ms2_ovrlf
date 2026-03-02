@@ -105,7 +105,7 @@
 	\begin{tcolorbox}[adjusted title={Comment \arabic{revcomment}}, fonttitle={\bfseries}, colback={colorcommentbg}, colframe={colorcommentframe},coltitle={colorcommentbg},bookmark={Comment \arabic{revcomment}},#1]
 	}{\end{tcolorbox}}
 
-\newenvironment{revresponse}[1][{Thank you for the comment.}]{%
+\newenvironment{revresponse}[1][{}]{%
 	\textbf{Response:} #1\par
 }{\vspace{4em plus 0.2em minus 1.5em}}
 
