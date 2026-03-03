@@ -71,14 +71,14 @@
 \begin{revresponse}[Thank you for your editorial work.]
     Both reviewers raised concerns regarding the potential impact of missing data and possible seasonal biases. We have addressed these concerns thoroughly. Our key revisions are brielfy summarised below.
     \begin{enumerate}
-        \item To address the concerns about possible seasonal biases, we conducted PERMANOVA analysis to compare the effects of inter-annual clusters versus seasonal clusters on community composition. This analysis demonstrates that the inter-annual signal explains approximately four times more variance than seasonal effects ($R^2 = 15.9\%$ vs.\ $3.7\%$), supporting our interpretation that annually aggregated analyses capture the dominant mode of community variability (see Appendix C).
+        \item To address the concerns about possible seasonal biases, we conducted PERMANOVA analysis to compare the effects of our identified community clusters versus seasonal patterns on community composition. This analysis demonstrates that the inter-annual signal explains approximately four times more variance than seasonal effects ($R^2 = 15.9\%$ vs.\ $3.7\%$), supporting our interpretation that annually aggregated analyses capture the dominant mode of community variability (see Appendix C).
         \item Rather than assuming equivalence based on hierarchical clustering alone, we have split Cluster 1 into two temporal phases: an Early Cluster~1 (1996–2003) and a Late Cluster~1 (2014–2016). We added statistical comparisons (Wilcoxon rank-sum tests) between these two periods to explicitly test whether the post-2014 data support the hypothesis of a return to pre-2004 conditions (Table~\ref{tab:ClustCompWilcox}).
         \item We have added a dedicated subsection on missing data (Section~2.4.3) and substantially expanded the part of the Discussion (Section~4.3) focused on limitations to address data gaps in the final years of the time series.
         \item Following reviewers' suggestions, we removed 'evaporation' and added 'primary productivity' to our analysis.
         \item We corrected numerous editorial issues, including year references, terminology, and figure descriptions throughout the manuscript.
         \item We fixed two minor inconsistencies in our analyses: one related to the distance between clusters in the dendrogram (Figure \ref{fig:clustering}$a$), the other related to the calculation of time lags for the climate indices in the Gradient Forest Analysis. What we previously reported as lags of months, were in fact lags of years. Such long-term lags can be expected when working with ecological data. Both corrections have no appreciable impacts on our results. 
     \end{enumerate}
-    In conclusion, none of the revisions and improvements we implemented altered our main findings or conclusions. Instead, thanks to the constrictive and fair criticism raised by the reviewers, we have been able to further substantiate the robustness of our results and improve the clarity of our arguments. The point regarding the data coverage in the final years of the time series gave us the opportunity to reconsider the framing of our main result . We now describe the final period (2014–2016) as a transition towards the first regime (early cluster 1) rather than a complete return to it.
+    In conclusion, none of the revisions and improvements we implemented altered our main findings or conclusions. Instead, thanks to the constrictive and fair criticism raised by the reviewers, we have been able to further substantiate the robustness of our results and improve the clarity of our arguments. The point regarding the data coverage in the final years of the time series gave us the opportunity to reconsider the framing of our main result. We now describe the final period (2014–2016) as a transition towards the first regime (early cluster 1) rather than a complete return to it.
 \end{revresponse}
 
 
@@ -469,7 +469,7 @@ Your careful and detailed review has greatly improved our manuscript. We are ver
     The statement about phytoplankton diversity could be better articulated here; it isn’t clear what the implications of a lack of change in diversity over a part of the data set are. Perhaps just add a clause indicating what this signifies. Otherwise, it feels like a result out of place.
 \end{revcomment}
 \begin{revresponse}[Thank you for pointing this out.]
-	We have revised the relevant sentence to highlight our finding that community evenness was higher during cluster 2. While our results cannot offer an explanation for the lack of change in diversity, the change in evenness we observed is in line with the common understanding that upwelling, productivity and community evenness are closely interlinked, generally exhibiting an inverse relationship whereby high productivity fueled by nutrient upwelling leads to low community evenness \cite{lehtinen_phytoplankton_2017}.
+	We have revised the relevant sentence to highlight our finding that community evenness was higher during cluster 2. While our results cannot offer an explanation for the lack of change in diversity, the change in evenness we observed is in line with the common understanding that upwelling, productivity and community evenness are closely interlinked, generally exhibiting an inverse relationship whereby high productivity fueled by nutrient upwelling leads to low community evenness (\cite{lehtinen_phytoplankton_2017}).
 \end{revresponse}
 
 \begin{revcomment}
@@ -513,7 +513,7 @@ Your careful and detailed review has greatly improved our manuscript. We are ver
     
 \end{revcomment}
 \begin{revresponse}[Thank you for these suggestions.]
-	We have reformulated the relevant section. Specifically, we clarified that previous studies considered aggregated microscopy cell counts of Diatoms and Dinoflagellates, and not HPLC data (\lineref{R2:C8:1}).
+	We have reformulated that section and included both the hypothesis and specific references to which data is the foundation for Muller-Karger et al.'s suggestion that there was a return to strong upwelling intensities and the previous phytoplankton community. Their claim makes reference to aggregated microscopy cell counts of Diatoms and Dinoflagellates, and not HPLC data. We have added this clarification to the paragraph (see \lineref{R2:C8:1}).
     We have also added a sentence stating the hypothesis that the observed changes were driven by large-scale climatic factors.
     We have also added a paragraph in which we discuss the different insights that microscopy data and pigment data may provide in relation to community responses (\lineref{R2:C8:2}).
     
@@ -660,7 +660,7 @@ Your careful and detailed review has greatly improved our manuscript. We are ver
     
     The gradient forest analysis is insensitive to the absolute scale of predictors (e.g. nutrients) because the algorithm identifies splits based on relative changes in community composition across the predictor range. In this context, depth-averaged concentrations (in µM) are equivalent to depth-integrated values.
     
-    For response variables (cell counts), we applied a log(1+x) transformation prior to analysis to normalize the highly skewed abundance distributions. Since this transformation is sensitive to the magnitude of input values (very small, non-integrated cell counts from individual depths would compress to near-zero values after the transformation, obscuring meaningful variations),  the depth-integration after the log transformation provides cell counts over a range of values that preserves ecologically relevant differences among genera.
+    For response variables (cell counts), we applied a log(1+x) transformation prior to analysis to normalize the highly skewed abundance distributions. This transformation is sensitive to the magnitude of input values: very small, non-integrated cell counts from individual depths would compress to near-zero values after transformation, obscuring meaningful variation. Depth-integrated counts provide values in a range where the log transformation preserves ecologically relevant differences among genera.
 
     We included these explanations in the Methods section (line XX).
 \end{revresponse}
