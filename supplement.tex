@@ -58,7 +58,7 @@
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\textwidth]{fig/Supplemental_ClusteringComparison.pdf}
+\includegraphics[width=\textwidth]{Supplemental_ClusteringComparison.pdf}
 \caption{Comparison of hierarchical clustering methods applied to annually aggregated phytoplankton community data (1996--2016). Four combinations of distance metrics and linkage methods are shown: (a) Jaccard dissimilarity with complete linkage, (b) Jaccard dissimilarity with Ward's method, (c) Bray-Curtis dissimilarity with complete linkage, and (d) Bray-Curtis dissimilarity with Ward's method. Jaccard dissimilarity was calculated on presence/absence data, while Bray-Curtis dissimilarity was calculated on cube-root transformed mean annual abundances, calculated from 0--100~m depth-integrated cell counts at the genus level. Colors indicate cluster assignments based on the reference clustering (from the complete linkage clustering based on the Jaccard distance): dark blue = Early Cluster~1 (1996--2003), dark red = Cluster~2 (2004--2013), light blue = Late Cluster~1 (2014--2016). All four methods recovered nearly identical cluster assignments, with only 2004 assigned differently by Ward's method, demonstrating that the identified temporal pattern is robust to methodological choices.}
 \label{fig:sup:annual_clust_comp}
 \end{figure}
@@ -68,7 +68,7 @@
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.75\textwidth]{fig/FigureSX_seasonalNMDS_v1.pdf}
+\includegraphics[width=0.75\textwidth]{FigureSX_seasonalNMDS_v1.pdf}
 \caption{NMDS plot of monthly phytoplankton community data (genus-level cell counts, cube-root transformed) with points colored by season. Stress: 0.263, 2 dimensions, converging solution. Vectors show how environmental variables co-vary with the community data. Vector length indicates the strength of the relationship. No clear separation is visible among seasonal groups (Upwelling: December--May, Secondary Upwelling: June--August, Rainy: September--November), consistent with PERMANOVA results showing that season explains only 3.5\% of community variance compared to 17.9\% for interannual clusters (Table~\ref{tab:sup:permanova_season_cluster}).}
 \label{fig:sup:nmds_season}
 \end{figure}
@@ -125,7 +125,7 @@ Variable & Upwelling & Secondary Upwelling & Rainy\\
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\textwidth]{fig/FigureS3_GF_seasonal_ALL_COMBINED.pdf}
+\includegraphics[width=\textwidth]{FigureS3_GF_seasonal_ALL_COMBINED.pdf}
 \caption{Exploratory gradient forest analysis of monthly phytoplankton community data at genus level across three oceanographic seasons: (a) Primary Upwelling (December--May), (b) Secondary Upwelling (June--August), and (c) Rainy Season (September--November). For each season, predictor variables are ranked by $R^2$ weighted importance for models without time lags (left) and with optimal lags (center), where lag notation indicates number of months (e.g., L24 = 24-month lag). The right panels show phytoplankton genera ranked by predictive power under optimal lag conditions, colored by functional group. Slight variation occurs between runs due to the stochastic nature of random forests; general patterns are robust. The shown results are exemplary outputs from a single model run. Monthly sample sizes per season are Primary Upwelling: $n=104$ (no lag), $n=104$ (with lags); Secondary Upwelling: $n=48$ (no lag), $n=40$ (with lags); Rainy Season: $n=43$ (no lag), $n=39$ (with lags).}
 \label{fig:sup:GF_seasonal}
 \end{figure}
