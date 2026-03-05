@@ -230,9 +230,13 @@ Line 213: Delete "sea surface temperature" and use SST only.
 Line 238: Note that the Results section make reference to data from 2016.
 \end{revcomment}
 \begin{revresponse}[Thank you for pointing this out.]
-	This section of the Methods refers only to Figure~\ref{fig:zscore}, presenting an analysis of interannual variance using z-scores. For this specific analysis, the years 1995, 2016 and 2017 were excluded due to data limitations (too few data points in these years). The other analyses (those that did not involve annual averaging) included also the years with limited data points. To clarify this aspect, we have added the following paragraph (\lineref{R1:C12:start}[R1:C12:end]).
+	This section of the Methods refers only to Figure~\ref{fig:zscore}, presenting an analysis of interannual variance using z-scores. For this specific analysis, the years 1995, 2016 and 2017 were excluded due to data limitations (too few data points in these years). The other analyses (those that did not involve annual averaging) included also the years with limited data points. To clarify this aspect, we have added the Section~2.4.3 (\lineref{R:misdat}):
         \begin{changes}
-        To provide an overview of the available data and to highlight interannual trends in the time series data, we calculated annual anomalies for relevant variables as normalized z-scores, $z = (x\,-\,\mu)\,/\,\sigma$, where $x$ is the yearly mean, $\mu$ is the mean, and $\sigma$ is the standard deviation of all yearly means. Data from 1995 (n=2; November and December) and 2017 (n=1; January) were excluded from all analyses due to insufficient temporal coverage and because these observations could not be reliably assigned to any of the identified community clusters. The analyzed time series thus spans 1996-2016. For annually aggregated analyses requiring sufficient monthly coverage (z-scores in Figure~\ref{fig:zscore}; annual means in Figure~\ref{fig:divts}), we additionally excluded 2016 (n=5; January, February, May, September, and December), applying a threshold of at least six monthly observations per year. However, 2016 was retained in presence-absence-based clustering and in all analyses using monthly observations (e.g., NMDS ordination, gradient forest, density distributions). Climate and meteorological variables (AMO, MEI v.2, wind speed, and precipitation) had 12 monthly data points per year from 1996 to 2016. In-situ measurements showed occasional gaps throughout the time series, with sporadic missing months (typically 1 to 3 per year) in the period 1997-2013 and more substantial gaps in 2014 (3 missing months: March, July, August) and 2015 (4 missing months: January, May, June, October). Despite these gaps, both 2014 and 2015 contained observations covering primary upwelling (December-May), secondary upwelling (June-August), and rainy season (September-November), reducing the risk of seasonal bias when calculating annual averages. See Table \ref{tab:sup:missing-data} for a complete overview of missing monthly data.
+            The CARIACO time series had variable monthly coverage, particularly in the final years when funding constraints reduced sampling frequency. Data from 1995 (n=2) and 2017 (n=1) were excluded from all analyses due to insufficient temporal coverage and because these observations could not be reliably assigned to any community cluster. The analyzed time series thus spans 1996–2016. A complete overview of missing months for all variables is provided in supplementary Table~\ref{tab:sup:missing-data}.
+    
+            We addressed data gaps in several ways depending on the analysis. For analyses requiring robust annual means (z-scores in Figure~\ref{fig:zscore} and annual means in Figure~\ref{fig:divts}), we excluded years with fewer than six monthly observations, which additionally removed 2016 (n=5). For hierarchical clustering based on presence-absence, we retained 2016 because binary metrics require only one detection per year to record a genus as present, making them relatively robust to missing months. For the NMDS ordination, density distributions, and gradient forest analysis, we used monthly observations directly, including all available data from 2014–2016. For monthly-resolution analyses, missing observations reduce sample size but do not bias the detected relationships, as each month is treated as an independent observation with contemporaneous environmental and biological measurements. Despite gaps in 2014 (3 missing months) and 2015 (4 missing months), both years contained observations from all three seasons (primary upwelling, secondary upwelling, and rainy season), reducing the risk of seasonal bias.
+    
+            Primary productivity data had additional gaps, with coverage declining markedly after 2009. Given the strong covariance between primary productivity and chlorophyll~\textit{a} ($\rho = 0.70$), we used chlorophyll~\textit{a} as the primary indicator of community productivity while including available PP data for comparison.
         \end{changes}
 \end{revresponse}
 
@@ -595,7 +599,7 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
 \end{revcomment}
 
 \begin{revresponse}[Thank you for pointing this out.]
-    Yes, phytoplankton cell counts also have gaps in these years. See our response to your \autoref{comment:phyto-coverage} for a detailed discussion of how missing data were handled and why we consider our interpretation robust. We have clarified the data exclusion criteria in Section~2.4 (\lineref{R1:C12:start}[R1:C12:end]) and provide a complete overview of missing months for all variables in supplementary Table~\ref{tab:sup:missing-data}.
+    Yes, phytoplankton cell counts also have gaps in these years. See our response to your \autoref{comment:phyto-coverage} for a detailed discussion of how missing data were handled and why we consider our interpretation robust. We have clarified the data exclusion criteria in Section~2.4.3 (\lineref{R:misdat}) and provide a complete overview of missing months for all variables in supplementary Table~\ref{tab:sup:missing-data}.
 \end{revresponse}
 
 
@@ -610,11 +614,11 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
     \begin{enumerate}
         \item Depth-specific cell counts (at 1, 7, 15, 25, 35, 55, 75, and 100~m) were interpolated to 1~m resolution and integrated over the upper 100~m to obtain a single depth-integrated value per taxon per month.
         \item For each month, depth-integrated counts of all taxa belonging to one functional group were summed up to obtain total cell counts per functional group.
-        \item These monthly functional group totals were then summed across all months within a year to obtain annual total cell counts per functional group.
+        \item These monthly functional group totals were then averaged per year to reduce sensitivity to uneven monthly sampling coverage.
     \end{enumerate}
     We have revised the relevant sentence (\lineref{R2:C16}) as follows.
     \begin{changes}
-        To calculate integrated cell counts of phytoplankton per functional group per year, we first interpolated depth-specific measurements and integrated them over the upper 100~m for each taxon identified to species or genus level. We then summed up these depth-integrated counts by functional group per month. We finally summed up these monthly totals per year to obtain annual cell counts per functional group.
+        Annual cell counts per functional group were calculated by first interpolating and integrating depth-discrete measurements over the upper 100~m for each taxon, then summing by functional group per month, and finally averaging monthly totals per year.
     \end{changes}
 \end{revresponse}
 
@@ -672,7 +676,7 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
 \begin{revresponse}[Thank you for pointing this out.]
     We have revised this sentence (\lineref{R2:C20}) to clarify that we are discussing annual means that reflect the influence of upwelling events within the corresponding year.
     \begin{changes}
-        Nitrate and phosphate anomalies tended to be higher during years characterized by stronger upwelling events, as intensified upwelling within a given year elevates the annual mean concentrations.
+        Nitrate and phosphate concentrations show strong positive anomalies at the beginning of the time series, reflecting intensified upwelling that elevates annual mean concentrations.
     \end{changes}
 \end{revresponse}
 
@@ -684,7 +688,7 @@ Figure B2: Please clarify how this figure is different from Figure 6. Both figur
 \begin{revresponse}[Thank you for pointing this out.]
     We have revised the paragraph as follows (\lineref{R2:C23:start}[R2:C23:end]).
     \begin{changes}
-        The annual means of diversity metrics do not follow this general pattern. Shannon diversity z-scores declined between 1998 and 2007, then increased between 2007 and 2013, during a period when chlorophyll~\textit{a} and cell counts actually declined. This inverse relationship between diversity and biomass is consistent with our understanding of upwelling systems, where strong upwelling favors dominance by fewer, specialized taxa such as diatoms (\cite{james_influence_2022}). However, in 1996 and 1997, positive anomalies in cell counts, chlorophyll~\textit{a}, and diversity metrics coincided, suggesting that additional factors other than upwelling influenced community structure during this period.
+        Diversity metrics showed different temporal patterns than biomass indicators. Shannon diversity z-scores declined between 1998 and 2007, then increased between 2007 and 2013, during a period when chlorophyll~\textit{a} and cell counts actually declined. This inverse relationship between diversity and biomass is consistent with our understanding of upwelling systems, where strong upwelling favors dominance by fewer specialized taxa such as diatoms (\cite{james_influence_2022}). However, in 1996 and 1997, positive anomalies in cell counts, chlorophyll~\textit{a}, and diversity metrics coincided, suggesting that additional factors other than upwelling influenced community structure during this period. 
     \end{changes}
 \end{revresponse}
 
