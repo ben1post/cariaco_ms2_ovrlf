@@ -15,9 +15,11 @@
 
 
 %% To submit your paper:
-\documentclass[draft]{agujournal2019}
+\documentclass[]{agujournal2019}
 \usepackage{url} %this package should fix any errors with URLs in refs.
+
 \usepackage{lineno}
+
 \usepackage[inline]{trackchanges} %for better track changes. finalnew option will compile document with changes incorporated.
 \usepackage{soul}
 
@@ -31,8 +33,11 @@
 % hard coded references to supplemental figures, so the following is commented out:
 %\usepackage{xr-hyper}  % Already have hyperref
 %\externaldocument{supplement}  % Reference supplement
+\DeclareUnicodeCharacter{202F}{\,} % Maps the narrow no-break space to a thin space
 
-\linenumbers
+
+
+
 %%%%%%%
 % As of 2018 we recommend use of the TrackChanges package to mark revisions.
 % The trackchanges package adds five new LaTeX commands:
@@ -46,7 +51,7 @@
 % complete documentation is here: http://trackchanges.sourceforge.net/
 %%%%%%%
 
-\draftfalse
+%\draftfalse
 
 %% Enter journal name below.
 %% Choose from this list of Journals:
@@ -79,6 +84,7 @@
 
 \begin{document}
 
+\linenumbers
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  TITLE
 %
@@ -138,7 +144,6 @@
 % Example: \correspondingauthor{First and Last Name}{email@address.edu}
 
 \correspondingauthor{Benjamin Post}{benjaminpost@aoop.de}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -220,6 +225,7 @@ These findings contribute to a broader understanding of how climate variability 
 
 
 %%% Suggested section heads:
+
 \section{Introduction}
 %
 % The main text should start with an introduction. Except for short
