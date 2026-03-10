@@ -161,7 +161,7 @@
 % \end{keypoints}
 
 \begin{keypoints}
-\item The CARIACO phytoplankton time series reveals two temporal regimes, linked to a 2004 shift from high to low upwelling and signs of reversal after 2013.
+\item The CARIACO Time Series reveals two temporal regimes, linked to a 2004 shift from high to low upwelling and signs of reversal after 2013.
 \item Diversity metrics show no significant difference except lower turnover and higher evenness during the period of low upwelling conditions.
 \item Gradient forest analysis finds AMO index as strongest predictor of community shifts, indicating large-scale climate impacts on ecosystem.
 \end{keypoints}
@@ -188,12 +188,10 @@
 %% \begin{abstract} starts the second page of the manuscript
 
 \begin{abstract}
-
-Phytoplankton communities are integral to oceanic biogeochemical cycles and are sensitive indicators of climate-driven environmental variability.
-Long-term time series capture this variability, allowing us to unravel the effects of environmental change on local communities. This study investigates changes in the phytoplankton community of the Cariaco Basin, off the coast of Venezuela, from 1996 to 2016, using monthly water column observations integrated with climate indices and meteorological data. To investigate impacts of larger-scale climate variability, we considered the Atlantic Multidecadal Oscillation (AMO) index and the Multivariate El Niño Southern Oscillation index (MEI v.2), both linked to variations in local weather and upwelling in the Cariaco Basin.
-Cluster analysis identified two distinct community states separated by a shift from high to low upwelling conditions after 2003. In 2014, environmental conditions shifted back toward a stronger upwelling regime, and community composition began transitioning toward the earlier state (pre-2004). No significant differences in genus richness or Shannon diversity were observed between the two periods. The low upwelling period, however, was characterized by significantly higher community evenness and lower species turnover.
-To quantify effects of climate and bottom-up drivers on phytoplankton community changes, we employed gradient forest analysis and found the AMO index was the strongest predictor of changes in the community, closely followed by in situ variables related to upwelling (sea surface temperature and nitrate concentration) and the MEI v.2. 
-Our study emphasizes the impact of long-term climatic oscillations, such as the AMO, on the phytoplankton community of a tropical coastal ecosystem through modulation of the upwelling system. The indications of a transition toward pre-2004 conditions, which began to appear in 2014, suggest a cyclic behavior of the ecosystem under decadal-scale climate forcing.
+Phytoplankton communities are integral to oceanic biogeochemical cycles and are sensitive indicators of climate-driven environmental variability. Long-term time series capture this variability, allowing us to unravel effects of environmental change on local communities. This study investigates changes in the phytoplankton community of the Cariaco Basin, Venezuela, from 1996 to 2016, using monthly water column observations integrated with climate indices and meteorological data. To investigate impacts of larger-scale climate variability, we considered the Atlantic Multidecadal Oscillation (AMO) index and Multivariate El Niño Southern Oscillation index (MEI v.2), both linked to local weather and upwelling.
+Cluster analysis identified two distinct community states separated by a shift from high to low upwelling in 2004. In 2014, conditions shifted toward a stronger upwelling regime, and community composition began transitioning toward the pre-2004 state. No significant differences in genus richness or Shannon diversity were observed between the two periods. The low upwelling period, however, was characterized by significantly higher community evenness and lower species turnover.
+To quantify effects of climate and bottom-up drivers on phytoplankton community changes, we employed gradient forest analysis and found the AMO index was the strongest predictor of changes in the community, closely followed by in situ variables related to upwelling (SST and nitrate concentration) and the MEI v.2. 
+Our study emphasizes the impact of long-term climatic oscillations, such as the AMO, on the phytoplankton community of a tropical coastal ecosystem. The transition toward pre-2004 conditions from 2014 suggest a cyclic behavior of the ecosystem under decadal-scale climate forcing.
 \end{abstract}
 
 %1
@@ -207,7 +205,7 @@ Phytoplankton are photosynthesizing unicellular microorganisms that form the fou
 % Paper Overview
 This study investigated how phytoplankton communities in the Cariaco Basin, off the coast of Venezuela, changed from 1996 to 2016. We compared microscopy cell counts and monthly water samples with weather data and two major climate indicators: the Atlantic Multidecadal Oscillation (AMO) index and the Multivariate El Niño Southern Oscillation index (MEI v.2), both linked to local weather and currents.
 % Findings Summary
-The results showed a major shift in the phytoplankton community in 2004, linked to a decrease in upwelling, conditions showing signs of reversal in 2014, transitioning back toward the pre-2004 state. Interestingly, community diversity declined between 1998 and 2009 independently of changes in the upwelling regime. Further analysis showed that the AMO index, along with sea surface temperature, MEI v.2 and nitrate concentrations in the water column, were the strongest predictors of changes in the phytoplankton community.
+The results showed a major shift in the phytoplankton community in 2004, linked to a decrease in upwelling, conditions showing signs of reversal in 2014, transitioning toward the pre-2004 state. Interestingly, community diversity declined between 1998 and 2009 independently of changes in the upwelling regime. Further analysis showed that the AMO index, along with sea surface temperature, MEI v.2 and nitrate concentrations in the water column, were the strongest predictors of changes in the phytoplankton community.
 
 % Key Takeaways
 These findings contribute to a broader understanding of how climate variability shapes marine phytoplankton communities and underscore the importance of sustained, long-term observations in detecting and interpreting ecological responses to climate change.
@@ -328,7 +326,7 @@ The shift in phytoplankton community composition associated with increased tempe
         The environmental variables from ocean time series tend to be strongly correlated, which the gradient forest methodology accounts for by implementing a conditional permutation of the correlated predictors \cite{ellis_gradient_2012}. Gradient forest runs were performed with 1500 bootstrapped trees and a correlation threshold of 0.5.
         We show a model run without any time lags in the supplementary material (Figure \ref{fig:sup:GFoutput_nolags}). To consider the temporal lag in effect, particularly of climate indices, we tested for an improved predictive power of time lags of up to 12 months and 2-5 years for all climate variables, as well as 3-month lags for in situ measurements in exploratory runs. We chose time lags that scored highest in the goodness-of-fit statistics for the final model run (Table \ref{tab:sup:GFlagtests}).
         To assess whether the dominant predictors differed among seasons, we additionally ran gradient forest models separately for primary upwelling (n=104), secondary upwelling (n=47), and rainy season (n=42) observations. Given the limited sample sizes for the latter two seasons, we interpret these results as exploratory (Figure~S3).
-        All the codes and data used in this analysis and used to create the plots are publicly available on GitHub at \url{https://github.com/ben1post/PhytoCariaco} \cite{post_ben1postphytocariaco_2026}.
+        All the codes and data used in this analysis and used to create the plots are publicly available on GitHub at \url{https://github.com/ben1post/PhytoCariaco} \cite{benjamin_post_2026_18942210}.
 
     \subsubsection{Missing data}
         \linelabel{R:misdat} The CARIACO time series had variable monthly coverage, particularly in the final years when funding constraints reduced sampling frequency. Data from 1995 (n=2) and 2017 (n=1) were excluded from all analyses due to insufficient temporal coverage and because these observations could not be reliably assigned to any community cluster. The analyzed time series thus spans 1996–2016. A complete overview of missing months for all variables is provided in supplementary Table~\ref{tab:sup:missing-data}.
@@ -946,10 +944,22 @@ lag (months)& NO3 & PO4 & SiO4 & SST & \qty{21}{\celsius} Isotherm & Salinity & 
 
 %!
 \section*{Open Research Section}
-All data used in this manuscript are publicly available. The CARIACO time series data we used was accessed from the Biological and Chemical Oceanography Data Management Office (BCO-DMO) under the doi \url{10.1575/1912/bco-dmo.3095.1}. This includes the Niskin bottle dataset for monthly in-situ measurements of chlorophyll \textit{a} and nutrient data at \url{https://www.bco-dmo.org/dataset/3093}, the CTD dataset at \url{https://www.bco-dmo.org/dataset/3092}, and the phytoplankton taxonomy dataset at \url{https://www.bco-dmo.org/dataset/3095}.
-The climate variables, such as wind speed and precipitation were extracted from the ``ERA5 monthly averaged data on single levels from 1940 to present'' dataset at \url{https://cds.climate.copernicus.eu/cdsapp#!/dataset/10.24381/cds.f17050d7}.
-The AMO index was retrieved from the Climate Data Guide provided by the NSF National Center for Atmospheric Research at \url{https://climatedataguide.ucar.edu/climate-data/atlantic-multi-decadal-oscillation-amo} and the MEI v.2 was accessed from NOAA Physical Sciences Laboratory (PSL) at \url{https://psl.noaa.gov/enso/mei/}.
-All the code and data used in this analysis and to create the plots are publicly available on GitHub at \url{https://github.com/ben1post/PhytoCariaco} \cite{post_ben1postphytocariaco_2026}.
+\section*{Open Research Section}
+All data used in this manuscript are publicly available. The CARIACO time 
+series data were accessed from the Biological and Chemical Oceanography 
+Data Management Office (BCO-DMO). This includes the Niskin bottle dataset 
+for monthly in-situ measurements of chlorophyll \textit{a} and nutrient 
+data \cite{muller-karger_time-series_2019}, the CTD dataset 
+\cite{muller-karger_time_2019}, and the phytoplankton taxonomy dataset 
+\cite{troccoli_time-series_2019}. The climate variables, such as wind 
+speed and precipitation, were extracted from the ERA5 monthly averaged 
+data on single levels \cite{hersbach_era5_2023}. The AMO index was 
+retrieved from the Climate Data Guide provided by the NSF National Center 
+for Atmospheric Research \cite{trenberth_climate_2023}, and the MEI v.2 
+was accessed from NOAA Physical Sciences Laboratory 
+\cite{noaa_physical_sciences_laboratory_multivariate_2025}. All code and 
+data used in this analysis and to create the plots are publicly available  \cite{benjamin_post_2026_18942210}.
+
 
 
 
@@ -960,12 +970,14 @@ All the code and data used in this analysis and to create the plots are publicly
 %Tully et al. (https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1029/2022JG007128) 
 %Please note that these statements are titled as “Global Research Collaboration Statements” from a previous pilot requirement in JGR Biogeosciences. The pilot has ended and statements should now be titled “Inclusion in Global Research Statement”.
 
+\section*{Conflict of Interest Statement}
+The authors have no conflicts of interest to disclose.
 
 %!
 \acknowledgments
-We thank Digna Rueda-Roa, Claudia Benitez-Nelson, and James Pinckney for their valuable input during the very early stages of this research. Additionally we want to thank all researchers and staff involved in the CARIACO Time Series for the considerable effort of collecting the time series data and providing it openly to the scientific community.
+We thank Digna Rueda-Roa, Claudia Benitez-Nelson, and James Pinckney for their valuable input during the very early stages of this research. Additionally, we want to thank all researchers and staff involved in the CARIACO Time Series for the considerable effort of collecting the time series data and providing it openly to the scientific community.
 
-AI tools (specifically Open AI's ChatGPT and Anthropic's Claude) were used to aid in spelling and grammar corrections in writing this study. During revisions of the manuscript we additionally employed Anthropic's Claude for code revisions.
+AI tools (specifically Open AI's ChatGPT and Anthropic's Claude) were used to aid in spelling and grammar corrections in writing this study. During revisions of the manuscript, we additionally employed Anthropic's Claude for code revisions.
 
 %Enter acknowledgments here. This section is to acknowledge funding, thank colleagues, enter any secondary affiliations, and so on.
 

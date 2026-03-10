@@ -1,0 +1,5 @@
+# Set the main file to be the difference file
+$main_file = 'diff.tex';
+
+# Run latexdiff before pdflatex
+$pdflatex = "latexdiff agujournaltemplate_old.tex agujournaltemplate.tex > diff.tex; pdflatex %O diff.tex";
